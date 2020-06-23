@@ -1,0 +1,89 @@
+﻿@using MSensis.ViewModels;
+@model UserLoginModel
+
+
+
+<head>
+
+    <!-- Icons font CSS-->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="~/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <!-- Vendor CSS-->
+    <link href="~/css/daterangepicker.css" rel="stylesheet" media="all">
+    <link href="~/css/main.min.css" rel="stylesheet" media="all">
+
+</head>
+
+
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+            <div class="card-heading">
+
+            </div>
+
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Login </h2>
+                </div>
+                <div class="card-body">
+
+
+                    <form id="account" method="post" asp-action="Login" asp-controller="Account">
+                        <input type="hidden" name="returnUrl" value="@ViewData["returnUrl"]" />
+                        <h4 align="center">Use a local account to log in.</h4>
+                        <hr />
+                        <br />
+                        <br />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label asp-for="RememberMe">
+                                    <input asp-for="RememberMe" />
+                                    @Html.DisplayNameFor(m => m.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Log in</button>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <a id="forgot-password" asp-page="">Forgot your password?</a>
+                            </p>
+                            <p>
+                                <a asp-page="" asp-route-returnUrl="">Register as a new user</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="~/js/select2.min.js"></script>
+    <script src="~/js/moment.min.js"></script>
+    <script src="~/js/daterangepicker.js"></script>
+    <!-- Main JS-->
+    <script src="~/js/global.js"></script>
+
+}

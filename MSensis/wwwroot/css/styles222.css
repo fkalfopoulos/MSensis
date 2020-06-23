@@ -1,0 +1,26 @@
+﻿ 
+ 
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+tr, td{
+    border: 1px solid gray;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+tr, th {
+    font-size: 12px;
+    font-weight: bold;
+    text-align:start;
+}
+
+tr, th , p{
+    text-align:center;
+}
+
+ 

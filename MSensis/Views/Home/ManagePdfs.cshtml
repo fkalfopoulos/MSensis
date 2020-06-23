@@ -1,0 +1,144 @@
+﻿@using MSensis.ViewModels;
+@model ClientViewModel
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Manage Pdf</h3>
+                </div>
+                <br />
+                 
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Client</th>
+                                <th>Invoice Date</th>
+                                <th> Invoice type</th>
+                                <th> Print pdf</th>
+                                <th> View Document</th>
+                                <th> Update Invoice</th>
+                                <th> View Products</th>
+                                <th> Total Vat</th>
+                                <th> Total Value</th>
+                                <th>Issue invoice</th>
+                                <th>elete invoice</th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model.Pdfs)
+                        {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Company.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Client.CompanyName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Invoice.Timestamp)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Invoice.Invoice_Type)</td>
+
+                            <td>  <a asp-action="ViewPdf" asp-controller="Home" asp-route-id="@item.Id">Download Pdf <i class="fa fa-download"></i></a>       </td>
+
+                            <td>  <a asp-action="ViewInvoice" asp-controller="Home" asp-route-id="@item.Id">View <i class="fa fa-eye"></i></a> </td>
+                            <td>
+                                <a asp-action="Update_Invoice" asp-route-id="@item.Invoice.Id">Update <i class="fa fa-edit"></i></a>
+                            </td>
+                            <td>
+                                <a asp-action="ViewProducts" asp-route-id="@item.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Download PDF"
+                                   style="padding-right: 2px;">View Products<i class="fa fa-edit"></i></a>
+                            </td>
+                            <td>
+                                @item.TotalVat.ToString("#.##")
+                            </td>
+                            <td>
+                                @item.TotalValue.ToString("#.##")
+                            </td>
+                            <td>
+                                <a asp-action="Issue_Invoice" asp-controller="MSensis" asp-route-id="@item.Invoice.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Download PDF"
+                                   style="padding-right: 2px;">Issue Invoice<i class="fa fa-edit"></i></a>
+
+                            </td>
+                            
+                            <td>
+                                <a asp-action="Ιnvoice_del" asp-controller="MSensis" asp-route-id="@item.Invoice.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Delete Invoice"
+                                   style="padding-right: 2px;">Delete Invoice<i class="fa fa-trash-o"></i></a>
+
+                                </td>
+
+</tr>
+                        }
+
+                    </table>
+                </div>
+
+            </div>
+
+             
+            </div>
+
+        </div>
+
+         
+
+</section>
+ 
+
+<!-- page script -->
+<script>
+    $(function () {
+        $('#example1').DataTable();
+    });
+
+
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    function Delete(id) {
+         var r = confirm("Are you sure you want to Delete?");
+         if (r == true) {
+             debugger;
+             $.ajax(
+                 {
+                     type: "POST",
+                     headers: {
+                         'Accept': 'application/json',
+                         'Content-Type': 'application/json',
+                     },
+                     credentials: "same-origin",
+                     url: '@Url.Action("Delete_Ιnvoice", "Home")',
+                     data: {
+                         id: id
+                     },
+                      
+                     error: function (result) {
+                         alert("error");
+                     },
+                     success: function (result) {
+                         if (result == true) {
+                             var baseUrl = "/Home";
+                             window.location.reload();
+                         }
+                         else {
+                             alert("There is a problem, Try Later!");
+                         }
+                     }
+                 });
+
+         }
+     }
+       
+             
+</script>
+ 
+
+   
+  

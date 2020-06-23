@@ -1,0 +1,112 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/login-forgot.css" />
+    <link rel="stylesheet" href="~/css/site2.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-adaptive-background.js"></script>
+</head>
+
+
+
+<div>
+    <div class="section center-align" style="padding-bottom:5px;padding-top:0px;">
+        <h4 class="white-text">Register</h4>
+    </div>
+    <div class="row" id="login-row">
+        <div class="col s12 col m12 col l6 offset-l3">
+
+            <form asp-route-returnUrl="@Model.ReturnUrl" id="login-form" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="input-field col s12 col m12 col l12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input asp-for="Input.Email" id="email-input" type="email" validate grey-text text-darken-3" autocomplete="off"
+                               style="padding-left:6px;">
+                        <label class="grey-text text-darken-3" for="email-input"
+                               data-error="This email address is not valid."
+                               data-success="This email address is valid.">
+                            Email
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 col m12 col l12">
+                        <i class="material-icons prefix">lock</i>
+                        <input asp-for="Input.Password" type="password" id="password-input" class="grey-text text-darken-3" autocomplete="off"
+                               style="padding-left: 6px;">
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        <label class="grey-text text-darken-3" for="password-input">Password</label>
+                    </div>
+                </div>
+                <div class="input-field col s12 col m12 col l12">
+                    <i class="material-icons prefix">lock</i>
+
+                    <input asp-for="Input.ConfirmPassword" type="password" id="password-input" class="grey-text text-darken-3" autocomplete="off"
+                           style="padding-left: 6px;">
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    <label class="grey-text text-darken-3" for="password-input">Password</label>
+                </div>
+
+
+                <div class="row center-align">
+                    <button id="login-button" type="submit"
+                            class="btn indigo darken-1 white-text waves-effect waves-light">
+                        Register
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            changeEmailLabel();
+            changePasswordLabel();
+
+            if ($("#email-input").val().length > 0 && $("#password-input").val().length == 0) {
+                $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+                $("#password-input").parent().find("label").css("transform-origin", "0 0");
+            }
+        });
+
+        $("#email-input").on("keyup", function () {
+            changeEmailLabel();
+        });
+
+        $("#password-input").on("keyup", function () {
+            changePasswordLabel();
+        });
+
+        function changePasswordLabel() {
+            if ($("#password-input").val().length > 0) {
+                $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+                $("#password-input").parent().find("label").css("transform-origin", "0 0");
+            } else {
+                $("#password-input").parent().find("label").css("transform", "translateY(12px)");
+                $("#password-input").parent().find("label").css("transform-origin", "0 100%");
+            }
+        }
+
+        function changeEmailLabel() {
+            if ($("#email-input").val().length > 0) {
+                $("#email-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+                $("#email-input").parent().find("label").css("transform-origin", "0 0");
+            } else {
+                $("#email-input").parent().find("label").css("transform", "translateY(12px)");
+                $("#email-input").parent().find("label").css("transform-origin", "0 100%");
+            }
+        }
+    </script>
+    }

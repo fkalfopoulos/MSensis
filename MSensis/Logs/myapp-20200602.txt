@@ -1,0 +1,500 @@
+2020-06-02T10:41:54.1435386+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-06-02T10:41:54.4797253+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-06-02T10:41:54.6470569+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:41:54.7082232+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-06-02T10:41:54.7093471+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-06-02T10:41:54.7319607+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-06-02T10:41:54.7638522+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2020-06-02T10:41:54.7750848+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 116.5934ms (afa2e885)
+2020-06-02T10:41:54.7768538+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-06-02T10:41:54.8383338+03:00 80000004-0000-fe00-b63f-84710c7967bb [INF] Request finished in 713.1792ms 302  (791a596a)
+2020-06-02T10:41:54.9063402+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2020-06-02T10:41:54.9177803+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-06-02T10:41:55.2331432+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-06-02T10:41:55.3468772+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid (cd3ef7ec)
+2020-06-02T10:41:55.3812534+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-06-02T10:41:55.3965844+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executed handler method "OnGetAsync", returned result "". (90fdc39c)
+2020-06-02T10:41:55.4052951+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executing an implicit handler method - ModelState is Valid (232a55d1)
+2020-06-02T10:41:55.4054909+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (f857da66)
+2020-06-02T10:41:56.6620486+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 1427.4399ms (02e01280)
+2020-06-02T10:41:56.6638878+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-06-02T10:41:56.6841898+03:00 80000006-0000-fe00-b63f-84710c7967bb [INF] Request finished in 1778.0386ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:41:56.9901758+03:00 80000004-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/site2.css   (ca22a1cb)
+2020-06-02T10:41:57.1192612+03:00 80000008-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/login-forgot.css   (ca22a1cb)
+2020-06-02T10:41:57.1935688+03:00 80000008-0000-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/login-forgot.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\login-forgot.css"' (27b0a520)
+2020-06-02T10:41:57.1960314+03:00 80000004-0002-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/site2.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\site2.css"' (27b0a520)
+2020-06-02T10:41:57.1989541+03:00 80000008-0000-fe00-b63f-84710c7967bb [INF] Request finished in 79.6647ms 200 text/css (791a596a)
+2020-06-02T10:41:57.1989858+03:00 80000004-0002-fc00-b63f-84710c7967bb [INF] Request finished in 208.9785ms 200 text/css (791a596a)
+2020-06-02T10:41:57.1993895+03:00 8000000a-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.min.js   (ca22a1cb)
+2020-06-02T10:41:57.2799803+03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery-adaptive-background.js   (ca22a1cb)
+2020-06-02T10:41:57.4279982+03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery-adaptive-background.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery-adaptive-background.js"' (27b0a520)
+2020-06-02T10:41:57.4281810+03:00 80000004-0000-fd00-b63f-84710c7967bb [INF] Request finished in 148.2282ms 200 application/javascript (791a596a)
+2020-06-02T10:41:57.5667976+03:00 8000000a-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.min.js"' (27b0a520)
+2020-06-02T10:41:57.5669515+03:00 8000000a-0001-fc00-b63f-84710c7967bb [INF] Request finished in 367.5794ms 200 application/javascript (791a596a)
+2020-06-02T10:42:02.0514372+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 241 (ca22a1cb)
+2020-06-02T10:42:02.0731453+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-06-02T10:42:02.0741071+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-06-02T10:42:02.1901901+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" - ModelState is Valid (cd3ef7ec)
+2020-06-02T10:42:02.2148102+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:42:03.2338133+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("346"ms) [Parameters=["@__normalizedUserName_0='ADMIN@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:42:03.9473566+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("24"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-06-02T10:42:04.1076444+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("30"ms) [Parameters=["@__userId_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-06-02T10:42:04.1437043+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-06-02T10:42:04.1530718+03:00 80000006-0000-fd00-b63f-84710c7967bb [WRN] Info - Successful login for "admin@gmail.com" (2f0a74b7)
+2020-06-02T10:42:04.1661688+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (90fdc39c)
+2020-06-02T10:42:04.1861478+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-06-02T10:42:04.1955446+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 2121.2163ms (02e01280)
+2020-06-02T10:42:04.1996385+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-06-02T10:42:04.2131652+03:00 80000006-0000-fd00-b63f-84710c7967bb [INF] Request finished in 2161.7366ms 302  (791a596a)
+2020-06-02T10:42:04.3185469+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-06-02T10:42:04.3493372+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-06-02T10:42:04.3500202+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:42:04.3516255+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-06-02T10:42:04.3966414+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:42:04.4281254+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:42:04.4695905+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:42:04.4864895+03:00 80000008-0000-fd00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-06-02T10:42:04.5597124+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("26"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-06-02T10:42:04.8115318+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("23"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-06-02T10:42:04.9936729+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("26"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-06-02T10:42:05.2293001+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`p`.`TotalVat`)
+FROM `Pdfs` AS `p`
+WHERE `p`.`Timestamp` <= DATE_ADD(CURDATE(), INTERVAL -3 month)" (0723d8ff)
+2020-06-02T10:42:05.2485711+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`p`.`TotalVat`)
+FROM `Pdfs` AS `p`
+WHERE `p`.`Timestamp` <= DATE_ADD(CURDATE(), INTERVAL -6 month)" (0723d8ff)
+2020-06-02T10:42:05.2644663+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`p`.`TotalValue`)
+FROM `Pdfs` AS `p`
+WHERE `p`.`Timestamp` <= DATE_ADD(CURDATE(), INTERVAL -6 month)" (0723d8ff)
+2020-06-02T10:42:05.2799524+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`p`.`TotalValue`)
+FROM `Pdfs` AS `p`
+WHERE `p`.`Timestamp` <= DATE_ADD(CURDATE(), INTERVAL -3 month)" (0723d8ff)
+2020-06-02T10:42:05.3035268+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 894.7392ms. (50a9e262)
+2020-06-02T10:42:05.5255260+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-06-02T10:42:05.8571036+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 525.5451ms. (f66409e9)
+2020-06-02T10:42:05.8582315+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 1507.9623ms (afa2e885)
+2020-06-02T10:42:05.8584061+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-06-02T10:42:05.8586086+03:00 80000008-0000-fd00-b63f-84710c7967bb [INF] Request finished in 1540.1565ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:42:05.9887098+03:00 80000010-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:42:05.9926965+03:00 80000002-0001-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/css/font-awesome.min.css   (ca22a1cb)
+2020-06-02T10:42:06.0122448+03:00 80000002-0001-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.dataTables.min.js   (ca22a1cb)
+2020-06-02T10:42:06.0129755+03:00 80000002-0001-f700-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/Ionicons/css/ionicons.min.css   (ca22a1cb)
+2020-06-02T10:42:06.0281164+03:00 80000010-0001-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css"' (27b0a520)
+2020-06-02T10:42:06.0282266+03:00 80000010-0001-fd00-b63f-84710c7967bb [INF] Request finished in 39.5831ms 200 text/css (791a596a)
+2020-06-02T10:42:06.0285954+03:00 80000002-0001-f600-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/skins/skin-blue.min.css   (ca22a1cb)
+2020-06-02T10:42:06.0486457+03:00 8000000c-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/adminlte.css   (ca22a1cb)
+2020-06-02T10:42:06.0622561+03:00 80000004-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/morris.js/morris.css   (ca22a1cb)
+2020-06-02T10:42:06.0768822+03:00 80000002-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/css/bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:42:06.0996358+03:00 80000002-0001-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/css/font-awesome.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\css\font-awesome.min.css"' (27b0a520)
+2020-06-02T10:42:06.0997764+03:00 80000002-0001-f900-b63f-84710c7967bb [INF] Request finished in 107.1822ms 200 text/css (791a596a)
+2020-06-02T10:42:06.1000585+03:00 80000002-0001-f700-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/Ionicons/css/ionicons.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\Ionicons\css\ionicons.min.css"' (27b0a520)
+2020-06-02T10:42:06.1001851+03:00 80000002-0001-f700-b63f-84710c7967bb [INF] Request finished in 87.2724ms 200 text/css (791a596a)
+2020-06-02T10:42:06.1385880+03:00 80000004-0001-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/morris.js/morris.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\morris.js\morris.css"' (27b0a520)
+2020-06-02T10:42:06.1387423+03:00 80000004-0001-fb00-b63f-84710c7967bb [INF] Request finished in 76.7567ms 200 text/css (791a596a)
+2020-06-02T10:42:06.1391519+03:00 80000002-0001-f600-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/skins/skin-blue.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\skins\skin-blue.min.css"' (27b0a520)
+2020-06-02T10:42:06.1395321+03:00 80000002-0001-f600-b63f-84710c7967bb [INF] Request finished in 110.8498ms 200 text/css (791a596a)
+2020-06-02T10:42:06.1626313+03:00 80000002-0001-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2020-06-02T10:42:06.1627661+03:00 80000002-0001-fa00-b63f-84710c7967bb [INF] Request finished in 85.9996ms 200 text/css (791a596a)
+2020-06-02T10:42:06.2051716+03:00 8000000c-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/adminlte.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\adminlte.css"' (27b0a520)
+2020-06-02T10:42:06.2052916+03:00 8000000c-0001-fc00-b63f-84710c7967bb [INF] Request finished in 156.7285ms 200 text/css (791a596a)
+2020-06-02T10:42:06.2273973+03:00 80000002-0001-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.dataTables.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.dataTables.min.js"' (27b0a520)
+2020-06-02T10:42:06.2275230+03:00 80000002-0001-f800-b63f-84710c7967bb [INF] Request finished in 215.3375ms 200 application/javascript (791a596a)
+2020-06-02T10:42:06.4421479+03:00 8000000a-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/raphael.min.js   (ca22a1cb)
+2020-06-02T10:42:06.5902476+03:00 80000004-0001-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/morris.min.js   (ca22a1cb)
+2020-06-02T10:42:06.8522073+03:00 8000000e-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/js/bootstrap.min.js   (ca22a1cb)
+2020-06-02T10:42:06.8717482+03:00 80000004-0001-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/morris.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\morris.min.js"' (27b0a520)
+2020-06-02T10:42:06.8719031+03:00 80000004-0001-f800-b63f-84710c7967bb [INF] Request finished in 281.7658ms 200 application/javascript (791a596a)
+2020-06-02T10:42:06.9271869+03:00 8000000c-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/content/user2-160x160.jpg   (ca22a1cb)
+2020-06-02T10:42:06.9279321+03:00 8000000a-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/js/adminlte.min.js   (ca22a1cb)
+2020-06-02T10:42:06.9522069+03:00 8000000c-0000-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/content/user2-160x160.jpg"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\content\user2-160x160.jpg"' (27b0a520)
+2020-06-02T10:42:06.9523279+03:00 8000000c-0000-fc00-b63f-84710c7967bb [INF] Request finished in 25.2051ms 200 image/jpeg (791a596a)
+2020-06-02T10:42:06.9525439+03:00 8000000a-0000-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/raphael.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\raphael.min.js"' (27b0a520)
+2020-06-02T10:42:06.9526260+03:00 8000000a-0000-fd00-b63f-84710c7967bb [INF] Request finished in 510.5493ms 200 application/javascript (791a596a)
+2020-06-02T10:42:07.0420635+03:00 8000000a-0000-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/js/adminlte.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\js\adminlte.min.js"' (27b0a520)
+2020-06-02T10:42:07.0450776+03:00 8000000a-0000-fe00-b63f-84710c7967bb [INF] Request finished in 114.3979ms 200 application/javascript (791a596a)
+2020-06-02T10:42:07.0655814+03:00 8000000e-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\js\bootstrap.min.js"' (27b0a520)
+2020-06-02T10:42:07.0658202+03:00 8000000e-0001-fc00-b63f-84710c7967bb [INF] Request finished in 213.5989ms 200 application/javascript (791a596a)
+2020-06-02T10:42:07.3395806+03:00 8000000c-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2020-06-02T10:42:07.4247267+03:00 8000000c-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/Ionicons/fonts/ionicons.ttf?v=2.0.0   (ca22a1cb)
+2020-06-02T10:42:07.4735149+03:00 8000000c-0000-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2020-06-02T10:42:07.4736592+03:00 8000000c-0000-fe00-b63f-84710c7967bb [INF] Request finished in 134.1464ms 200 font/woff2 (791a596a)
+2020-06-02T10:42:07.4756603+03:00 8000000c-0000-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/Ionicons/fonts/ionicons.ttf"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\Ionicons\fonts\ionicons.ttf"' (27b0a520)
+2020-06-02T10:42:07.4757809+03:00 8000000c-0000-fd00-b63f-84710c7967bb [INF] Request finished in 51.1488ms 200 application/x-font-ttf (791a596a)
+2020-06-02T10:42:13.7857348+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/IssuedPdfs   (ca22a1cb)
+2020-06-02T10:42:13.7887450+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (500cc934)
+2020-06-02T10:42:13.8051188+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"IssuedPdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IssuedPdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:42:13.8057058+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:42:13.8188876+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:42:13.8245434+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:42:14.3034572+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("27"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND (`c.Invoice`.`Invoice_Type` = 'Issued')
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:42:14.4107849+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 604.8049ms. (50a9e262)
+2020-06-02T10:42:14.4722194+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "IssuedPdfs". (c83d0e25)
+2020-06-02T10:42:14.5152886+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "IssuedPdfs" executed in 103.6137ms. (f66409e9)
+2020-06-02T10:42:14.5156347+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" in 710.3763ms (afa2e885)
+2020-06-02T10:42:14.5157966+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (99874f2b)
+2020-06-02T10:42:14.5159495+03:00 8000000e-0000-fd00-b63f-84710c7967bb [INF] Request finished in 730.372ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:42:15.2695437+03:00 80000010-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2020-06-02T10:42:15.3026895+03:00 80000010-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2020-06-02T10:42:15.3028088+03:00 80000010-0001-fc00-b63f-84710c7967bb [INF] Request finished in 33.4908ms 200 font/woff2 (791a596a)
+2020-06-02T10:42:19.1920403+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/ManagePdfs   (ca22a1cb)
+2020-06-02T10:42:19.2236841+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.ManagePdfs (MSensis)"' (500cc934)
+2020-06-02T10:42:19.2452652+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"ManagePdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ManagePdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:42:19.2454769+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.ManagePdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:42:19.2561252+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:42:19.2613178+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:42:19.3450258+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE `c`.`UserId` = @__user_Id_0
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:42:19.4602002+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.ManagePdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 214.4489ms. (50a9e262)
+2020-06-02T10:42:19.5195633+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "ManagePdfs". (c83d0e25)
+2020-06-02T10:42:19.7105890+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "ManagePdfs" executed in 246.793ms. (f66409e9)
+2020-06-02T10:42:19.7110322+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.ManagePdfs (MSensis)" in 465.5952ms (afa2e885)
+2020-06-02T10:42:19.7114811+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.ManagePdfs (MSensis)"' (99874f2b)
+2020-06-02T10:42:19.7116445+03:00 80000006-0002-fc00-b63f-84710c7967bb [INF] Request finished in 519.7112ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:42:22.9778812+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/api/MSensis/Issue_Invoice?id=99efe6f3-b5d6-48b4-aa1f-ff2cc9c93023   (ca22a1cb)
+2020-06-02T10:42:22.9797576+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.MSensisController.Issue_Invoice (MSensis)"' (500cc934)
+2020-06-02T10:42:23.0037701+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Issue_Invoice\", controller = \"MSensis\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Issue_Invoice(System.String)" on controller "MSensis.Controllers.MSensisController" ("MSensis"). (122b2fdf)
+2020-06-02T10:42:23.0113252+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.MSensisController.Issue_Invoice (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:42:23.0194055+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:42:23.0623205+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='99efe6f3-b5d6-48b4-aa1f-ff2cc9c93023' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`ClientId`, `u`.`Code`, `u`.`Comments`, `u`.`CompanyId`, `u`.`DateTimeString`, `u`.`Description`, `u`.`Discount`, `u`.`IdentifierId`, `u`.`Invoice_Type`, `u`.`Number`, `u`.`Payment_Status`, `u`.`PriceAfterDiscount`, `u`.`PriceBeforeDiscount`, `u`.`PricePerUnit`, `u`.`Quantity`, `u`.`Timestamp`, `u`.`Vat`
+FROM `Invoices` AS `u`
+WHERE `u`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2020-06-02T10:42:23.3899531+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@p1='99efe6f3-b5d6-48b4-aa1f-ff2cc9c93023' (Nullable = false) (Size = 255), @p0='Issued' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `Invoices` SET `Invoice_Type` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();" (0723d8ff)
+2020-06-02T10:42:23.5692212+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.MSensisController.Issue_Invoice (MSensis)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 557.724ms. (50a9e262)
+2020-06-02T10:42:23.5706576+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/Home/IssuedPdfs". (d98d540e)
+2020-06-02T10:42:23.5709484+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.MSensisController.Issue_Invoice (MSensis)" in 567.0073ms (afa2e885)
+2020-06-02T10:42:23.5710213+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.MSensisController.Issue_Invoice (MSensis)"' (99874f2b)
+2020-06-02T10:42:23.5727586+03:00 80000008-0002-fc00-b63f-84710c7967bb [INF] Request finished in 594.9171ms 302  (791a596a)
+2020-06-02T10:42:23.6212535+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/IssuedPdfs   (ca22a1cb)
+2020-06-02T10:42:23.6226147+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (500cc934)
+2020-06-02T10:42:23.6230151+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"IssuedPdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IssuedPdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:42:23.6232035+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:42:23.6240214+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:42:23.6304059+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:42:23.6382226+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND (`c.Invoice`.`Invoice_Type` = 'Issued')
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:42:23.6447420+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 21.3222ms. (50a9e262)
+2020-06-02T10:42:23.6450319+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "IssuedPdfs". (c83d0e25)
+2020-06-02T10:42:23.6708599+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "IssuedPdfs" executed in 25.8234ms. (f66409e9)
+2020-06-02T10:42:23.6711965+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" in 48.0522ms (afa2e885)
+2020-06-02T10:42:23.6712935+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (99874f2b)
+2020-06-02T10:42:23.6717827+03:00 8000000a-0002-fc00-b63f-84710c7967bb [INF] Request finished in 50.473ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:45:21.0838650+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/IssuedPdfs   (ca22a1cb)
+2020-06-02T10:45:21.0858987+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (500cc934)
+2020-06-02T10:45:21.0862480+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"IssuedPdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IssuedPdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:45:21.0866314+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:45:21.0890845+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:45:21.0968396+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:45:21.1021589+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND (`c.Invoice`.`Invoice_Type` = 'Issued')
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:45:21.1035305+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 16.6009ms. (50a9e262)
+2020-06-02T10:45:33.7077231+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "IssuedPdfs". (c83d0e25)
+2020-06-02T10:45:33.7729378+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "IssuedPdfs" executed in 12669.0252ms. (f66409e9)
+2020-06-02T10:45:33.7732303+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" in 12686.8401ms (afa2e885)
+2020-06-02T10:45:33.7733123+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (99874f2b)
+2020-06-02T10:45:33.7737040+03:00 80000010-0000-fd00-b63f-84710c7967bb [INF] Request finished in 12689.9473ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:45:33.9243324+03:00 80000012-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/adminlte.css   (ca22a1cb)
+2020-06-02T10:45:33.9244155+03:00 80000002-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/morris.js/morris.css   (ca22a1cb)
+2020-06-02T10:45:33.9254554+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery-adaptive-background.js   (ca22a1cb)
+2020-06-02T10:45:33.9256303+03:00 80000002-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/morris.js/morris.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\morris.js\morris.css"' (27b0a520)
+2020-06-02T10:45:33.9257425+03:00 80000002-0000-fa00-b63f-84710c7967bb [INF] Request finished in 1.363ms 200 text/css (791a596a)
+2020-06-02T10:45:33.9259476+03:00 8000000e-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:45:33.9268553+03:00 8000000e-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.min.js   (ca22a1cb)
+2020-06-02T10:45:33.9280321+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery-adaptive-background.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery-adaptive-background.js"' (27b0a520)
+2020-06-02T10:45:33.9280630+03:00 8000000e-0000-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css"' (27b0a520)
+2020-06-02T10:45:33.9281566+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Request finished in 2.7657ms 200 application/javascript (791a596a)
+2020-06-02T10:45:33.9281621+03:00 8000000e-0000-fe00-b63f-84710c7967bb [INF] Request finished in 2.2201ms 200 text/css (791a596a)
+2020-06-02T10:45:33.9387199+03:00 8000000a-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.dataTables.min.js   (ca22a1cb)
+2020-06-02T10:45:33.9398057+03:00 80000004-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/css/bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:45:34.2058076+03:00 80000010-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/skins/skin-blue.min.css   (ca22a1cb)
+2020-06-02T10:45:34.2102074+03:00 8000000e-0000-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.min.js"' (27b0a520)
+2020-06-02T10:45:34.2104883+03:00 8000000e-0000-fc00-b63f-84710c7967bb [INF] Request finished in 283.6482ms 200 application/javascript (791a596a)
+2020-06-02T10:45:34.2108976+03:00 80000010-0000-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/skins/skin-blue.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\skins\skin-blue.min.css"' (27b0a520)
+2020-06-02T10:45:34.2110326+03:00 80000010-0000-fe00-b63f-84710c7967bb [INF] Request finished in 5.3352ms 200 text/css (791a596a)
+2020-06-02T10:45:34.2493225+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/Ionicons/css/ionicons.min.css   (ca22a1cb)
+2020-06-02T10:45:34.2493237+03:00 80000004-0003-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/css/font-awesome.min.css   (ca22a1cb)
+2020-06-02T10:45:34.2516237+03:00 80000004-0003-f100-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/css/font-awesome.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\css\font-awesome.min.css"' (27b0a520)
+2020-06-02T10:45:34.2516610+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/Ionicons/css/ionicons.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\Ionicons\css\ionicons.min.css"' (27b0a520)
+2020-06-02T10:45:34.2517451+03:00 80000004-0003-f100-b63f-84710c7967bb [INF] Request finished in 2.5496ms 200 text/css (791a596a)
+2020-06-02T10:45:34.2518164+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Request finished in 2.5689ms 200 text/css (791a596a)
+2020-06-02T10:45:34.2521027+03:00 8000000a-0000-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.dataTables.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.dataTables.min.js"' (27b0a520)
+2020-06-02T10:45:34.2522064+03:00 8000000a-0000-fb00-b63f-84710c7967bb [INF] Request finished in 313.5558ms 200 application/javascript (791a596a)
+2020-06-02T10:45:34.2524798+03:00 80000004-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2020-06-02T10:45:34.2525892+03:00 80000004-0000-fa00-b63f-84710c7967bb [INF] Request finished in 312.8591ms 200 text/css (791a596a)
+2020-06-02T10:45:34.2532651+03:00 80000012-0000-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/adminlte.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\adminlte.css"' (27b0a520)
+2020-06-02T10:45:34.2534000+03:00 80000012-0000-fd00-b63f-84710c7967bb [INF] Request finished in 329.1694ms 200 text/css (791a596a)
+2020-06-02T10:45:34.7025411+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/js/bootstrap.min.js   (ca22a1cb)
+2020-06-02T10:45:34.7035646+03:00 80000006-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/js/adminlte.min.js   (ca22a1cb)
+2020-06-02T10:45:34.7045897+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\js\bootstrap.min.js"' (27b0a520)
+2020-06-02T10:45:34.7047029+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Request finished in 2.2284ms 200 application/javascript (791a596a)
+2020-06-02T10:45:34.7049490+03:00 80000006-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/js/adminlte.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\js\adminlte.min.js"' (27b0a520)
+2020-06-02T10:45:34.7050337+03:00 80000006-0000-fa00-b63f-84710c7967bb [INF] Request finished in 1.5529ms 200 application/javascript (791a596a)
+2020-06-02T10:45:34.8417042+03:00 80000008-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/content/user2-160x160.jpg   (ca22a1cb)
+2020-06-02T10:45:34.8438423+03:00 80000008-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/content/user2-160x160.jpg"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\content\user2-160x160.jpg"' (27b0a520)
+2020-06-02T10:45:34.8439521+03:00 80000008-0000-fa00-b63f-84710c7967bb [INF] Request finished in 2.3237ms 200 image/jpeg (791a596a)
+2020-06-02T10:45:35.0679160+03:00 8000000a-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2020-06-02T10:45:35.1105477+03:00 8000000a-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2020-06-02T10:45:35.1106812+03:00 8000000a-0000-fa00-b63f-84710c7967bb [INF] Request finished in 42.8472ms 200 font/woff2 (791a596a)
+2020-06-02T10:45:35.6745999+03:00 8000000c-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/favicon.ico   (ca22a1cb)
+2020-06-02T10:45:35.7361722+03:00 8000000c-0002-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\favicon.ico"' (27b0a520)
+2020-06-02T10:45:35.7362927+03:00 8000000c-0002-fc00-b63f-84710c7967bb [INF] Request finished in 61.7582ms 200 image/x-icon (791a596a)
+2020-06-02T10:46:18.6593172+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/IssuedPdfs   (ca22a1cb)
+2020-06-02T10:46:18.6612084+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (500cc934)
+2020-06-02T10:46:18.6614311+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Route matched with "{action = \"IssuedPdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IssuedPdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:46:18.6617740+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:46:18.6627661+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:46:18.6698101+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:46:18.6751110+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND (`c.Invoice`.`Invoice_Type` = 'Issued')
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:46:18.6764350+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 14.4451ms. (50a9e262)
+2020-06-02T10:46:21.0893188+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executing ViewResult, running view "IssuedPdfs". (c83d0e25)
+2020-06-02T10:46:21.1525601+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executed ViewResult - view "IssuedPdfs" executed in 2475.7015ms. (f66409e9)
+2020-06-02T10:46:21.1530436+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.IssuedPdfs (MSensis)" in 2491.4864ms (afa2e885)
+2020-06-02T10:46:21.1531485+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.IssuedPdfs (MSensis)"' (99874f2b)
+2020-06-02T10:46:21.1533008+03:00 80000006-0003-f100-b63f-84710c7967bb [INF] Request finished in 2494.6739ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:46:21.3546377+03:00 80000008-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.min.js   (ca22a1cb)
+2020-06-02T10:46:21.3556270+03:00 8000000e-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/adminlte.css   (ca22a1cb)
+2020-06-02T10:46:21.3566571+03:00 80000006-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:46:21.3591610+03:00 80000006-0002-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css"' (27b0a520)
+2020-06-02T10:46:21.3592871+03:00 80000006-0002-fd00-b63f-84710c7967bb [INF] Request finished in 2.712ms 200 text/css (791a596a)
+2020-06-02T10:46:21.3618745+03:00 80000002-0002-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery-adaptive-background.js   (ca22a1cb)
+2020-06-02T10:46:21.3648076+03:00 80000002-0002-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery-adaptive-background.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery-adaptive-background.js"' (27b0a520)
+2020-06-02T10:46:21.3658790+03:00 80000002-0002-fa00-b63f-84710c7967bb [INF] Request finished in 4.0975ms 200 application/javascript (791a596a)
+2020-06-02T10:46:21.3666713+03:00 80000002-0002-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/morris.js/morris.css   (ca22a1cb)
+2020-06-02T10:46:21.3687378+03:00 80000002-0002-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/morris.js/morris.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\morris.js\morris.css"' (27b0a520)
+2020-06-02T10:46:21.3689126+03:00 80000002-0002-f900-b63f-84710c7967bb [INF] Request finished in 2.7997ms 200 text/css (791a596a)
+2020-06-02T10:46:21.3690927+03:00 80000002-0002-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/css/bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:46:21.3691887+03:00 80000002-0002-f700-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/css/font-awesome.min.css   (ca22a1cb)
+2020-06-02T10:46:21.3707542+03:00 80000002-0002-f700-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/css/font-awesome.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\css\font-awesome.min.css"' (27b0a520)
+2020-06-02T10:46:21.3708776+03:00 80000002-0002-f700-b63f-84710c7967bb [INF] Request finished in 1.7213ms 200 text/css (791a596a)
+2020-06-02T10:46:21.3709097+03:00 80000002-0002-f600-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/Ionicons/css/ionicons.min.css   (ca22a1cb)
+2020-06-02T10:46:21.3710785+03:00 80000008-0003-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/skins/skin-blue.min.css   (ca22a1cb)
+2020-06-02T10:46:21.3739298+03:00 80000002-0002-f600-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/Ionicons/css/ionicons.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\Ionicons\css\ionicons.min.css"' (27b0a520)
+2020-06-02T10:46:21.3742336+03:00 80000002-0002-f600-b63f-84710c7967bb [INF] Request finished in 3.3292ms 200 text/css (791a596a)
+2020-06-02T10:46:21.3745762+03:00 80000008-0003-f100-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/skins/skin-blue.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\skins\skin-blue.min.css"' (27b0a520)
+2020-06-02T10:46:21.3746809+03:00 80000008-0003-f100-b63f-84710c7967bb [INF] Request finished in 3.6262ms 200 text/css (791a596a)
+2020-06-02T10:46:21.4052124+03:00 80000002-0002-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.dataTables.min.js   (ca22a1cb)
+2020-06-02T10:46:21.4326311+03:00 80000008-0002-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.min.js"' (27b0a520)
+2020-06-02T10:46:21.4327543+03:00 80000002-0002-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2020-06-02T10:46:21.4327816+03:00 80000008-0002-fe00-b63f-84710c7967bb [INF] Request finished in 78.236ms 200 application/javascript (791a596a)
+2020-06-02T10:46:21.4328852+03:00 80000002-0002-f800-b63f-84710c7967bb [INF] Request finished in 63.905ms 200 text/css (791a596a)
+2020-06-02T10:46:21.4330205+03:00 8000000e-0002-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/adminlte.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\adminlte.css"' (27b0a520)
+2020-06-02T10:46:21.4332050+03:00 8000000e-0002-fc00-b63f-84710c7967bb [INF] Request finished in 77.564ms 200 text/css (791a596a)
+2020-06-02T10:46:21.4595719+03:00 80000002-0002-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.dataTables.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.dataTables.min.js"' (27b0a520)
+2020-06-02T10:46:21.4596865+03:00 80000002-0002-fb00-b63f-84710c7967bb [INF] Request finished in 54.5425ms 200 application/javascript (791a596a)
+2020-06-02T10:46:21.7809465+03:00 80000012-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/js/bootstrap.min.js   (ca22a1cb)
+2020-06-02T10:46:21.7821473+03:00 80000012-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\js\bootstrap.min.js"' (27b0a520)
+2020-06-02T10:46:21.7822663+03:00 80000012-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1.4803ms 200 application/javascript (791a596a)
+2020-06-02T10:46:21.8889131+03:00 80000014-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/js/adminlte.min.js   (ca22a1cb)
+2020-06-02T10:46:21.8901686+03:00 80000014-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/js/adminlte.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\js\adminlte.min.js"' (27b0a520)
+2020-06-02T10:46:21.8902871+03:00 80000014-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1.4382ms 200 application/javascript (791a596a)
+2020-06-02T10:46:21.9367123+03:00 80000004-0002-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/content/user2-160x160.jpg   (ca22a1cb)
+2020-06-02T10:46:21.9386558+03:00 80000004-0002-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/content/user2-160x160.jpg"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\content\user2-160x160.jpg"' (27b0a520)
+2020-06-02T10:46:21.9387690+03:00 80000004-0002-fb00-b63f-84710c7967bb [INF] Request finished in 2.1336ms 200 image/jpeg (791a596a)
+2020-06-02T10:46:22.3502967+03:00 8000000c-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2020-06-02T10:46:22.3929636+03:00 8000000c-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2020-06-02T10:46:22.3931513+03:00 8000000c-0000-fa00-b63f-84710c7967bb [INF] Request finished in 42.8629ms 200 font/woff2 (791a596a)
+2020-06-02T10:46:22.5547248+03:00 80000016-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2020-06-02T10:46:22.5605192+03:00 80000016-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2020-06-02T10:46:22.5606592+03:00 80000016-0001-fc00-b63f-84710c7967bb [INF] Request finished in 5.9921ms 200 font/woff2 (791a596a)
+2020-06-02T10:46:22.9035435+03:00 8000000e-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/favicon.ico   (ca22a1cb)
+2020-06-02T10:46:22.9046377+03:00 8000000e-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\favicon.ico"' (27b0a520)
+2020-06-02T10:46:22.9047736+03:00 8000000e-0000-fa00-b63f-84710c7967bb [INF] Request finished in 1.2866ms 200 image/x-icon (791a596a)
+2020-06-02T10:54:18.3197431+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/DraftPdfs   (ca22a1cb)
+2020-06-02T10:54:18.3278714+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.DraftPdfs (MSensis)"' (500cc934)
+2020-06-02T10:54:18.3467392+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"DraftPdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DraftPdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:54:18.3474974+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.DraftPdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:54:18.3582700+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:54:18.5690218+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:54:18.6836317+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND (`c.Invoice`.`Invoice_Type` = 'Draft')
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:54:18.6941556+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.DraftPdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 346.4568ms. (50a9e262)
+2020-06-02T10:54:18.7835622+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "DraftPdfs". (c83d0e25)
+2020-06-02T10:54:18.8968643+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "DraftPdfs" executed in 202.3191ms. (f66409e9)
+2020-06-02T10:54:18.8975675+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.DraftPdfs (MSensis)" in 550.3219ms (afa2e885)
+2020-06-02T10:54:18.8977135+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.DraftPdfs (MSensis)"' (99874f2b)
+2020-06-02T10:54:18.8980012+03:00 80000018-0001-fc00-b63f-84710c7967bb [INF] Request finished in 578.366ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:55:39.4847231+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/DraftPdfs   (ca22a1cb)
+2020-06-02T10:55:39.4867699+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.DraftPdfs (MSensis)"' (500cc934)
+2020-06-02T10:55:39.4870761+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Route matched with "{action = \"DraftPdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DraftPdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:55:39.4873697+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.DraftPdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:55:39.4884007+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:55:39.4946647+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-06-02T10:55:39.5009452+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`DateTimeString`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`Payment_Status`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND (`c.Invoice`.`Invoice_Type` = 'Draft')
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-06-02T10:55:39.5039495+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.DraftPdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 16.3921ms. (50a9e262)
+2020-06-02T10:55:41.0677573+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executing ViewResult, running view "DraftPdfs". (c83d0e25)
+2020-06-02T10:55:41.1817909+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executed ViewResult - view "DraftPdfs" executed in 1677.5977ms. (f66409e9)
+2020-06-02T10:55:41.1820575+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.DraftPdfs (MSensis)" in 1694.841ms (afa2e885)
+2020-06-02T10:55:41.1821961+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.DraftPdfs (MSensis)"' (99874f2b)
+2020-06-02T10:55:41.1823842+03:00 8000000a-0003-f100-b63f-84710c7967bb [INF] Request finished in 1697.8329ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:55:41.4863738+03:00 80000010-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/adminlte.css   (ca22a1cb)
+2020-06-02T10:55:41.5188551+03:00 80000010-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.dataTables.min.js   (ca22a1cb)
+2020-06-02T10:55:41.5200633+03:00 8000000a-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/morris.js/morris.css   (ca22a1cb)
+2020-06-02T10:55:41.5235654+03:00 8000000a-0002-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/morris.js/morris.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\morris.js\morris.css"' (27b0a520)
+2020-06-02T10:55:41.5238504+03:00 8000000a-0002-fe00-b63f-84710c7967bb [INF] Request finished in 3.6799ms 200 text/css (791a596a)
+2020-06-02T10:55:41.5243371+03:00 80000004-0002-f600-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/css/bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:55:41.5276726+03:00 80000004-0002-f700-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/css/font-awesome.min.css   (ca22a1cb)
+2020-06-02T10:55:41.5295543+03:00 80000004-0002-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/css/skins/skin-blue.min.css   (ca22a1cb)
+2020-06-02T10:55:41.5296135+03:00 80000004-0002-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/Ionicons/css/ionicons.min.css   (ca22a1cb)
+2020-06-02T10:55:41.5311028+03:00 80000010-0000-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/adminlte.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\adminlte.css"' (27b0a520)
+2020-06-02T10:55:41.5313094+03:00 80000010-0000-fa00-b63f-84710c7967bb [INF] Request finished in 45.0855ms 200 text/css (791a596a)
+2020-06-02T10:55:41.5317283+03:00 80000004-0002-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/Ionicons/css/ionicons.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\Ionicons\css\ionicons.min.css"' (27b0a520)
+2020-06-02T10:55:41.5319139+03:00 80000004-0002-fa00-b63f-84710c7967bb [INF] Request finished in 2.4331ms 200 text/css (791a596a)
+2020-06-02T10:55:41.5341751+03:00 80000004-0002-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/css/skins/skin-blue.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\css\skins\skin-blue.min.css"' (27b0a520)
+2020-06-02T10:55:41.5343137+03:00 80000004-0002-f900-b63f-84710c7967bb [INF] Request finished in 4.8446ms 200 text/css (791a596a)
+2020-06-02T10:55:41.5583808+03:00 80000004-0002-f700-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/css/font-awesome.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\css\font-awesome.min.css"' (27b0a520)
+2020-06-02T10:55:41.5586362+03:00 80000004-0002-f700-b63f-84710c7967bb [INF] Request finished in 31.0119ms 200 text/css (791a596a)
+2020-06-02T10:55:41.5591678+03:00 80000008-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css   (ca22a1cb)
+2020-06-02T10:55:41.5602025+03:00 80000008-0000-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css"' (27b0a520)
+2020-06-02T10:55:41.5603464+03:00 80000008-0000-f900-b63f-84710c7967bb [INF] Request finished in 1.2029ms 200 text/css (791a596a)
+2020-06-02T10:55:41.5606374+03:00 80000006-0002-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.min.js   (ca22a1cb)
+2020-06-02T10:55:41.5619177+03:00 80000004-0002-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery-adaptive-background.js   (ca22a1cb)
+2020-06-02T10:55:41.5630912+03:00 80000004-0002-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery-adaptive-background.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery-adaptive-background.js"' (27b0a520)
+2020-06-02T10:55:41.5632078+03:00 80000004-0002-f800-b63f-84710c7967bb [INF] Request finished in 1.3819ms 200 application/javascript (791a596a)
+2020-06-02T10:55:41.6022330+03:00 80000010-0002-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.dataTables.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.dataTables.min.js"' (27b0a520)
+2020-06-02T10:55:41.6024669+03:00 80000010-0002-fc00-b63f-84710c7967bb [INF] Request finished in 83.5778ms 200 application/javascript (791a596a)
+2020-06-02T10:55:41.6029821+03:00 80000004-0002-f600-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\css\bootstrap.min.css"' (27b0a520)
+2020-06-02T10:55:41.6031193+03:00 80000004-0002-f600-b63f-84710c7967bb [INF] Request finished in 78.9137ms 200 text/css (791a596a)
+2020-06-02T10:55:41.6035609+03:00 80000006-0002-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.min.js"' (27b0a520)
+2020-06-02T10:55:41.6036948+03:00 80000006-0002-fb00-b63f-84710c7967bb [INF] Request finished in 43.1026ms 200 application/javascript (791a596a)
+2020-06-02T10:55:42.0124034+03:00 8000000c-0003-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/js/bootstrap.min.js   (ca22a1cb)
+2020-06-02T10:55:42.0135300+03:00 8000000c-0003-f100-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\js\bootstrap.min.js"' (27b0a520)
+2020-06-02T10:55:42.0136886+03:00 8000000c-0003-f100-b63f-84710c7967bb [INF] Request finished in 1.314ms 200 application/javascript (791a596a)
+2020-06-02T10:55:42.1946361+03:00 8000001a-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/dist/js/adminlte.min.js   (ca22a1cb)
+2020-06-02T10:55:42.1961845+03:00 8000001a-0001-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/dist/js/adminlte.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\dist\js\adminlte.min.js"' (27b0a520)
+2020-06-02T10:55:42.1963052+03:00 8000001a-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1.8236ms 200 application/javascript (791a596a)
+2020-06-02T10:55:42.2044384+03:00 80000006-0001-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/content/user2-160x160.jpg   (ca22a1cb)
+2020-06-02T10:55:42.2062035+03:00 80000006-0001-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/content/user2-160x160.jpg"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\content\user2-160x160.jpg"' (27b0a520)
+2020-06-02T10:55:42.2063659+03:00 80000006-0001-f800-b63f-84710c7967bb [INF] Request finished in 1.9877ms 200 image/jpeg (791a596a)
+2020-06-02T10:55:42.4778621+03:00 80000006-0002-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2020-06-02T10:55:42.5356106+03:00 80000006-0002-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2020-06-02T10:55:42.5358739+03:00 80000006-0002-f800-b63f-84710c7967bb [INF] Request finished in 59.0251ms 200 font/woff2 (791a596a)
+2020-06-02T10:55:42.6649056+03:00 80000008-0002-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2020-06-02T10:55:42.6685178+03:00 80000008-0002-f800-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2020-06-02T10:55:42.6686764+03:00 80000008-0002-f800-b63f-84710c7967bb [INF] Request finished in 3.8377ms 200 font/woff2 (791a596a)
+2020-06-02T10:55:43.2296878+03:00 8000000a-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/favicon.ico   (ca22a1cb)
+2020-06-02T10:55:43.2312598+03:00 8000000a-0000-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\favicon.ico"' (27b0a520)
+2020-06-02T10:55:43.2313935+03:00 8000000a-0000-f900-b63f-84710c7967bb [INF] Request finished in 1.885ms 200 image/x-icon (791a596a)
+2020-06-02T10:55:51.7044111+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/Update_Invoice/17c423fb-4fd2-4b6f-8a7e-30b602edd2ee   (ca22a1cb)
+2020-06-02T10:55:51.7058954+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Update_Invoice (MSensis)"' (500cc934)
+2020-06-02T10:55:51.7158548+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"Update_Invoice\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Update_Invoice(System.String)" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-06-02T10:55:51.7165990+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Update_Invoice (MSensis)" - Validation state: Valid (dad538d7)
+2020-06-02T10:55:51.7195882+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-06-02T10:55:51.7797378+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='17c423fb-4fd2-4b6f-8a7e-30b602edd2ee' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`ClientId`, `c`.`Code`, `c`.`Comments`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`Description`, `c`.`Discount`, `c`.`IdentifierId`, `c`.`Invoice_Type`, `c`.`Number`, `c`.`Payment_Status`, `c`.`PriceAfterDiscount`, `c`.`PriceBeforeDiscount`, `c`.`PricePerUnit`, `c`.`Quantity`, `c`.`Timestamp`, `c`.`Vat`
+FROM `Invoices` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2020-06-02T10:55:51.7806369+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Update_Invoice (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 63.8713ms. (50a9e262)
+2020-06-02T10:55:51.8911389+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executing ViewResult, running view "Update_Invoice". (c83d0e25)
+2020-06-02T10:55:51.9365835+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executed ViewResult - view "Update_Invoice" executed in 155.7006ms. (f66409e9)
+2020-06-02T10:55:51.9368005+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Update_Invoice (MSensis)" in 220.8075ms (afa2e885)
+2020-06-02T10:55:51.9369678+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Update_Invoice (MSensis)"' (99874f2b)
+2020-06-02T10:55:51.9370900+03:00 8000000a-0002-f800-b63f-84710c7967bb [INF] Request finished in 232.8008ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-02T10:55:52.1509723+03:00 8000000e-0003-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/form.css   (ca22a1cb)
+2020-06-02T10:55:52.1818025+03:00 8000000e-0003-f100-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/form.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\form.css"' (27b0a520)
+2020-06-02T10:55:52.1819201+03:00 8000000e-0003-f100-b63f-84710c7967bb [INF] Request finished in 31.1115ms 200 text/css (791a596a)

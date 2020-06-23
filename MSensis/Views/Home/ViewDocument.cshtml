@@ -1,0 +1,129 @@
+﻿@using MSensis.ViewModels;
+
+@model PDFViewModel
+
+@{
+    ViewData["Title"] = "pdf";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/styles222.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
+</head>
+<br />
+
+@{ var date = DateTime.Now; }
+
+<div>
+      
+        <img src="~/content/@Url.Content(Model.Company.ImageSrc)" />
+   
+</div>
+<br />
+<br />
+<br />
+
+
+<table style="width:1247px;">
+    <tbody>
+        <tr>
+            <td style="width:638px;">Είδος Παραστατικού </td>
+            <td style="width:164px;">Αριθμος</td>
+            <td style="width:122px;">Ημερομηνία</td>
+            <td style="width:194px;">Ώρα</td>
+        </tr>
+        <tr>
+            <th style="width:638px;"><p>ΤΙΜΟΛΟΓΙΟ ΠΑΡΟΧΗΣ ΥΠΗΡΕΣΙΩΝ </p></th>
+
+            <th style="width:164px;"><p> <b>  Σειρά  </b></p></th>
+            <th style="width:122px;"> <p> <b> @date.ToShortDateString()</b></p> </th>
+            <th style="width:194px;"><p> <b> @date.Hour : @date.Second</b></p> </th>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<table style="width:747px;">
+    <tbody>
+        <tr style="height: 23px;">
+            <td style="width:738px; height: 23px;">Στοιχεία Πελάτη </td>
+        </tr>
+        <tr style="height: 23px;">
+            <th style="width:738px; height: 23px;">Όνομα : <b>  @Model.Client.CompanyName</b> </th>
+        </tr>
+        <tr style="height: 23px;">
+            <th style="width:738px; height: 23px;">Διεύθυνση : <b>  @Model.Client.Address </b></th>
+        </tr>
+        <tr style="height: 23px;">
+            <th style="width:738px; height: 23px;">Πόλη : <b>  @Model.Client.City</b> </th>
+        </tr>
+        <tr style="height: 23px;">
+            <th style="width:738px; height: 23px;">ΔΟΥ :  <b> @Model.Client.AFM </b></th>
+        </tr>
+        <tr style="height: 23px;">
+            <th style="width:738px; height: 23px;">ΑΦΜ :  <b> @Model.Client.AFM </b></th>
+        </tr>
+</table>
+
+<br />
+<br />
+
+<table style="width:1247px;">
+    <tbody>
+        <tr style="height:39px;">
+            <td style="width: 150px; height:34px;">Kωδικός</td>
+            <td style="width: 179px; height:34px;">Περιγραφή
+            <td>
+            <td style="width: 115px; height:34px;">M / M</td>
+            <td style="width: 115px; height:34px;">Ποσότητα</td>
+            <td style="width: 115px; height:34px;">Τιμή Μονάδος</td>
+            <td style="width: 115px; height:34px;">Αξία προ Έκτπωσης</td>
+            <td style="width: 115px; height:34px;">Αξία μετά Έκτπωσης</td>
+
+            <td style="width: 115px; height:34px;">ΦΠΑ%</td>
+        </tr>
+        <tr style="height: 39px;">
+            <th style="width: 150px; height: 39px;">@Model.Invoice.Comments</th>
+            <th style="width: 179px; height: 39px;">@Model.Invoice.Description</th>
+            <th style="width: 115px; height: 39px;">@Model.Invoice.Discount</th>
+            <th style="width: 115px; height: 39px;">@Model.Invoice.PriceAfterDiscount</th>
+            <th style="width: 115px; height: 39px;">@Model.Invoice.PriceAfterDiscount</th>
+            <th style="width: 115px; height: 39px;">@Model.Invoice.PricePerUnit</th>
+            <th style="width: 115px; height: 39px;">&nbsp;</th>
+            <th style="width: 115px; height: 39px;">&nbsp;</th>
+            <th style="width: 115px; height: 39px;">@Model.Invoice.Vat %</th>
+        </tr>
+        <tr style="height: 315px;">
+            <td style="width: 150px; height: 315px;">&nbsp;</td>
+            <td style="width: 179px; height: 315px;">&nbsp;</td>
+            <td style="width: 115px; height: 315px;">&nbsp;</td>
+            <td style="width: 93px; height: 315px;">&nbsp;</td>
+            <td style="width: 102px; height: 315px;">&nbsp;</td>
+            <td style="width: 69px; height: 315px;">&nbsp;</td>
+            <td style="width: 143px; height: 315px;">&nbsp;</td>
+            <td style="width: 129px; height: 315px;">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<table style="width: 518px;">
+    <tbody>
+        Comments :
+
+        <tr>
+            <td style="width: 158px; height: 19px;"> @Model.Invoice.Comments</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div align="center">
+    <a asp-action="CreatePDF" asp-controller="MSensis">
+
+
+    </a>
+
+</div>
+
+<script src="~/js/jquery.min.js"></script>

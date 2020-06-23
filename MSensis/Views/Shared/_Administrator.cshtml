@@ -1,0 +1,162 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+
+<title>Admin Panel</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="~/adminlte/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="~/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/jquery-adaptive-background.js"></script>
+    <link rel="stylesheet" href="~/bower_components/morris.js/morris.css">
+    <link rel="stylesheet" href="~/adminlte/components/jvectormap/jquery-jvectormap.css">
+
+
+    <link rel="stylesheet" href="~/adminlte/components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/adminlte/components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/adminlte/components/Ionicons/css/ionicons.min.css">
+    <script src="~/js/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" href="~/dist/css/skins/skin-blue.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+</head>
+
+
+
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <header class="main-header">
+
+            <a href="Home/Index" class="logo">
+
+                <span class="logo-mini"><b>AP</b>T</span>
+
+                <span class="logo-lg"><b>AdminPanel </b></span>
+            </a>
+
+            <nav class="navbar navbar-static-top" role="navigation">
+
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="~/content/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Hello @UserManager.GetUserName(User)!</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="~/content/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <p>
+                                        @UserManager.GetUserName(User)
+                                    </p>
+                                </li>
+                                <li class="user-footer">
+
+                                    <div class="pull-left">
+                                        <a href='@Url.Action("ListIndex", "Login")' class="btn btn-default btn-flat">Profile</a>
+
+                                    </div>
+                                    <div class="pull-right">
+                                        <form id="logoutForm" class="form-inline" asp-action="LogOut" asp-controller="Account">
+                                            <button id="logout" type="submit" class=btn btn-default btn-flat">Logout</button>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="~/content/user2-160x160.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p> @UserManager.GetUserName(User) </p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+
+            @Html.Partial("_MainMenu")
+
+
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            @RenderBody()
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+            <!-- Default to the left -->
+            <strong>Copyright © 2020 . MSensis.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+
+    <script src="~/adminlte/components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/adminlte/components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>$.widget.bridge('uibutton', $.ui.button);</script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Morris.js charts -->
+    <script src="~/adminlte/components/raphael/raphael.min.js"></script>
+    <script src="~/adminlte/components/morris.js/morris.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/adminlte/components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- jvectormap -->
+    <script src="~/adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/adminlte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="~/adminlte/components/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/adminlte/components/moment/min/moment.min.js"></script>
+    <script src="~/adminlte/components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- datepicker -->
+    <script src="~/adminlte/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="~/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+
+    <script src="~/adminlte/components/chart.js/Chart.js"></script>
+    <!-- Slimscroll -->
+    <script src="~/adminlte/components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/adminlte/components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/adminlte/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="~/adminlte/dist/js/pages/dashboard.js"></script>
+    <script src="~/adminlte/dist/js/pages/dashboard2.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/adminlte/dist/js/demo.js"></script>
+
+</body>

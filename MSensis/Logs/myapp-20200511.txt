@@ -1,0 +1,850 @@
+2020-05-11T11:37:16.8074484+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T11:37:17.7240682+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T11:37:17.8818128+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T11:37:17.9457789+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-05-11T11:37:17.9468688+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-05-11T11:37:17.9784148+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-05-11T11:37:18.4531083+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2020-05-11T11:37:18.4646601+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 571.2671ms (afa2e885)
+2020-05-11T11:37:18.4665930+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T11:37:18.6809941+03:00 8000005e-0000-ed00-b63f-84710c7967bb [INF] Request finished in 1952.6697ms 302  (791a596a)
+2020-05-11T11:37:19.2928829+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2020-05-11T11:37:19.3694809+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-05-11T11:37:20.1849629+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-05-11T11:37:22.4916345+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid (cd3ef7ec)
+2020-05-11T11:37:22.5616534+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-05-11T11:37:22.5841321+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executed handler method "OnGetAsync", returned result "". (90fdc39c)
+2020-05-11T11:37:22.5947557+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executing an implicit handler method - ModelState is Valid (232a55d1)
+2020-05-11T11:37:22.5950001+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (f857da66)
+2020-05-11T11:37:24.8004266+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 4615.1737ms (02e01280)
+2020-05-11T11:37:24.8006772+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-05-11T11:37:24.8367631+03:00 80000060-0000-ed00-b63f-84710c7967bb [INF] Request finished in 5543.8723ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T11:37:34.6785060+03:00 80000016-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/font-awesome.min.css   (ca22a1cb)
+2020-05-11T11:37:34.7015366+03:00 80000017-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/material-design-iconic-font.min.css   (ca22a1cb)
+2020-05-11T11:37:34.7316689+03:00 80000016-0001-f300-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/font-awesome.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\font-awesome.min.css"' (27b0a520)
+2020-05-11T11:37:34.7318118+03:00 80000016-0001-f300-b63f-84710c7967bb [INF] Request finished in 53.4223ms 200 text/css (791a596a)
+2020-05-11T11:37:34.8084289+03:00 80000017-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/material-design-iconic-font.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\material-design-iconic-font.min.css"' (27b0a520)
+2020-05-11T11:37:34.8120973+03:00 80000017-0002-f200-b63f-84710c7967bb [INF] Request finished in 111.0692ms 200 text/css (791a596a)
+2020-05-11T11:37:35.2909280+03:00 80000024-0003-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/daterangepicker.css   (ca22a1cb)
+2020-05-11T11:37:35.3202659+03:00 80000024-0003-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/daterangepicker.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\daterangepicker.css"' (27b0a520)
+2020-05-11T11:37:35.3210448+03:00 80000024-0003-fc00-b63f-84710c7967bb [INF] Request finished in 30.1903ms 200 text/css (791a596a)
+2020-05-11T11:37:35.3837577+03:00 80000019-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/main.min.css   (ca22a1cb)
+2020-05-11T11:37:35.4130641+03:00 80000019-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/css/main.min.css"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\css\main.min.css"' (27b0a520)
+2020-05-11T11:37:35.4131870+03:00 80000019-0002-f200-b63f-84710c7967bb [INF] Request finished in 29.5028ms 200 text/css (791a596a)
+2020-05-11T11:37:35.6429782+03:00 8000001b-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2020-05-11T11:37:35.7327768+03:00 8000001b-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2020-05-11T11:37:35.7329425+03:00 8000001b-0002-f200-b63f-84710c7967bb [INF] Request finished in 90.1271ms 200 application/javascript (791a596a)
+2020-05-11T11:37:36.5832963+03:00 8000001d-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2020-05-11T11:37:36.6490184+03:00 8000001d-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2020-05-11T11:37:36.6528959+03:00 8000001d-0002-f200-b63f-84710c7967bb [INF] Request finished in 66.3491ms 200 application/javascript (791a596a)
+2020-05-11T11:37:36.7433016+03:00 8000001f-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/select2.min.js   (ca22a1cb)
+2020-05-11T11:37:36.8578819+03:00 80000016-0002-f500-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/moment.min.js   (ca22a1cb)
+2020-05-11T11:37:36.9082339+03:00 8000001f-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/select2.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\select2.min.js"' (27b0a520)
+2020-05-11T11:37:36.9087298+03:00 8000001f-0002-f200-b63f-84710c7967bb [INF] Request finished in 165.383ms 200 application/javascript (791a596a)
+2020-05-11T11:37:37.0076492+03:00 80000016-0002-f500-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/moment.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\moment.min.js"' (27b0a520)
+2020-05-11T11:37:37.0079709+03:00 80000016-0002-f500-b63f-84710c7967bb [INF] Request finished in 150.0862ms 200 application/javascript (791a596a)
+2020-05-11T11:37:37.1109344+03:00 80000018-0002-f500-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/daterangepicker.js   (ca22a1cb)
+2020-05-11T11:37:37.2061697+03:00 80000018-0002-f500-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/daterangepicker.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\daterangepicker.js"' (27b0a520)
+2020-05-11T11:37:37.2065026+03:00 80000018-0002-f500-b63f-84710c7967bb [INF] Request finished in 95.5424ms 200 application/javascript (791a596a)
+2020-05-11T11:37:37.2540747+03:00 80000026-0003-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/global.js   (ca22a1cb)
+2020-05-11T11:37:37.2883747+03:00 80000026-0003-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/global.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\global.js"' (27b0a520)
+2020-05-11T11:37:37.2886087+03:00 80000026-0003-fc00-b63f-84710c7967bb [INF] Request finished in 34.7088ms 200 application/javascript (791a596a)
+2020-05-11T11:37:37.3016572+03:00 80000018-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/content/img_23-04-2020-15-12-31.png   (ca22a1cb)
+2020-05-11T11:37:37.3085505+03:00 80000018-0001-f300-b63f-84710c7967bb [INF] The file "/content/img_23-04-2020-15-12-31.png" was not modified (f1f8d725)
+2020-05-11T11:37:37.3113561+03:00 80000018-0001-f300-b63f-84710c7967bb [INF] Request finished in 9.715ms 304 image/png (791a596a)
+2020-05-11T11:39:43.3995048+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 264 (ca22a1cb)
+2020-05-11T11:39:43.4133738+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-05-11T11:39:43.4142696+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-05-11T11:39:43.5673291+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" - ModelState is Valid (cd3ef7ec)
+2020-05-11T11:39:44.4195002+03:00 80000028-0003-fc00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T11:39:44.4357077+03:00 80000028-0003-fc00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T11:39:44.7626284+03:00 80000028-0003-fc00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T11:39:44.9994009+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T11:39:47.9872562+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("470"ms) [Parameters=["@__normalizedUserName_0='ADMIN@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-05-11T11:39:49.1926273+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("43"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T11:39:49.3838484+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@__userId_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-05-11T11:39:49.4528588+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-05-11T11:39:49.4627293+03:00 80000028-0003-fc00-b63f-84710c7967bb [WRN] Info - Successful login for "admin@gmail.com" (2f0a74b7)
+2020-05-11T11:39:49.4872760+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (90fdc39c)
+2020-05-11T11:39:49.5103088+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-05-11T11:39:49.5225447+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 6108.0662ms (02e01280)
+2020-05-11T11:39:49.5263783+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-05-11T11:39:49.5391897+03:00 80000028-0003-fc00-b63f-84710c7967bb [INF] Request finished in 6140.1192ms 302  (791a596a)
+2020-05-11T11:39:49.5600038+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T11:39:49.5918650+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T11:39:49.5926569+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T11:39:49.5943547+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T11:39:49.6552820+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T11:39:49.6707407+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T11:39:49.7282614+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T11:39:49.7472048+03:00 8000001a-0002-f500-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T11:39:49.7874574+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 117.1089ms. (50a9e262)
+2020-05-11T11:39:49.9237819+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T11:39:50.2152820+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 401.7398ms. (f66409e9)
+2020-05-11T11:39:50.2174144+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 624.5447ms (afa2e885)
+2020-05-11T11:39:50.2176407+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T11:39:50.2188853+03:00 8000001a-0002-f500-b63f-84710c7967bb [INF] Request finished in 658.3814ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T11:40:04.3470767+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Identity/Account/Logout application/x-www-form-urlencoded 225 (ca22a1cb)
+2020-05-11T11:40:04.3494469+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Logout"' (500cc934)
+2020-05-11T11:40:04.4304377+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Logout\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Logout" (547e620f)
+2020-05-11T11:40:04.4385836+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LogoutModel.OnPost" - ModelState is Valid (cd3ef7ec)
+2020-05-11T11:40:04.4494830+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2020-05-11T11:40:04.4501672+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-05-11T11:40:04.4506163+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2020-05-11T11:40:04.4510866+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] User logged out. (f9c27106)
+2020-05-11T11:40:04.4513582+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Executed handler method "OnPost", returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (90fdc39c)
+2020-05-11T11:40:04.4993087+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Executed page "/Account/Logout" in 68.6866ms (02e01280)
+2020-05-11T11:40:04.4994596+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Logout"' (99874f2b)
+2020-05-11T11:40:04.5000011+03:00 80000062-0000-ed00-b63f-84710c7967bb [INF] Request finished in 153.2627ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T11:40:07.9573616+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Account/LogOut application/x-www-form-urlencoded 225 (ca22a1cb)
+2020-05-11T11:40:07.9577538+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.AccountController.LogOut (MSensis)"' (500cc934)
+2020-05-11T11:40:07.9820395+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Route matched with "{action = \"LogOut\", controller = \"Account\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogOut()" on controller "MSensis.Controllers.AccountController" ("MSensis"). (122b2fdf)
+2020-05-11T11:40:07.9893719+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.AccountController.LogOut (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T11:40:07.9925798+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2020-05-11T11:40:07.9928967+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-05-11T11:40:07.9932168+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2020-05-11T11:40:07.9936556+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] User logged out. (f9c27106)
+2020-05-11T11:40:07.9941041+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.AccountController.LogOut (MSensis)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 4.5082ms. (50a9e262)
+2020-05-11T11:40:07.9953578+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-05-11T11:40:07.9955993+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.AccountController.LogOut (MSensis)" in 13.0908ms (afa2e885)
+2020-05-11T11:40:07.9956953+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.AccountController.LogOut (MSensis)"' (99874f2b)
+2020-05-11T11:40:07.9975793+03:00 8000001c-0002-f500-b63f-84710c7967bb [INF] Request finished in 39.9755ms 302  (791a596a)
+2020-05-11T11:40:08.0121319+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T11:40:08.0131722+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T11:40:08.0135783+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T11:40:08.0138050+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-05-11T11:40:08.0139560+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-05-11T11:40:08.0142983+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-05-11T11:40:08.0146529+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2020-05-11T11:40:08.0147993+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 1.0893ms (afa2e885)
+2020-05-11T11:40:08.0151002+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T11:40:08.0158128+03:00 8000001a-0001-f300-b63f-84710c7967bb [INF] Request finished in 3.7181ms 302  (791a596a)
+2020-05-11T11:40:08.0361117+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2020-05-11T11:40:08.0367442+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-05-11T11:40:08.0370042+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-05-11T11:40:08.0378221+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid (cd3ef7ec)
+2020-05-11T11:40:08.0381869+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-05-11T11:40:08.0384583+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executed handler method "OnGetAsync", returned result "". (90fdc39c)
+2020-05-11T11:40:08.0385914+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executing an implicit handler method - ModelState is Valid (232a55d1)
+2020-05-11T11:40:08.0386674+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (f857da66)
+2020-05-11T11:40:08.0467610+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 9.5828ms (02e01280)
+2020-05-11T11:40:08.0469066+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-05-11T11:40:08.0470435+03:00 8000001c-0001-f300-b63f-84710c7967bb [INF] Request finished in 11.005ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T11:40:50.2522659+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 264 (ca22a1cb)
+2020-05-11T11:40:50.2526618+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-05-11T11:40:50.2528476+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-05-11T11:40:50.2550367+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" - ModelState is Valid (cd3ef7ec)
+2020-05-11T11:40:50.2652354+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T11:40:50.2705238+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='ADMIN@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-05-11T11:40:50.3002664+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T11:40:50.3049464+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-05-11T11:40:50.3064253+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-05-11T11:40:50.3066422+03:00 8000001e-0002-f500-b63f-84710c7967bb [WRN] Info - Successful login for "admin@gmail.com" (2f0a74b7)
+2020-05-11T11:40:50.3069749+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (90fdc39c)
+2020-05-11T11:40:50.3073652+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-05-11T11:40:50.3089253+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 55.7404ms (02e01280)
+2020-05-11T11:40:50.3091426+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-05-11T11:40:50.3104719+03:00 8000001e-0002-f500-b63f-84710c7967bb [INF] Request finished in 58.1159ms 302  (791a596a)
+2020-05-11T11:40:50.3677139+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T11:40:50.3697002+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T11:40:50.3699935+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T11:40:50.3702003+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T11:40:50.3706451+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T11:40:50.3715025+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T11:40:50.3855136+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T11:40:50.3867951+03:00 8000001e-0001-f300-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T11:40:50.3871056+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 16.3145ms. (50a9e262)
+2020-05-11T11:40:50.3879240+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T11:41:12.0296230+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 21641.9078ms. (f66409e9)
+2020-05-11T11:41:12.0299886+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 21659.8597ms (afa2e885)
+2020-05-11T11:41:12.0301388+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T11:41:12.0308855+03:00 8000001e-0001-f300-b63f-84710c7967bb [INF] Request finished in 21663.1412ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T11:42:02.7238525+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T11:42:02.7271307+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T11:42:02.7274152+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T11:42:02.7277614+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T11:42:02.7280405+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T11:42:02.7293798+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T11:42:02.7452580+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T11:42:02.7458543+03:00 8000002a-0003-fc00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T11:42:02.7460885+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 17.863ms. (50a9e262)
+2020-05-11T11:42:02.7463665+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T11:42:02.7491597+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 2.8618ms. (f66409e9)
+2020-05-11T11:42:02.7493968+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 21.7369ms (afa2e885)
+2020-05-11T11:42:02.7495008+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T11:42:02.7500196+03:00 8000002a-0003-fc00-b63f-84710c7967bb [INF] Request finished in 31.0147ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:11:19.1268740+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:11:19.9427357+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:11:20.0905840+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:11:20.1451747+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:11:21.3036995+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:11:22.4905684+03:00 80000064-0000-ed00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T12:11:22.5230536+03:00 80000064-0000-ed00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T12:11:23.0990296+03:00 80000064-0000-ed00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T12:11:23.6588737+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:11:29.5062998+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("1,142"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:11:30.8772567+03:00 80000064-0000-ed00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:11:30.9480022+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 9619.2224ms. (50a9e262)
+2020-05-11T12:11:31.0980976+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:11:32.4900865+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1430.6513ms. (f66409e9)
+2020-05-11T12:11:32.5093550+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 12418.0604ms (afa2e885)
+2020-05-11T12:11:32.5196220+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:11:32.6101705+03:00 80000064-0000-ed00-b63f-84710c7967bb [INF] Request finished in 13531.0589ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:12:06.7910573+03:00 80000025-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/gr   (ca22a1cb)
+2020-05-11T12:12:06.8191251+03:00 80000025-0003-f900-b63f-84710c7967bb [INF] Request finished in 28.0254ms 404  (791a596a)
+2020-05-11T12:12:09.2686154+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:12:09.2701990+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:12:09.2712069+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:12:09.2722915+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:12:09.2746460+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:12:09.2771038+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:12:09.4281549+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:12:09.4307754+03:00 80000066-0000-ed00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:12:09.4311944+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 156.2119ms. (50a9e262)
+2020-05-11T12:12:09.4330604+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:12:09.4451042+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 12.5768ms. (f66409e9)
+2020-05-11T12:12:09.4457597+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 174.3114ms (afa2e885)
+2020-05-11T12:12:09.4458918+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:12:09.4464784+03:00 80000066-0000-ed00-b63f-84710c7967bb [INF] Request finished in 177.9506ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:13:17.6223986+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:13:17.6240615+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:13:17.6243763+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:13:17.6245429+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:13:17.6252711+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:13:17.6263141+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:13:17.7107066+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executed DbCommand ("40"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:13:17.7112620+03:00 80000020-0001-f300-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:13:17.7113949+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 86.0147ms. (50a9e262)
+2020-05-11T12:13:17.7115940+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:13:29.7595519+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 12047.9057ms. (f66409e9)
+2020-05-11T12:13:29.7601520+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 12135.294ms (afa2e885)
+2020-05-11T12:13:29.7603554+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:13:29.7606374+03:00 80000020-0001-f300-b63f-84710c7967bb [INF] Request finished in 12138.7962ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:13:31.3617366+03:00 80000027-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/favicon.ico   (ca22a1cb)
+2020-05-11T12:13:31.4579692+03:00 80000027-0003-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\favicon.ico"' (27b0a520)
+2020-05-11T12:13:31.4584331+03:00 80000027-0003-f900-b63f-84710c7967bb [INF] Request finished in 96.6853ms 200 image/x-icon (791a596a)
+2020-05-11T12:15:29.4429379+03:00 80000022-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/gr   (ca22a1cb)
+2020-05-11T12:15:29.4493912+03:00 80000022-0001-f300-b63f-84710c7967bb [INF] Request finished in 6.4722ms 404  (791a596a)
+2020-05-11T12:15:32.0067399+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:15:32.0080374+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:15:32.0084732+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:15:32.0086969+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:15:32.0094316+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:15:32.0102121+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:15:32.0702036+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("29"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:15:32.0709133+03:00 80000068-0000-ed00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:15:32.0712580+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 61.6181ms. (50a9e262)
+2020-05-11T12:15:32.0716119+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:15:32.0773454+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 5.7726ms. (f66409e9)
+2020-05-11T12:15:32.0776546+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 69.0457ms (afa2e885)
+2020-05-11T12:15:32.0783915+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:15:32.0796901+03:00 80000068-0000-ed00-b63f-84710c7967bb [INF] Request finished in 72.953ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:15:37.3814920+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:15:37.3829332+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:15:37.3831974+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:15:37.3833505+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:15:37.3839233+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:15:37.3848219+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:15:37.4009221+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:15:37.4014398+03:00 80000024-0001-f300-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:15:37.4016580+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 17.5352ms. (50a9e262)
+2020-05-11T12:15:37.4018662+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:15:37.4071151+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 3.477ms. (f66409e9)
+2020-05-11T12:15:37.4084643+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 25.0158ms (afa2e885)
+2020-05-11T12:15:37.4087933+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:15:37.4090501+03:00 80000024-0001-f300-b63f-84710c7967bb [INF] Request finished in 27.6437ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:15:40.7422166+03:00 80000029-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/gr   (ca22a1cb)
+2020-05-11T12:15:40.7448928+03:00 80000029-0003-f900-b63f-84710c7967bb [INF] Request finished in 2.7374ms 404  (791a596a)
+2020-05-11T12:15:43.5341260+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:15:43.5389870+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:15:43.5394195+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:15:43.5396310+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:15:43.5402536+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:15:43.5409638+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:15:43.5461757+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:15:43.5469287+03:00 8000002b-0003-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:15:43.5472528+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 6.7651ms. (50a9e262)
+2020-05-11T12:15:43.5475702+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:15:43.5524410+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 4.9299ms. (f66409e9)
+2020-05-11T12:15:43.5529573+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 13.2727ms (afa2e885)
+2020-05-11T12:15:43.5531279+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:15:43.5532880+03:00 8000002b-0003-f900-b63f-84710c7967bb [INF] Request finished in 19.2699ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:18:24.3686444+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:18:24.9166569+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:18:25.0595374+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:18:25.1791435+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:18:26.4796902+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:18:27.5471715+03:00 80000035-0001-fa00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T12:18:27.5832725+03:00 80000035-0001-fa00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T12:18:28.2102254+03:00 80000035-0001-fa00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T12:18:28.6217786+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:18:32.8632548+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("501"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:18:33.7040535+03:00 80000035-0001-fa00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:18:33.7563821+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 7246.7321ms. (50a9e262)
+2020-05-11T12:18:34.0407833+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:18:35.5487044+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1648.1081ms. (f66409e9)
+2020-05-11T12:18:35.5679710+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 10507.6599ms (afa2e885)
+2020-05-11T12:18:35.5713184+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:18:35.6644670+03:00 80000035-0001-fa00-b63f-84710c7967bb [INF] Request finished in 11338.2143ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:19:29.8186415+03:00 80000037-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/nl   (ca22a1cb)
+2020-05-11T12:19:29.8471746+03:00 80000037-0001-fa00-b63f-84710c7967bb [INF] Request finished in 28.5385ms 404  (791a596a)
+2020-05-11T12:19:32.3841146+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:19:32.3857360+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:19:32.3866765+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:19:32.3875929+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:19:32.3975193+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:19:32.4001526+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:19:32.6128718+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executed DbCommand ("70"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:19:32.6155380+03:00 80000033-0003-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:19:32.6161817+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 218.3662ms. (50a9e262)
+2020-05-11T12:19:32.6172046+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:19:32.6333166+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 16.5133ms. (f66409e9)
+2020-05-11T12:19:32.6339073+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 247.0681ms (afa2e885)
+2020-05-11T12:19:32.6340545+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:19:32.6414032+03:00 80000033-0003-f900-b63f-84710c7967bb [INF] Request finished in 257.3706ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:19:35.3002619+03:00 80000035-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/hu   (ca22a1cb)
+2020-05-11T12:19:35.3075628+03:00 80000035-0003-f900-b63f-84710c7967bb [INF] Request finished in 7.2036ms 404  (791a596a)
+2020-05-11T12:19:37.4481434+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:19:37.4528527+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:19:37.4531240+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:19:37.4533049+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:19:37.4542873+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:19:37.4556732+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:19:37.5559515+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executed DbCommand ("43"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:19:37.5568099+03:00 80000037-0003-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:19:37.5570509+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 102.5948ms. (50a9e262)
+2020-05-11T12:19:37.5573000+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:19:37.5604232+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 3.1205ms. (f66409e9)
+2020-05-11T12:19:37.5613104+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 107.988ms (afa2e885)
+2020-05-11T12:19:37.5615610+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:19:37.5625808+03:00 80000037-0003-f900-b63f-84710c7967bb [INF] Request finished in 114.4789ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:24:46.6149806+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:24:47.2258478+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:24:47.3202136+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:24:47.3678616+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:24:48.2295700+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:24:49.0242044+03:00 80000073-0000-ed00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T12:24:49.0616162+03:00 80000073-0000-ed00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T12:24:49.9258793+03:00 80000073-0000-ed00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T12:24:50.4105982+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:24:55.8536523+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("960"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:24:57.0337879+03:00 80000073-0000-ed00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:24:57.0798308+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 8823.0051ms. (50a9e262)
+2020-05-11T12:24:57.3408517+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:24:58.7917091+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1587.6936ms. (f66409e9)
+2020-05-11T12:24:58.8168606+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 11495.906ms (afa2e885)
+2020-05-11T12:24:58.8214064+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:24:58.9855334+03:00 80000073-0000-ed00-b63f-84710c7967bb [INF] Request finished in 12398.0381ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:25:13.3477275+03:00 80000039-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/fr   (ca22a1cb)
+2020-05-11T12:25:13.3772307+03:00 80000039-0003-f900-b63f-84710c7967bb [INF] Request finished in 29.7873ms 404  (791a596a)
+2020-05-11T12:48:43.9622372+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2020-05-11T12:48:43.9717761+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-05-11T12:48:44.1259486+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-05-11T12:48:44.2090380+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid (cd3ef7ec)
+2020-05-11T12:48:44.2328665+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-05-11T12:48:44.2427065+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executed handler method "OnGetAsync", returned result "". (90fdc39c)
+2020-05-11T12:48:44.2551931+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executing an implicit handler method - ModelState is Valid (232a55d1)
+2020-05-11T12:48:44.2554081+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (f857da66)
+2020-05-11T12:48:44.6559748+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 529.6615ms (02e01280)
+2020-05-11T12:48:44.6569738+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-05-11T12:48:44.6573395+03:00 8000003b-0003-f900-b63f-84710c7967bb [INF] Request finished in 695.6483ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T12:48:48.1503395+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T12:48:48.1523942+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T12:48:48.1542218+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T12:48:48.1562921+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T12:48:48.1574941+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T12:48:48.1632064+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T12:48:48.4638417+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executed DbCommand ("39"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T12:48:48.4660857+03:00 8000003d-0003-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T12:48:48.4664794+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 308.6957ms. (50a9e262)
+2020-05-11T12:48:48.4706013+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T12:48:48.4817870+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 14.6207ms. (f66409e9)
+2020-05-11T12:48:48.4822627+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 327.8092ms (afa2e885)
+2020-05-11T12:48:48.4824346+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T12:48:48.4829395+03:00 8000003d-0003-f900-b63f-84710c7967bb [INF] Request finished in 332.7411ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T14:10:37.5257944+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T14:10:38.0243502+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T14:10:38.3508445+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T14:10:38.4316157+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T14:10:40.0777797+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T14:10:41.3094141+03:00 80000093-0003-fb00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T14:10:41.3392920+03:00 80000093-0003-fb00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T14:10:41.9278146+03:00 80000093-0003-fb00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T14:10:42.5081286+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T14:10:47.0504638+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("632"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T14:10:47.8001573+03:00 80000093-0003-fb00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T14:10:47.8308376+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 7735.2371ms. (50a9e262)
+2020-05-11T14:10:48.1009219+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T14:10:49.4355298+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1530.1598ms. (f66409e9)
+2020-05-11T14:10:49.4488879+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 11096.1497ms (afa2e885)
+2020-05-11T14:10:49.4533731+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T14:10:49.5671311+03:00 80000093-0003-fb00-b63f-84710c7967bb [INF] Request finished in 12069.7564ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T14:16:12.5978321+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T14:16:12.6088536+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T14:16:12.6098240+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T14:16:12.6115109+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T14:16:12.6219851+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T14:16:12.6284118+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T14:16:13.0921549+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("84"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T14:16:13.1277042+03:00 80000095-0003-fb00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T14:16:13.1280441+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 505.8531ms. (50a9e262)
+2020-05-11T14:16:13.1294324+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T14:16:41.6755865+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 28546.5713ms. (f66409e9)
+2020-05-11T14:16:41.6776283+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 29067.6104ms (afa2e885)
+2020-05-11T14:16:41.6777795+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T14:16:41.6782242+03:00 80000095-0003-fb00-b63f-84710c7967bb [INF] Request finished in 29080.6649ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T14:17:27.5345608+03:00 80000025-0002-f400-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/favicon.ico   (ca22a1cb)
+2020-05-11T14:17:27.6127755+03:00 80000025-0002-f400-b63f-84710c7967bb [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\favicon.ico"' (27b0a520)
+2020-05-11T14:17:27.6129666+03:00 80000025-0002-f400-b63f-84710c7967bb [INF] Request finished in 78.5183ms 200 image/x-icon (791a596a)
+2020-05-11T15:37:58.1957491+03:00 8000007e-0000-ed00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T15:38:00.2517358+03:00 8000007e-0000-ed00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T15:38:00.2862608+03:00 8000007e-0000-ed00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T15:38:00.7753123+03:00 8000007e-0000-ed00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T15:38:01.2151289+03:00 8000007e-0000-ed00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T15:38:04.9898319+03:00 8000007e-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("544"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T15:38:06.3003403+03:00 8000007e-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("37"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T15:38:06.6289024+03:00 8000007e-0000-ed00-b63f-84710c7967bb [INF] Executed DbCommand ("29"ms) [Parameters=["@__userId_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-05-11T15:38:06.9366322+03:00 8000007e-0000-ed00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSensis.Startup.JsonRequestCultureProvider.DetermineProviderCultureResult(HttpContext httpContext) in C:\Users\User\source\repos\MSensis\MSensis\Startup.cs:line 133
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-11T15:38:07.3571787+03:00 8000007e-0000-ed00-b63f-84710c7967bb [INF] Request finished in 9221.6024ms 500 text/html; charset=utf-8 (791a596a)
+2020-05-11T15:40:36.4885836+03:00 80000026-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T15:40:37.9707120+03:00 80000026-0002-f200-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MSensis.Startup.JsonRequestCultureProvider.DetermineProviderCultureResult(HttpContext httpContext) in C:\Users\User\source\repos\MSensis\MSensis\Startup.cs:line 133
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-11T15:40:38.7250174+03:00 80000026-0002-f200-b63f-84710c7967bb [INF] Request finished in 2235.0629ms 500 text/html; charset=utf-8 (791a596a)
+2020-05-11T15:56:05.4750478+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T15:56:06.2721743+03:00 80000069-0001-f900-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T15:56:06.2728168+03:00 80000069-0001-f900-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T15:56:06.5567300+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T15:56:06.6451128+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T15:56:06.7098404+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T15:56:06.7842579+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T15:56:07.6474877+03:00 80000069-0001-f900-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T15:56:07.7163573+03:00 80000069-0001-f900-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-05-11T15:56:08.2674905+03:00 80000069-0001-f900-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-05-11T15:56:08.6641930+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T15:56:12.5539047+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executed DbCommand ("496"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T15:56:13.4401865+03:00 80000069-0001-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T15:56:13.4842377+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 6679.6656ms. (50a9e262)
+2020-05-11T15:56:13.7348668+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T15:56:15.0100220+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1400.7073ms. (f66409e9)
+2020-05-11T15:56:15.0300338+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 8384.2149ms (afa2e885)
+2020-05-11T15:56:15.0352915+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T15:56:15.1105814+03:00 80000069-0001-f900-b63f-84710c7967bb [INF] Request finished in 9638.157ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T16:09:25.7170884+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/Administrator2   (ca22a1cb)
+2020-05-11T16:09:25.7428814+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T16:09:26.1605083+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("141"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T16:09:26.6969643+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T16:09:26.8828679+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-05-11T16:09:26.9387316+03:00 8000007e-0003-ff00-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T16:09:26.9390537+03:00 8000007e-0003-ff00-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T16:09:26.9565158+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Administrator2 (MSensis)"' (500cc934)
+2020-05-11T16:09:26.9820888+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Administrator2\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Administrator2()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T16:09:26.9880384+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Administrator2 (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T16:09:27.1118190+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T16:09:27.4763096+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`IdentifierId`, `c`.`Timestamp`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T16:09:27.6145188+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T16:09:27.7875186+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Administrator2 (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 799.2176ms. (50a9e262)
+2020-05-11T16:09:27.8858273+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Administrator2". (c83d0e25)
+2020-05-11T16:09:28.1958963+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "Administrator2" executed in 392.9306ms. (f66409e9)
+2020-05-11T16:09:28.1971430+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Administrator2 (MSensis)" in 1214.8536ms (afa2e885)
+2020-05-11T16:09:28.1972649+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Administrator2 (MSensis)"' (99874f2b)
+2020-05-11T16:09:28.1977192+03:00 8000007e-0003-ff00-b63f-84710c7967bb [INF] Request finished in 2480.8509ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T16:09:28.8916852+03:00 80000028-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/raphael.min.js   (ca22a1cb)
+2020-05-11T16:09:29.1709935+03:00 8000003b-0000-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/morris.min.js   (ca22a1cb)
+2020-05-11T16:09:29.4040700+03:00 8000003b-0000-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/morris.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\morris.min.js"' (27b0a520)
+2020-05-11T16:09:29.4044697+03:00 8000003b-0000-f200-b63f-84710c7967bb [INF] Request finished in 233.3383ms 200 application/javascript (791a596a)
+2020-05-11T16:09:29.4304091+03:00 8000006b-0001-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/content/user2-160x160.jpg   (ca22a1cb)
+2020-05-11T16:09:29.4374924+03:00 8000006b-0001-f900-b63f-84710c7967bb [INF] The file "/content/user2-160x160.jpg" was not modified (f1f8d725)
+2020-05-11T16:09:29.4411298+03:00 80000028-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/raphael.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\raphael.min.js"' (27b0a520)
+2020-05-11T16:09:29.4412869+03:00 80000028-0002-f200-b63f-84710c7967bb [INF] Request finished in 549.732ms 200 application/javascript (791a596a)
+2020-05-11T16:09:29.4444776+03:00 8000006b-0001-f900-b63f-84710c7967bb [INF] Request finished in 14.1987ms 304 image/jpeg (791a596a)
+2020-05-11T16:09:30.3615803+03:00 8000002a-0002-f200-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components2/Ionicons/fonts/ionicons.ttf?v=2.0.0   (ca22a1cb)
+2020-05-11T16:09:30.4472667+03:00 8000002a-0002-f200-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components2/Ionicons/fonts/ionicons.ttf"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components2\Ionicons\fonts\ionicons.ttf"' (27b0a520)
+2020-05-11T16:09:30.4479283+03:00 8000002a-0002-f200-b63f-84710c7967bb [INF] Request finished in 85.9511ms 200 application/x-font-ttf (791a596a)
+2020-05-11T17:34:14.4761417+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T17:34:14.7643009+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:34:16.0328689+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("130"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T17:34:16.8680747+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("35"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:34:17.1662647+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("50"ms) [Parameters=["@__userId_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-05-11T17:34:17.3774142+03:00 8000006b-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:34:17.3785316+03:00 8000006b-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:34:17.5603178+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T17:34:17.6209125+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T17:34:17.6754382+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T17:34:17.7499799+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:34:17.7627446+03:00 8000006b-0000-f100-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T17:34:17.8459673+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 13.5417ms. (50a9e262)
+2020-05-11T17:34:17.9734718+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T17:34:18.7085412+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 804.3037ms. (f66409e9)
+2020-05-11T17:34:18.7102008+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 1088.5945ms (afa2e885)
+2020-05-11T17:34:18.7103285+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T17:34:18.7562846+03:00 8000006b-0000-f100-b63f-84710c7967bb [INF] Request finished in 4319.9224ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:34:22.9178987+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/Administrator2   (ca22a1cb)
+2020-05-11T17:34:22.9246177+03:00 8000009e-0003-fb00-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:34:22.9247899+03:00 8000009e-0003-fb00-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:34:22.9373062+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Administrator2 (MSensis)"' (500cc934)
+2020-05-11T17:34:22.9632243+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Administrator2\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Administrator2()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T17:34:22.9657233+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Administrator2 (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:34:22.9883642+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:34:22.9970347+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T17:34:23.1328850+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:34:23.4168736+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`IdentifierId`, `c`.`Timestamp`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:34:23.5257423+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:34:23.6933022+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Administrator2 (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 726.594ms. (50a9e262)
+2020-05-11T17:34:23.8206755+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Administrator2". (c83d0e25)
+2020-05-11T17:34:24.1181411+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Administrator2" executed in 383.7944ms. (f66409e9)
+2020-05-11T17:34:24.1275389+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Administrator2 (MSensis)" in 1162.6581ms (afa2e885)
+2020-05-11T17:34:24.1427084+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Administrator2 (MSensis)"' (99874f2b)
+2020-05-11T17:34:24.1734055+03:00 8000009e-0003-fb00-b63f-84710c7967bb [INF] Request finished in 1255.8363ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:34:35.8442286+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/ManagePdfs   (ca22a1cb)
+2020-05-11T17:34:35.8460199+03:00 8000006e-0001-f900-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:34:35.8461400+03:00 8000006e-0001-f900-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:34:35.8847683+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.ManagePdfs (MSensis)"' (500cc934)
+2020-05-11T17:34:35.9097906+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"ManagePdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ManagePdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T17:34:35.9100586+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.ManagePdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:34:35.9267881+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:34:35.9329383+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T17:34:36.3781348+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executed DbCommand ("22"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`IdentifierId`, `c`.`Timestamp`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE `c`.`UserId` = @__user_Id_0
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-05-11T17:34:36.6200069+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.ManagePdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 709.7499ms. (50a9e262)
+2020-05-11T17:34:36.7412081+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "ManagePdfs". (c83d0e25)
+2020-05-11T17:34:37.0620443+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "ManagePdfs" executed in 441.4304ms. (f66409e9)
+2020-05-11T17:34:37.0638804+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.ManagePdfs (MSensis)" in 1153.4024ms (afa2e885)
+2020-05-11T17:34:37.0677392+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.ManagePdfs (MSensis)"' (99874f2b)
+2020-05-11T17:34:37.0680015+03:00 8000006e-0001-f900-b63f-84710c7967bb [INF] Request finished in 1224.1262ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:34:37.4140677+03:00 80000070-0001-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/jquery.dataTables.min.js   (ca22a1cb)
+2020-05-11T17:34:37.4542051+03:00 8000004f-0001-f400-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/js/dataTables.bootstrap.min.js   (ca22a1cb)
+2020-05-11T17:34:37.5512899+03:00 8000004f-0001-f400-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/dataTables.bootstrap.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\dataTables.bootstrap.min.js"' (27b0a520)
+2020-05-11T17:34:37.5515402+03:00 8000004f-0001-f400-b63f-84710c7967bb [INF] Request finished in 97.3491ms 200 application/javascript (791a596a)
+2020-05-11T17:34:37.6926193+03:00 80000070-0001-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/jquery.dataTables.min.js"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\js\jquery.dataTables.min.js"' (27b0a520)
+2020-05-11T17:34:37.6928073+03:00 80000070-0001-f900-b63f-84710c7967bb [INF] Request finished in 278.8583ms 200 application/javascript (791a596a)
+2020-05-11T17:34:38.4597608+03:00 80000028-0002-f400-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/bower_components2/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2020-05-11T17:34:38.4931095+03:00 80000028-0002-f400-b63f-84710c7967bb [INF] Sending file. Request path: '"/bower_components2/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\User\source\repos\MSensis\MSensis\wwwroot\bower_components2\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2020-05-11T17:34:38.4933077+03:00 80000028-0002-f400-b63f-84710c7967bb [INF] Request finished in 33.6176ms 200 font/woff2 (791a596a)
+2020-05-11T17:34:40.5610605+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/api/MSensis/CreatePDF?id=12afa33d-d4d6-4cd9-9351-320f4f3fde80   (ca22a1cb)
+2020-05-11T17:34:40.5694366+03:00 8000006d-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:34:40.5695763+03:00 8000006d-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:34:40.5698866+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.MSensisController.CreatePDF (MSensis)"' (500cc934)
+2020-05-11T17:34:40.6418350+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Route matched with "{action = \"CreatePDF\", controller = \"MSensis\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePDF(System.String)" on controller "MSensis.Controllers.MSensisController" ("MSensis"). (122b2fdf)
+2020-05-11T17:34:40.6935139+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.MSensisController.CreatePDF (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:34:40.7592119+03:00 8000006d-0000-f100-b63f-84710c7967bb [WRN] https://www.google.com (9824a03f)
+2020-05-11T17:34:40.7612644+03:00 8000006d-0000-f100-b63f-84710c7967bb [WRN] /api/MSensis/CreatePDF (e0eada24)
+2020-05-11T17:34:40.7625724+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:34:40.8101223+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='12afa33d-d4d6-4cd9-9351-320f4f3fde80' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u.Client`.`CompanyName`
+FROM `Pdfs` AS `u`
+LEFT JOIN `Clients` AS `u.Client` ON `u`.`ClientId` = `u.Client`.`Id`
+WHERE `u`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2020-05-11T17:34:43.8767411+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.MSensisController.CreatePDF (MSensis)", returned result "Microsoft.AspNetCore.Mvc.FileContentResult" in 3182.9618ms. (50a9e262)
+2020-05-11T17:34:43.8820079+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executing "Microsoft.AspNetCore.Mvc.FileContentResult", sending file with download name '"Microsoft Hellas-5-2020-40.pdf"' ... (3ade02d2)
+2020-05-11T17:34:43.8968214+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.MSensisController.CreatePDF (MSensis)" in 3254.5735ms (afa2e885)
+2020-05-11T17:34:43.8970779+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.MSensisController.CreatePDF (MSensis)"' (99874f2b)
+2020-05-11T17:34:43.8976229+03:00 8000006d-0000-f100-b63f-84710c7967bb [INF] Request finished in 3336.5759ms 200 application/pdf (791a596a)
+2020-05-11T17:47:07.6054884+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-05-11T17:47:07.9428153+03:00 80000072-0001-f900-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:47:07.9436762+03:00 80000072-0001-f900-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:47:08.1057988+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-05-11T17:47:08.1744780+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T17:47:08.2265311+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-05-11T17:47:08.2780968+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:47:08.2930416+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:47:09.4077223+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executed DbCommand ("127"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T17:47:09.7278235+03:00 80000072-0001-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-05-11T17:47:09.7434928+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 1451.0596ms. (50a9e262)
+2020-05-11T17:47:09.8365588+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-05-11T17:47:11.1328442+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1346.1598ms. (f66409e9)
+2020-05-11T17:47:11.1363149+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 2960.9559ms (afa2e885)
+2020-05-11T17:47:11.1365008+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-05-11T17:47:11.1560196+03:00 80000072-0001-f900-b63f-84710c7967bb [INF] Request finished in 3584.8987ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:47:42.5957376+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/Administrator2   (ca22a1cb)
+2020-05-11T17:47:42.6120717+03:00 8000006f-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:47:42.6121830+03:00 8000006f-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:47:42.6333941+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Administrator2 (MSensis)"' (500cc934)
+2020-05-11T17:47:42.7042941+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Route matched with "{action = \"Administrator2\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Administrator2()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T17:47:42.7053800+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Administrator2 (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:47:42.7338694+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:47:43.0998848+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("41"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T17:47:43.2290164+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:47:43.4468192+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`IdentifierId`, `c`.`Timestamp`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:47:43.5349788+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-05-11T17:47:43.6874573+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Administrator2 (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 981.7324ms. (50a9e262)
+2020-05-11T17:47:43.7326524+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executing ViewResult, running view "Administrator2". (c83d0e25)
+2020-05-11T17:47:44.1924592+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed ViewResult - view "Administrator2" executed in 471.4519ms. (f66409e9)
+2020-05-11T17:47:44.2069475+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Administrator2 (MSensis)" in 1502.4251ms (afa2e885)
+2020-05-11T17:47:44.2101579+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Administrator2 (MSensis)"' (99874f2b)
+2020-05-11T17:47:44.2467671+03:00 8000006f-0000-f100-b63f-84710c7967bb [INF] Request finished in 1650.1148ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:47:53.9472732+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/ManagePdfs   (ca22a1cb)
+2020-05-11T17:47:53.9497721+03:00 80000046-0003-f800-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:47:53.9505790+03:00 80000046-0003-f800-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:47:53.9828909+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.ManagePdfs (MSensis)"' (500cc934)
+2020-05-11T17:47:54.0023056+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"ManagePdfs\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ManagePdfs()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-05-11T17:47:54.0036462+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.ManagePdfs (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:47:54.0181048+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:47:54.0253242+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-05-11T17:47:54.5266822+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='1ec6bf17-bd03-4869-b701-b6bcaf336e3b' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`IdentifierId`, `c`.`Timestamp`, `c`.`Type`, `c`.`UserId`, `c.Company`.`Id`, `c.Company`.`Address`, `c.Company`.`City`, `c.Company`.`ClientId`, `c.Company`.`Code`, `c.Company`.`CompanyName`, `c.Company`.`IdentifierId`, `c.Company`.`ImageSrc`, `c.Company`.`InvoiceId`, `c.Company`.`Name`, `c.Company`.`TelephoneNumber`, `c.Company`.`Timestamp`, `c.Company`.`UserId`, `c.Client`.`Id`, `c.Client`.`AFM`, `c.Client`.`Address`, `c.Client`.`City`, `c.Client`.`Client_Occupation`, `c.Client`.`Code`, `c.Client`.`CompanyId`, `c.Client`.`CompanyName`, `c.Client`.`DOY`, `c.Client`.`Email`, `c.Client`.`IdentifierId`, `c.Client`.`TelephoneNumber`, `c.Client`.`Timestamp`, `c.Client`.`UserId`, `c.Client`.`ZipCode`, `c.Invoice`.`Id`, `c.Invoice`.`ClientId`, `c.Invoice`.`Code`, `c.Invoice`.`Comments`, `c.Invoice`.`CompanyId`, `c.Invoice`.`Description`, `c.Invoice`.`Discount`, `c.Invoice`.`IdentifierId`, `c.Invoice`.`Invoice_Type`, `c.Invoice`.`Number`, `c.Invoice`.`PriceAfterDiscount`, `c.Invoice`.`PriceBeforeDiscount`, `c.Invoice`.`PricePerUnit`, `c.Invoice`.`Quantity`, `c.Invoice`.`Timestamp`, `c.Invoice`.`Vat`
+FROM `Pdfs` AS `c`
+LEFT JOIN `Companies` AS `c.Company` ON `c`.`CompanyId` = `c.Company`.`Id`
+LEFT JOIN `Clients` AS `c.Client` ON `c`.`ClientId` = `c.Client`.`Id`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE `c`.`UserId` = @__user_Id_0
+ORDER BY `c`.`Id` DESC" (0723d8ff)
+2020-05-11T17:47:54.7238323+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.ManagePdfs (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 719.9571ms. (50a9e262)
+2020-05-11T17:47:54.7296440+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executing ViewResult, running view "ManagePdfs". (c83d0e25)
+2020-05-11T17:47:54.9006455+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executed ViewResult - view "ManagePdfs" executed in 176.2924ms. (f66409e9)
+2020-05-11T17:47:54.9010919+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.ManagePdfs (MSensis)" in 898.5676ms (afa2e885)
+2020-05-11T17:47:54.9012712+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.ManagePdfs (MSensis)"' (99874f2b)
+2020-05-11T17:47:54.9021367+03:00 80000046-0003-f800-b63f-84710c7967bb [INF] Request finished in 954.7538ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:47:59.2045011+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/api/MSensis/CreatePDF?id=12afa33d-d4d6-4cd9-9351-320f4f3fde80   (ca22a1cb)
+2020-05-11T17:47:59.2090430+03:00 80000048-0003-f800-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:47:59.2091571+03:00 80000048-0003-f800-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:47:59.2095361+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.MSensisController.CreatePDF (MSensis)"' (500cc934)
+2020-05-11T17:47:59.2637754+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"CreatePDF\", controller = \"MSensis\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePDF(System.String)" on controller "MSensis.Controllers.MSensisController" ("MSensis"). (122b2fdf)
+2020-05-11T17:47:59.3295809+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.MSensisController.CreatePDF (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:47:59.5434589+03:00 80000048-0003-f800-b63f-84710c7967bb [WRN] https://www.google.com (9824a03f)
+2020-05-11T17:47:59.5454512+03:00 80000048-0003-f800-b63f-84710c7967bb [WRN] /api/MSensis/CreatePDF (e0eada24)
+2020-05-11T17:47:59.5467176+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:47:59.6095251+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='12afa33d-d4d6-4cd9-9351-320f4f3fde80' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u.Client`.`CompanyName`
+FROM `Pdfs` AS `u`
+LEFT JOIN `Clients` AS `u.Client` ON `u`.`ClientId` = `u.Client`.`Id`
+WHERE `u`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2020-05-11T17:48:01.3761173+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.MSensisController.CreatePDF (MSensis)" in 2112.1112ms (afa2e885)
+2020-05-11T17:48:01.3775291+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.MSensisController.CreatePDF (MSensis)"' (99874f2b)
+2020-05-11T17:48:01.5402164+03:00 80000048-0003-f800-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\User\source\repos\MSensis\MSensis\Files\637248052813666928.pdf'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at MSensis.Controllers.MSensisController.CreatePDF(String id) in C:\Users\User\source\repos\MSensis\MSensis\Controllers\MSensisController.cs:line 180
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-11T17:48:01.7880278+03:00 80000048-0003-f800-b63f-84710c7967bb [INF] Request finished in 2583.6788ms 500 text/html; charset=utf-8 (791a596a)
+2020-05-11T17:49:06.0228469+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/api/MSensis/CreatePDF?id=12afa33d-d4d6-4cd9-9351-320f4f3fde80   (ca22a1cb)
+2020-05-11T17:49:06.0298404+03:00 80000071-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["el-GR", "el", "en"]'. (70503d1b)
+2020-05-11T17:49:06.0300259+03:00 80000071-0000-f100-b63f-84710c7967bb [WRN] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["el-GR", "el", "en"]'. (31a7522c)
+2020-05-11T17:49:06.0749132+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.MSensisController.CreatePDF (MSensis)"' (500cc934)
+2020-05-11T17:49:06.0755814+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Route matched with "{action = \"CreatePDF\", controller = \"MSensis\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePDF(System.String)" on controller "MSensis.Controllers.MSensisController" ("MSensis"). (122b2fdf)
+2020-05-11T17:49:06.0775778+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.MSensisController.CreatePDF (MSensis)" - Validation state: Valid (dad538d7)
+2020-05-11T17:49:06.0777798+03:00 80000071-0000-f100-b63f-84710c7967bb [WRN] https://www.google.com (9824a03f)
+2020-05-11T17:49:06.0778555+03:00 80000071-0000-f100-b63f-84710c7967bb [WRN] /api/MSensis/CreatePDF (e0eada24)
+2020-05-11T17:49:06.0787984+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-05-11T17:49:06.0846074+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='12afa33d-d4d6-4cd9-9351-320f4f3fde80' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u.Client`.`CompanyName`
+FROM `Pdfs` AS `u`
+LEFT JOIN `Clients` AS `u.Client` ON `u`.`ClientId` = `u.Client`.`Id`
+WHERE `u`.`Id` = @__id_0
+LIMIT 2" (0723d8ff)
+2020-05-11T17:49:07.0686505+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.MSensisController.CreatePDF (MSensis)", returned result "Microsoft.AspNetCore.Mvc.FileContentResult" in 990.7866ms. (50a9e262)
+2020-05-11T17:49:07.0721134+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executing "Microsoft.AspNetCore.Mvc.FileContentResult", sending file with download name '""' ... (3ade02d2)
+2020-05-11T17:49:07.0909871+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.MSensisController.CreatePDF (MSensis)" in 1015.2327ms (afa2e885)
+2020-05-11T17:49:07.0910994+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.MSensisController.CreatePDF (MSensis)"' (99874f2b)
+2020-05-11T17:49:07.0914317+03:00 80000071-0000-f100-b63f-84710c7967bb [INF] Request finished in 1068.7499ms 200 application/pdf (791a596a)

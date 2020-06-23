@@ -1,0 +1,107 @@
+﻿@using MSensis.ViewModels;
+@model ClientViewModel
+
+
+ 
+ 
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Manage   Clients</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Occupation</th>
+                                <th>City</th>
+                                <th>Address</th>
+                                <th>Email</th>
+                                <th>Zipcode</th>
+                                <th>Telephone Number</th>
+                                <th>AFM</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Clients)
+                            {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.CompanyName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Client_Occupation)</td>
+                                <td>@Html.DisplayFor(modelItem => item.City)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ZipCode)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TelephoneNumber)</td>
+                                <td>@Html.DisplayFor(modelItem => item.AFM)</td>
+
+                                <td>
+                                    <a asp-action="Update_Client" asp-route-id="@item.Id">Update  <i class="fa fa-edit"></i></a> 
+                                </td>
+                                <td>
+                                    <a href="" onclick="Delete('@item.Id')"> Delete   <i class="fa fa-trash-o"> </i></a>
+                                </td>
+                            </tr>
+                            }
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DataTables -->
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap.min.js"></script>
+<!-- page script -->
+<script>
+
+    $(function () {
+
+        $('#example1').DataTable();
+    });
+
+
+    function Delete(id){
+         
+        var r = confirm("Are you sure you want to Delete?");
+        if (r == true) {
+
+            $.ajax(
+            {
+                type: "POST",
+                url: '@Url.Action("Delete_Client", "Home")',
+                data: {
+                    id: id
+                },
+                error: function (result) {
+                    alert("error");
+                },
+                success: function (result) {
+                    if (result == true) {
+                        var baseUrl="/Home";
+                        window.location.reload();
+                    }
+                    else {
+                        alert("There is a problem, Try Later!");
+                    }
+                    }
+                }
+            );
+        }
+    }
+</script>
+
+
+

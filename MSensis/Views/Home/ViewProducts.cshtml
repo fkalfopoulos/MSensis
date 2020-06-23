@@ -1,0 +1,119 @@
+﻿@using MSensis.ViewModels;
+@model PDFViewModel
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Manage Pdf</h3>
+                </div>
+                <br />
+
+
+
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Price</th> 
+                                <th>Quantity</th>
+                                <th>VAT</th>
+                                <th>Discount</th>
+                                <th>Delete</th>
+
+
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model.products2)
+                        {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Code)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+
+                            <td>@Html.DisplayFor(modelItem => item.PricePerUnit)</td>
+
+                            <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Vat)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Discount)</td>
+
+
+
+                            <td>  <a asp-action="Edit_Product" asp-controller="Account" asp-route-id="@item.Id">Edit <i class="fa fa-ed"></i></a>       </td>
+
+                           
+
+                        </tr>
+                        }
+
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+<!-- DataTables -->
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap.min.js"></script>
+
+
+
+<!-- page script -->
+<script>
+    $(function () {
+        $('#example1').DataTable();
+    });
+
+    function Delete(id) {
+         var r = confirm("Are you sure you want to Delete?");
+         if (r == true) {
+             debugger;
+             $.ajax(
+                 {
+                     type: "POST",
+                     url: '@Url.Action("Delete_Product", "Home")',
+                     data: {
+                         id: id
+                     },
+
+                     error: function (result) {
+                         alert("error");
+                     },
+                     success: function (result) {
+                         if (result == true) {
+                             var baseUrl = "/Home";
+                             window.location.reload();
+                         }
+                         else {
+                             alert("There is a problem, Try Later!");
+                         }
+                     }
+                 });
+
+         }
+     }
+
+
+</script>
+
+<script>
+
+     function Action() {
+         const id = document.getElementById("")
+     }
+
+</script>

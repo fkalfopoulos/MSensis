@@ -1,0 +1,105 @@
+﻿@using MSensis.ViewModels;
+ @model ClientViewModel
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Manage Companies</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                               
+                                <th>City</th>
+                                <th>Code</th>
+                                <th>Occupation</th>
+                                <th>Address</th>
+                                <th>Telephone Number</th>
+                                <th>Invoices</th>
+                                <th>Clients</th>
+                                <th>Clients</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr> 
+                              
+                                <td>@Model.Code</td>
+                                <td>@Model.CompanyName</td>
+                                <td>@Model.Client_Occupation</td>
+                                <td>@Model.City</td>
+                                <td>@Model.Address</td>
+                                <td>@Model.TelephoneNumber</td>
+                                <td>@Model.TelephoneNumber</td>
+
+                            </tr>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DataTables -->
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap.min.js"></script>
+<!-- page script -->
+<script>
+
+    $(function () {
+
+        $('#example1').DataTable();
+
+
+    });
+
+
+    function Delete(id){
+        var txt;
+        var r = confirm("Are you sure you want to Delete?");
+        if (r == true) {
+
+            $.ajax(
+            {
+                type: "POST",
+                url: '@Url.Action("Delete", "Home")',
+                data: {
+                    id: id
+                },
+                error: function (result) {
+                    alert("error");
+                },
+                success: function (result) {
+                    if (result == true) {
+                        var baseUrl="/Home";
+                        window.location.reload();
+                    }
+                    else {
+                        alert("There is a problem, Try Later!");
+                    }
+                    }
+                });
+        }
+    }
+</script>
+
+

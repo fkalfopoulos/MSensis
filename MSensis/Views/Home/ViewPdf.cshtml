@@ -1,0 +1,129 @@
+﻿@using MSensis.ViewModels;
+
+@model PDFViewModel
+
+
+<head>
+    <link rel="stylesheet" href="~/css/invoice.css">
+</head>
+<div id="invoice">
+
+    <div class="invoice overflow-auto">
+        <div style="min-width: 600px">
+            <header>
+                <div class="row">
+                    <div class="col">
+
+                        <img src="/content/msensis.png" alt="@Model.Company.ImageSrc" />
+
+
+
+                        <div class="col company-details">
+                            <h3 class="name">
+                                @Model.Company.Name
+                            </h3>
+                            <div> Διεύθυνση : @Model.Company.Address</div>
+                            <div>Number :  @Model.Company.TelephoneNumber   City : @Model.Company.City</div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="row contacts">
+                    <div class="col invoice-to">
+                        <div class="text-gray-light">INVOICE TO:</div><br /><br />
+                        <h2 class="to">Name : @Model.Client.CompanyName</h2>
+                        <div class="address">Address : @Model.Client.Address</div>
+                        <div class="email"><a href="mailto:john@example.com">@Model.Client.Email</a></div>
+
+                        <div class="email"> Number  : @Model.Client.TelephoneNumber</div>
+                    </div>
+                    <div class="col invoice-details">
+                        <h1 class="invoice-id">INVOICE 3-2-1</h1>
+                        <div class="date">@Model.DateTimeString</div>
+
+                    </div>
+                </div>
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th class="text-left">DESCRIPTION</th>
+                            <th class="text-right">Price</th>
+                            <th class="text-right">Quantity</th>
+                            <th class="text-right">Price Per Unit</th>
+                            <th class="text-right">Discount</th>
+                            <th class="text-right">VAT</th>
+                        </tr>
+                    </thead>
+                    @foreach (var c in Model.products2)
+                    {
+
+                        <tbody>
+                            <tr>
+                                <td class="no">@c.Code</td>
+                                <td class="text-left">
+                                    <h3>
+                                        @c.Description
+                                    </h3>
+                                </td>
+                                <td class="text-right">@c.PricePerUnit.ToString("#.##")€</td>
+                                <td class="qty">
+
+                                    <h3>  @c.Quantity</h3>
+
+                                </td>
+
+                                <td class="qty">@c.PricePerUnit.ToString("#.##")€ </td>
+                                <td class="qty">@c.Discount%</td>
+                                <td class="total">@c.Vat%</td>
+                            </tr>
+                        </tbody>
+
+                    }
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2">Price Before Discount</td>
+                            <td>@Model.PriceWithoutVat€</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2">Total Discount </td>
+                            <td>
+                                @Model.Discount
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2">TOTAL VAT %</td>
+                        <td>@Model.TotalVat€</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2">GRAND TOTAL</td>
+                        <td>@Model.GrantTotal.ToString("#.##")€</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="notices">
+                <div>NOTICE:</div>
+                <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+            </div>
+        </main>
+        <footer>
+            Invoice was created on a computer and is valid without the signature and seal.
+        </footer>
+    </div>
+    <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+    <div></div>
+</div>
+</div>
+
+
+<script> 
+      window.onload = function() { window.print(); }
+</script>

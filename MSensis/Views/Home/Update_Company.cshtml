@@ -1,0 +1,87 @@
+﻿@using MSensis.ViewModels
+@model Company
+
+<head>
+    <link rel="stylesheet" href="~/css/form.css" />
+</head>
+<section class="content-header">
+    <h1>
+        Edit Company
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content container-fluid">
+
+     
+
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Home/Update_Company">
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+
+
+                    <div class="row">
+                        <div class="col-50">
+
+                            <label for="fname"><i class="fa fa-user"></i>Company Name</label>
+                            <input type="text" id="fname" name="Name" value="@Model.Name">
+
+                            <label for="email"><i class="fa fa-envelope"></i> Company Address</label>
+                            <input type="text" id="email" name="Address" value="@Model.Address" placeholder="company address">
+
+                            <label for="adr"><i class="fa fa-address-card-o"></i> City</label>
+                            <input type="text" id="adr" name="City" placeholder="Address" value="@Model.City">
+
+                           
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">Code</label>
+                                    <input type="number" id="state" name="Code" placeholder="" value="@Model.Code">
+                                </div>
+
+
+                                <div class="col-50">
+                                    <label for="Telephone"><i class="fas fa-mobile"></i></label>
+                                    <input type="number" id="zip" name="TelephoneNumber" placeholder="10001" value="@Model.TelephoneNumber">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="inputImage3" class="col-sm-2 control-label">Company's Logo</label>
+                            <div class="col-sm-10">
+                               
+                                    <img height="170" width="130" src="~/content/@Url.Content(Model.ImageSrc)" class="rounded-circle" />
+                                
+                                <input type="file" class="form-control" name="Logo" value="@Model.Logo"  >
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="Id" value="@Model.Id" />
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="box-footer">
+            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">Back</button>
+            <button type="submit" class="btn btn-info pull-right">Save</button>
+        </div>
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+    </form>
+</section>
+
+
+
+
+
+
+
+
+

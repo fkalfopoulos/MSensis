@@ -1,0 +1,233 @@
+﻿ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+   
+    <environment names="Development">
+        <!-- Compiled and minified Materialze CSS -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" />
+        <link rel="stylesheet" href="~/css/site2.css" />
+        <!--Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Awesome Font-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    </environment>
+    <environment names="Staging,Production">
+        <!-- Compiled and minified Materialze CSS -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <!--Awesome Font-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    </environment>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="slide-out" class="side-nav">
+                <!--Check if user exist-->
+               
+                    <li class="@(ViewBag.Current == "Home" ? "active" : "")">
+                        <a asp-area="" asp-controller="Home" asp-route-email="@(User.Identity.Name)"
+                           asp-action="Index">Home</a>
+                    </li>
+                
+             
+
+               
+                    <!--Debtors-->
+                    <li class="">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header">Debtors<i class="material-icons" style="float:right;">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li class="@(ViewBag.Current == "Debtors" ? "active" : "")">
+                                            <a asp-area="" asp-controller="Debtors" asp-action="Index">Persons</a>
+                                        </li>
+                                        <li class="@(ViewBag.Current == "Companies" ? "active" : "")">
+                                            <a asp-area="" asp-controller="Companies" asp-action="Index">Companies</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Products-->
+                    <li class="">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header">Products<i class="material-icons" style="float:right;">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li class="@(ViewBag.Current == "Products" ? "active" : "")">
+                                            <a asp-area="" asp-controller="Products" asp-action="Index">Products</a>
+                                        </li>
+                                        <li class="@(ViewBag.Current == "Categories" ? "active" : "")">
+                                            <a asp-area="" asp-controller="Categories" asp-action="Index">Categories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Invoices-->
+                    <li class="@(ViewBag.Current == "Invoices" ? "active" : "")">
+                        <a asp-area="" asp-controller="Invoices" asp-action="Index">Invoices</a>
+                    </li>
+
+                    <!--Accounts-->
+                    <li class="">
+                        <ul class="collapsible collapsible-accordion">
+                            <li>
+                                <a class="collapsible-header">Accounts<i class="material-icons" style="float:right;">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                         
+                                        <li class="@(ViewBag.Current == "Admins" ? "active" : "")">
+                                            <a asp-area="" asp-controller="Admins" asp-action="Index">Admins</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                }
+
+                <!--Check if user exist-->
+                
+                <!--Contact-->
+                <li class="@(ViewBag.Current == "Contact" ? "active" : "")">
+                    <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                </li>
+               in != null)
+                {
+                    <li class="@(ViewBag.Current == "Settings" ? "active" : "")">
+                        <a id="settings-btn" asp-controller="Admins" asp-action="Settings"
+                           class="btn-flat waves-effect waves-default tooltipped"
+                           data-position="right" data-delay="50" data-tooltip="Settings">
+                            Settings
+                        </a>
+                    </li>
+                }
+                <!--Login/Logout button-->
+                <li>
+                    <a id="account-btn" asp-controller="Users" asp-action="Login"
+                       class="btn-flat waves-effect waves-default tooltipped"
+                       data-position="right" data-delay="50" data-tooltip="Sign in">
+                    </a>
+                </li>
+            </ul>
+            <!--Toggle button-->
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
+                <i class="material-icons">menu</i>
+            </a>
+            <!--Navbar brand-->
+        
+         
+            
+        </nav>
+    </header>
+    <main role="main">
+        <div class="body-content">
+            @RenderBody()
+        </div>
+    </main>
+    <footer class="page-footer" style="padding-top: 0px;">
+        <div class="footer-copyright white-text center-align">
+            <div class="container">
+                &copy; @DateTime.Now.Year MSensis, All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <environment names="Development">
+        <!--jQuery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Compiled and minified JavaScript Materialize CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <!--jQuery Adaptive Background Script-->
+        <script src="~/js/jquery-adaptive-background.js"></script>
+        <!--jQuery Globalize Scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.3.0/globalize.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.3.0/globalize/currency.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.3.0/globalize/number.js"></script>
+        <!--Site JS-->
+        <script src="~/js/site2.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <!--jQuery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Compiled and minified JavaScript Materialize CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <!--jQuery Adaptive Background Script-->
+        <script src="~/js/jquery-adaptive-background.js"></script>
+        <!--jQuery Globalize Scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.3.0/globalize.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.3.0/globalize/currency.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.3.0/globalize/number.js"></script>
+        <!--Site JS-->
+        <script src="~/js/site2.js" asp-append-version="true"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
+    <script>
+        $(document).ready(() => {
+			$(".button-collapse").sideNav({
+				menuWidth: 210,
+				edge: "left",
+				closeOnClick: true
+			});
+            $(".collapsible").collapsible();
+            $('.tooltipped').tooltip({ delay: 50 });
+
+            var isLoggedIn = true;
+            var width = $(window).width();
+            var button = $("#account-btn");
+
+            
+			}
+
+			//Account button non-mobile
+			if (isLoggedIn == true) {
+				//Set background color
+				button.css("background", "#e53935", "important");
+
+				//Set text
+				button.text("");
+				button.text("Sign out");
+
+				//Set tooltip
+				button.attr("data-tooltip", "Sign out");
+				button.tooltip();
+
+				//Set location attribute
+				button.attr("href", "/Users/Logout");
+			} else if (isLoggedIn == false) {
+				//Set background color
+				button.css("background", "#64dd17", "important");
+
+				//Set text
+				button.text("");
+				button.text("Sign In");
+
+				//Set tooltip
+				button.attr("data-tooltip", "Sign in");
+				button.tooltip();
+
+				//Set location attribute
+				button.attr("href", "/Users/Login");
+			}
+        });
+    </script>
+</body>
+</html>

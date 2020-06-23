@@ -1,42 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+using DinkToPdf;
+using DinkToPdf.Contracts;
+ 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.Logging;
+using MSensis.Email;
+using MSensis.LocalizationResources;
+using MSensis.Models;
+using MSensis.Services;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Reflection;
+using System.Runtime.Loader;
+using System.Threading.Tasks;
+using Wkhtmltopdf.NetCore;
 
 namespace MSensis
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
+        
+        public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
+
+            services.ConfigureApplicationCookie(opts =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
+                opts.Cookie.Expiration = TimeSpan.FromDays(14);
+
+                opts.Cookie.Name = "SecurityLogin";
             });
 
+            
+            services.AddTransient<FileManager>(); 
+            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+            //services.Configure<SmtpSettings>(Configuration.GetSection("SmtpSettings"));
+            services.AddSingleton<IMailer, Mailer>();
+            services.AddAuthorization();
+            services.AddCors();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "/Account/Login");
+            })
+            .AddViewLocalization().AddDataAnnotationsLocalization()
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+             
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -49,9 +74,22 @@ namespace MSensis
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            //{
+            //    var context = serviceScope.ServiceProvider.GetRequiredService<MSensisContext>();
+            //    context.Database.Migrate();
+            //}
+
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            
+            app.UseFileServer();
+            app.UseAuthentication();
+            
+
+            loggerFactory.AddFile("Logs/myapp-{Date}.txt");
+
 
             app.UseMvc(routes =>
             {
@@ -61,4 +99,6 @@ namespace MSensis
             });
         }
     }
+  
 }
+      

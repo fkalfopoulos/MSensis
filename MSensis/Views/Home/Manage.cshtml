@@ -1,0 +1,108 @@
+﻿@using MSensis.ViewModels;
+@model UserViewModel
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+ 
+<section class="content-header">
+
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Companies</li>
+    </ol>
+</section>
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <a asp-action="CreatePDF" asp-controller="MSensis">
+
+                        <h3 class="box-title">Manage Companies</h3>
+                    </a>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>City</th>
+                                <th>Code</th>
+                                <th>Address</th>
+                                <th>Telephone Number</th>
+                                <th>Update</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Companies)
+                            {
+                                <tr>
+
+                                    <td><img height="170" width="230" src="~/content/@Url.Content(item.ImageSrc)" class="rounded-circle" /></td>
+                                    <td>@Html.DisplayFor(modelItem => item.City)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Code)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.TelephoneNumber)</td>
+                                    <td>
+                                        <a asp-action="Update_Company" asp-route-id="@item.Id"> Update<i class="fa fa-edit"></i></a>
+                                    </td> 
+                                </tr>
+                            }
+                    </table>
+                </div>
+
+
+
+            </div>
+            </div>
+        </div>
+
+
+</section>
+
+<!-- DataTables -->
+<script src="~/js/jquery.dataTables.min.js"></script>
+<script src="~/js/dataTables.bootstrap.min.js"></script>
+
+<!-- page script -->
+<script>
+    $(function () {
+        $('#example1').DataTable();
+    });
+  function Delete(id){
+         
+        var r = confirm("Are you sure you want to Delete?");
+        if (r == true) {
+
+            $.ajax(
+            {
+                type: "POST",
+                url: '@Url.Action("Delete", "Home")',
+                data: {
+                    id: id
+                },
+                error: function (result) {
+                    alert("error");
+                },
+                success: function (result) {
+                    if (result == true) {
+                        
+                        window.location.reload();
+                    }
+                    else {
+                        alert("There is a problem, Try Later!");
+                    }
+                    }
+                });
+        }
+    }
+
+</script>
