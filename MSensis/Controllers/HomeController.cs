@@ -67,10 +67,10 @@ namespace MSensis.Controllers
 
                 List<Pdf> user_pdfs = _db.Pdfs.Where(c => c.User.Id == user.Id).ToList();
                 List<Client> Clients = _db.Clients.Where(c => c.User.Id == user.Id).ToList();
-                var totalvatThree = _db.Pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalVat).Sum();
-                var totalvatSix = _db.Pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalVat).Sum();
-                var totalValueSix = _db.Pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalValue).Sum();
-                var totalValueThree = _db.Pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalValue).Sum();
+                var totalvatThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalVat).Sum();
+                var totalvatSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalVat).Sum();
+                var totalValueSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalValue).Sum();
+                var totalValueThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalValue).Sum();
 
                 UserViewModel model = new UserViewModel
                 {
