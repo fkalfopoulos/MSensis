@@ -29,6 +29,18 @@
                 <div class="row">
                     <div class="input-field col s12 col m12 col l12">
                         <i class="material-icons prefix">account_circle</i>
+                        <input asp-for="Input.Name" id="name-input" type="text" validate grey-text text-darken-3" autocomplete="off"
+                               style="padding-left:6px;">
+                        <label class="grey-text text-darken-3" for="name-input"
+                               data-error="This name is not valid."
+                               data-success="This name is valid.">
+                            Name
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 col m12 col l12">
+                        <i class="material-icons prefix">account_circle</i>
                         <input asp-for="Input.Email" id="email-input" type="email" validate grey-text text-darken-3" autocomplete="off"
                                style="padding-left:6px;">
                         <label class="grey-text text-darken-3" for="email-input"

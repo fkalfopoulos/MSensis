@@ -8,6 +8,16 @@ using System.Threading.Tasks;
 
 namespace MSensis.ViewModels
 {
+    public class UserForProfileViewModel
+    {
+        public string Name { get; set; }
+
+        public string PhoneNumber { get; set; }
+        public IEnumerable<Company> Companies { get; set; }
+        public IEnumerable<Client> Clients { get; set; }
+
+
+    }
     public class UserViewModel
     {
 

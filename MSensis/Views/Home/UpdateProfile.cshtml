@@ -1,0 +1,61 @@
+﻿@model MSensis.ViewModels.UserForProfileViewModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h2>Manage @Model.Name Profile</h2>
+
+<section class="content container-fluid">
+
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Home/UpdateProfile">
+
+        <div class="col-75">
+            <div class="container">
+                <div class="row">
+                    <div class="col-50">
+                        <label asp-for="Name"><i class="fa fa-user"></i>Name</label>
+                        @*<input type="text" id="Name" name="Name" value="@Model.Name">*@
+                        <input asp-for="Name" value="@Model.Name">
+                        <label asp-for="PhoneNumber"><i class="fa fa-phone"></i> Phone Number</label>
+                        @*<input type="text" id="email" name="Email" value="@Model.Email" placeholder="company address">*@
+                        <input asp-for="PhoneNumber" value="@Model.PhoneNumber" placeholder="phone number">
+
+                    </div>
+                    <div class="col-md-6">
+                        <label for="companies">Companies</label>
+                        <ul class="list-group" id="companies">
+                            @foreach (var company in Model.Companies)
+                            {
+                                <li class="list-group-item">@company.Name</li>
+                            }
+                            <a href='@Url.Action("Manage","Home")'>
+                                <span>Manage Companies</span>
+                            </a>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="clients">Clients</label>
+                        <ul class="list-group" id="clients">
+                            @foreach (var client in Model.Clients)
+                            {
+                                <li class="list-group-item">@client.CompanyName</li>
+                            }
+                            <a href='@Url.Action("CClients","Home")'>
+                                <span> Manage Clients</span>
+                            </a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-footer">
+            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">Back</button>
+            <button type="submit" class="btn btn-info pull-right">Save</button>
+        </div>
+
+    </form>
+</section>
+

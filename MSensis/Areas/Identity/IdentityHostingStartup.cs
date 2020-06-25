@@ -17,8 +17,8 @@ namespace MSensis.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<MSensisContext>(options =>
                      
-            options.UseMySql(
-                   context.Configuration.GetConnectionString("DefaultConnection2")));
+            options.UseSqlServer(
+                   context.Configuration.GetConnectionString("DefaultConnection3")));
 
             services.AddIdentity<User, IdentityRole>()
                      .AddEntityFrameworkStores<MSensisContext>(); 

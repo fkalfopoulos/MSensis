@@ -47,6 +47,43 @@ namespace MSensis.Controllers
            
         }
 
+        [HttpGet]
+        [Authorize]
+        [ViewLayout("_Administrator")]
+        public async Task<IActionResult> UpdateProfile()
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList();
+            List<Client> Clients = _db.Clients.Where(c => c.User.Id == user.Id).ToList();
+
+            UserForProfileViewModel model = new UserForProfileViewModel
+            {
+                Name = user.Name,
+                PhoneNumber = user.PhoneNumber,
+                Clients = Clients,
+                Companies = user_companies
+            };
+
+
+            return View(model);
+        }
+        [HttpPost]
+        [Authorize]
+        [ViewLayout("_Administrator")]
+        public async Task<IActionResult> UpdateProfile(UserForProfileViewModel model)
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            if (model.PhoneNumber != null && model.Name != null)
+            {
+                user.PhoneNumber = model.PhoneNumber;
+                user.Name = model.Name;
+
+                await _manager.UpdateAsync(user);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         [Authorize]
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Index()
