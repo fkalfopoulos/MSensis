@@ -67,7 +67,10 @@ namespace MSensis.ViewModels
     public class ClientViewModel
     {
         public string Id { get; set; }
+        public string pdfId{ get; set; }
+        public string invoiceId { get; set; }
         public string CompanyName { get; set; }
+        public string ClientName { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public IEnumerable<Client> Clients { get; set; }

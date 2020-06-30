@@ -740,20 +740,42 @@ namespace MSensis.Controllers
         {
             User user = await _manager.GetUserAsync(HttpContext.User);
 
-            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Invoice_Type == "Draft" || c.Invoice.Invoice_Type == "Issued")  
+            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Invoice_Type == "Draft" || c.Invoice.Invoice_Type == "Issued")
                 .Include(u => u.Invoice)
                 .Include(u => u.Client)
                 .Include(u => u.Company)
                  .OrderByDescending(u => u.Id)
-                .ToListAsync(); 
+                .ToListAsync();
             ClientViewModel model = new ClientViewModel
             {
                 Pdfs = pdfs,
-                 
-        };  
+
+            };
             return View(model);
         }
-         
+        [HttpPost]
+        [ViewLayout("_Administrator")]
+        public async Task<IActionResult> GetPdfs(int period)
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            
+
+            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Draft" || c.Invoice.Invoice_Type == "Issued") && c.Invoice.Timestamp> DateTime.Now.AddMonths(-period))
+                .Include(u => u.Invoice)
+                .Include(u => u.Client)
+                .Include(u => u.Company)
+                 .OrderByDescending(u => u.Id)
+                .ToListAsync();
+            ClientViewModel model = new ClientViewModel
+            {
+                Pdfs = pdfs,
+
+            };
+
+            return PartialView("_DataTableInvoice", model);
+        }
+
+
 
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Invoices()
@@ -890,15 +912,10 @@ namespace MSensis.Controllers
                  .OrderByDescending(u => u.Id)
                 .ToListAsync();
 
-            List<int> ChooseListD = new List<int>();
-            ChooseListD.Add(1);
-            ChooseListD.Add(2);
-            ChooseListD.Add(3);
-
             ClientViewModel model = new ClientViewModel
             {
-                Pdfs = pdfs,
-                ChooseList = ChooseListD 
+                Pdfs = pdfs
+                
             };
 
            
@@ -908,72 +925,36 @@ namespace MSensis.Controllers
 
         [HttpPost]
         [ViewLayout("_Administrator")]
-        public async Task<IActionResult> DraftPdfs(ClientViewModel postData)
+        public async Task<IActionResult> GetDraftPdfs(int period)
         {
 
-            User user = await _manager.GetUserAsync(HttpContext.User);
-            List<int> ChooseListD = new List<int>();
-            ChooseListD.Add(1);
-            ChooseListD.Add(2);
-            ChooseListD.Add(3);
 
-            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Invoice_Type == "Draft")
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Invoice_Type == "Draft" && c.Invoice.Timestamp > DateTime.Now.AddMonths(-period))
                 .Include(u => u.Invoice)
                 .Include(u => u.Client)
                 .Include(u => u.Company)
                  .OrderByDescending(u => u.Id)
                 .ToListAsync();
-            if ( postData.CategoryId == 1)
+            //ClientViewModel model = new ClientViewModel
+            //{
+            //    Pdfs = pdfs
+            //};
+            List<ClientViewModel> toSend = new List<ClientViewModel>();
+            for (var i = 0; i < pdfs.Count; i++)
             {
-                List<Pdf> ToSend = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Timestamp >= DateTime.Now.AddDays(-30) && c.Invoice.Timestamp <=
-                DateTime.Now).ToList();
-                ClientViewModel model2 = new ClientViewModel
+                Pdf pdf = pdfs[i];
+                toSend.Add(new ClientViewModel()
                 {
-                    Pdfs = ToSend,
-                    ChooseList = ChooseListD
-                };
+                    CompanyName = pdf.Company.Name,
+                    ClientName = pdf.Client.CompanyName,
+                    DatetimeString = pdf.DateTimeString,
+                    pdfId = pdf.Id,
+                    invoiceId = pdf.InvoiceId
 
-                return PartialView(model2);
+                });
             }
-            if (postData.CategoryId == 2)
-            {
-                List<Pdf>ToSend = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Timestamp >= DateTime.Now.AddDays(-23) && c.Invoice.Timestamp <=
-                DateTime.Now).ToList();
-                ClientViewModel model1 = new ClientViewModel
-                {
-                    Pdfs = ToSend,
-                    ChooseList = ChooseListD
-                };
-
-                return PartialView(model1);
-
-            }
-            if (postData.CategoryId ==3)
-            {
-                List<Pdf> ToSend = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Timestamp >= DateTime.Now.AddMonths(-6) && c.Invoice.Timestamp <=
-                DateTime.Now).ToList();
-
-                if(ToSend == null)
-                {
-                    
-
-                }
-
-                ClientViewModel model3 = new ClientViewModel
-                {
-                    Pdfs = ToSend,
-                    ChooseList = ChooseListD
-                };
-
-                return PartialView(model3);
-            }
-            ClientViewModel model = new ClientViewModel
-            {
-                Pdfs = pdfs,
-                ChooseList = ChooseListD
-            }; 
-
-              return PartialView(model);
+            return Json(toSend);
         }
 
         [ViewLayout("_Administrator")]

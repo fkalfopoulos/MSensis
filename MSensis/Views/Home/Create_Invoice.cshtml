@@ -14,11 +14,11 @@
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">Select Client</label>
             <div class="col-sm-10">
-                <select class="form-control" name="ClientId">
+                <select class="form-control" name="ClientId" id="ClientId">
 
                     @foreach (var c in Model.Clients)
                     {
-                        <option value="@c.Id" id="ClientId"> @c.CompanyName</option>
+                        <option value="@c.Id" > @c.CompanyName</option>
                     }
                 </select>
             </div>
@@ -263,7 +263,7 @@
                 }
 
 
-                sendData('@Url.Action("Create_Action", "Home")', data);
+            var message=    sendData('@Url.Action("Create_Action", "Home")', data);
                 location.reload();
                
             }

@@ -28,11 +28,12 @@
                             {
                                 <li class="list-group-item">@company.Name</li>
                             }
-                            <a href='@Url.Action("Manage","Home")'>
-                                <span>Manage Companies</span>
-                            </a>
+
 
                         </ul>
+                        <a href='@Url.Action("Manage","Home")'>
+                            <span>Manage Companies</span>
+                        </a>
                     </div>
                     <div class="col-md-6">
                         <label for="clients">Clients</label>
@@ -41,11 +42,12 @@
                             {
                                 <li class="list-group-item">@client.CompanyName</li>
                             }
-                            <a href='@Url.Action("CClients","Home")'>
-                                <span> Manage Clients</span>
-                            </a>
+
 
                         </ul>
+                        <a href='@Url.Action("CClients","Home")'>
+                            <span> Manage Clients</span>
+                        </a>
                     </div>
                 </div>
             </div>

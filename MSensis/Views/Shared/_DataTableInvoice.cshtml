@@ -8,31 +8,11 @@
 
 
 <!-- Main content -->
-<section class="content">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title">Manage Pdf</h3>
-                </div>
-                <div class="dropdown">
 
-                    <div class="form-group">
-                        <label for="periodOfMonths" class="col-sm-2 control-label">Search for Invoices</label>
-                        <select class="form-control" id="periodOfMonths">
-                            <option value="1">Last Month</option>
-                            <option value="3">Last 3 Months</option>
-                            <option value="6">Last 6 Months</option>
-                        </select>
-                        <button type="submit" onclick="SendData()" id="getInvoices">Get Invoices </button>
-                    </div>
-
-                </div>
-                <br />
-                <br />
+   
 
                 <!-- /.box-header -->
-                @*<div class="box-body">
+                <div class="box-body">
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -92,97 +72,8 @@
                     </table>
 
                 </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>*@
-
-
-    <div id="partial">
-        <partial name="_DataTableInvoice" />
-    </div>
-</section>
-
-
-<!-- page script -->
 <script>
-    $(function () {
+     $(function () {
         $('#example1').DataTable();
     });
-  
-   
-
-    async function SendData() {
-        var period = document.getElementById("periodOfMonths").value;
-      
-        $.ajax({
-            type: "POST",
-            url: "GetPdfs",
-            
-            data: { period: period },
-            success: function (result) {
-                $("#partial").html(result);     
-                console.log(result);
-                console.log(result.responseText);
-            },
-            error: function (result) {
-                alert("fail"); 
-               
-            }
-
-        }).catch(err => console.error(err.toString()));
-
-        console.log(period)
-    }
-
-
-
-
-
-
-
-
-
-    function Delete(id) {
-         var r = confirm("Are you sure you want to Delete?");
-         if (r == true) {
-             debugger;
-             $.ajax(
-                 {
-                     type: "POST",
-                     headers: {
-                         'Accept': 'application/json',
-                         'Content-Type': 'application/json',
-                     },
-                     credentials: "same-origin",
-                     url: '@Url.Action("Delete_Ιnvoice", "Home")',
-                     data: {
-                         id: id
-                     },
-
-                     error: function (result) {
-                         alert("error");
-                     },
-                     success: function (result) {
-                         if (result == true) {
-                             var baseUrl = "/Home";
-                             window.location.reload();
-                         }
-                         else {
-                             alert("There is a problem, Try Later!");
-                         }
-                     }
-                 });
-
-         }
-     }
-
-
 </script>
-
-
-

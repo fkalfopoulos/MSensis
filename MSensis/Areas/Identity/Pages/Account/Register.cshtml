@@ -31,7 +31,7 @@
                         <i class="material-icons prefix">account_circle</i>
                         <input asp-for="Input.Name" id="name-input" type="text" validate grey-text text-darken-3" autocomplete="off"
                                style="padding-left:6px;">
-                        <label class="grey-text text-darken-3" for="name-input"
+                        <label class="grey-text text-darken-3" for="name-input" 
                                data-error="This name is not valid."
                                data-success="This name is valid.">
                             Name
@@ -63,7 +63,7 @@
                 <div class="input-field col s12 col m12 col l12">
                     <i class="material-icons prefix">lock</i>
 
-                    <input asp-for="Input.ConfirmPassword" type="password" id="password-input" class="grey-text text-darken-3" autocomplete="off"
+                    <input asp-for="Input.ConfirmPassword" type="password" id="confirmPassword-input" class="grey-text text-darken-3" autocomplete="off"
                            style="padding-left: 6px;">
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     <label class="grey-text text-darken-3" for="password-input">Password</label>
@@ -86,6 +86,8 @@
         $(document).ready(function () {
             changeEmailLabel();
             changePasswordLabel();
+            changeNameLabel();
+            changeConfirmPasswordLabel();
 
             if ($("#email-input").val().length > 0 && $("#password-input").val().length == 0) {
                 $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
@@ -98,6 +100,12 @@
         });
 
         $("#password-input").on("keyup", function () {
+            changePasswordLabel();
+        });
+        $("#name-input").on("keyup", function () {
+            changePasswordLabel();
+        });
+        $("#confirmPassword-input").on("keyup", function () {
             changePasswordLabel();
         });
 
@@ -118,6 +126,24 @@
             } else {
                 $("#email-input").parent().find("label").css("transform", "translateY(12px)");
                 $("#email-input").parent().find("label").css("transform-origin", "0 100%");
+            }
+        }
+        function changeNameLabel() {
+            if ($("#name-input").val().length > 0) {
+                $("#name-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+                $("#name-input").parent().find("label").css("transform-origin", "0 0");
+            } else {
+                $("#name-input").parent().find("label").css("transform", "translateY(12px)");
+                $("#name-input").parent().find("label").css("transform-origin", "0 100%");
+            }
+        }
+        function changeConfirmPasswordLabel() {
+            if ($("#confirmPassword-input").val().length > 0) {
+                $("#confirmPassword-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+                $("#confirmPassword-input").parent().find("label").css("transform-origin", "0 0");
+            } else {
+                $("#confirmPassword-input").parent().find("label").css("transform", "translateY(12px)");
+                $("#confirmPassword-input").parent().find("label").css("transform-origin", "0 100%");
             }
         }
     </script>
