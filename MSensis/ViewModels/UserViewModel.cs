@@ -16,6 +16,12 @@ namespace MSensis.ViewModels
         public IEnumerable<Company> Companies { get; set; }
         public IEnumerable<Client> Clients { get; set; }
 
+        public static void UpdateProfile(User user, UserForProfileViewModel model)
+        {
+            user.PhoneNumber = model.PhoneNumber;
+            user.Name = model.Name;      
+        }
+
 
     }
     public class UserViewModel

@@ -74,13 +74,11 @@ namespace MSensis.Controllers
         {
             User user = await _manager.GetUserAsync(HttpContext.User);
             if (model.PhoneNumber != null && model.Name != null)
-            {
-                user.PhoneNumber = model.PhoneNumber;
-                user.Name = model.Name;
-
-                await _manager.UpdateAsync(user);
-            }
-
+                UserForProfileViewModel.UpdateProfile(user, model);
+            //user.PhoneNumber = model.PhoneNumber;
+            //user.Name = model.Name;
+            //await _manager.UpdateAsync(user);
+            await _manager.UpdateAsync(user);
             return RedirectToAction("Index", "Home");
         }
 
