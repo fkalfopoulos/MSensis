@@ -38,7 +38,7 @@
                                 <td>@Html.DisplayFor(modelItem => item.Invoice.Timestamp)</td>
                                 <td>@Html.DisplayFor(modelItem => item.Invoice.Invoice_Type)</td>
 
-                                <td>  <a asp-action="ViewPdf" asp-controller="Home" asp-route-id="@item.Id">Download Pdf <i class="fa fa-download"></i></a>       </td>
+                                <td>  <a asp-action="CreatePDF" asp-controller="MSensis" asp-route-id="@item.Id">Download Pdf <i class="fa fa-download"></i></a></td>
 
                                 <td>  <a asp-action="ViewInvoice" asp-controller="Home" asp-route-id="@item.Id">View <i class="fa fa-eye"></i></a> </td>
                                 <td>

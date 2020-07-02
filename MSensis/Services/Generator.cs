@@ -27,7 +27,7 @@ namespace MSensis.Services
 
 
 
-        public  async Task<IActionResult> CreatePDF(string id)
+        public async Task<IActionResult> CreatePDF(string id)
         {
 
 

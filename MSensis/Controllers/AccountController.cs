@@ -219,7 +219,7 @@ namespace MSensis.Controllers
         }
 
 
-        public async  Task<IActionResult> Download(string id)
+        public async Task<IActionResult> Download(string id)
         {
             Generator pdf = new Generator(_db, _env);
             return await pdf.CreatePDF(id);
