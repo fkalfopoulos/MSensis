@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MSensis.Services
 {
@@ -13,12 +14,14 @@ namespace MSensis.Services
     {
 
         private readonly string _imagePath;
-        private readonly MSensisContext _db; 
+        private readonly MSensisContext _db;
+        private readonly IHostingEnvironment _hostEnviroment;
 
-        public FileManager(IConfiguration config, MSensisContext db)
+        public FileManager(IConfiguration config, MSensisContext db, IHostingEnvironment hostEnviroment)
         {
             _imagePath = config["Path:Images"]; //remember to change
             _db = db;
+            _hostEnviroment = hostEnviroment;
         }
 
         public string GetImagePath(string PhotoId)
@@ -32,11 +35,12 @@ namespace MSensis.Services
             try
             {
                 string save_path = Path.Combine(Directory.GetCurrentDirectory(), _imagePath);
-
+                string wwwRootPath = _hostEnviroment.WebRootPath;
                 string mime = image.FileName.Substring(image.FileName.LastIndexOf('.'));
                 string fileName = $"img_{DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss")}{mime}";
+                string path = Path.Combine(wwwRootPath + "/Content/" + fileName);
 
-                using (var fileStream = new FileStream(Path.Combine(save_path, fileName), FileMode.Create))
+                using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     await image.CopyToAsync(fileStream);
                 } 

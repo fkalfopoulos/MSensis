@@ -19,11 +19,13 @@ namespace MSensis.ViewModels
         public static void UpdateProfile(User user, UserForProfileViewModel model)
         {
             user.PhoneNumber = model.PhoneNumber;
-            user.Name = model.Name;      
+            user.Name = model.Name;
         }
 
 
     }
+
+
     public class UserViewModel
     {
 
@@ -32,11 +34,11 @@ namespace MSensis.ViewModels
         public IEnumerable<Invoice> Invoices { get; set; }
         public IEnumerable<Pdf> pdfs { get; set; }
         public Company Company { get; set; }
-        public User User {get; set; }
+        public User User { get; set; }
 
         public string Id { get; set; }
         public int Companys_Clients { get; set; }
-        public int UserCompanies { get; set; } 
+        public int UserCompanies { get; set; }
 
         public string Company_Name { get; set; }
 
@@ -67,13 +69,13 @@ namespace MSensis.ViewModels
         public string ImageSrc { get; set; }
 
         public IEnumerable<Client> Cients { get; set; }
-        public IEnumerable<Invoice>Invoices { get; set; }
+        public IEnumerable<Invoice> Invoices { get; set; }
     }
 
     public class ClientViewModel
     {
         public string Id { get; set; }
-        public string pdfId{ get; set; }
+        public string pdfId { get; set; }
         public string invoiceId { get; set; }
         public string CompanyName { get; set; }
         public string ClientName { get; set; }
@@ -83,15 +85,15 @@ namespace MSensis.ViewModels
         public int CategoryId { get; set; }
 
         public List<string> pdfss { get; set; }
-        
+
         public List<int> ChooseList { get; set; }
 
-       public List<string> Ids { get; set; }
+        public List<string> Ids { get; set; }
 
         public string DatetimeString { get; set; }
 
         public int choice { get; set; }
-        public List<int>Choose { get; set; }
+        public List<int> Choose { get; set; }
         public int TelephoneNumber { get; set; }
         public int Code { get; set; }
         public int ZipCode { get; set; }
@@ -101,7 +103,7 @@ namespace MSensis.ViewModels
         public string DOY { get; set; }
 
         public IEnumerable<Pdf> Pdfs { get; set; }
-          public DateTime? Timestamp { get; set; }
+        public DateTime? Timestamp { get; set; }
         public Company Company { get; set; }
         public Invoice Invoice { get; set; }
         public Client Client { get; set; }
@@ -137,8 +139,8 @@ namespace MSensis.ViewModels
         public decimal Price { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
-        public decimal PricePerUnit { get; set; } 
-         
+        public decimal PricePerUnit { get; set; }
+
         public int Discount { get; set; }
         public string Invoice_Comments { get; set; }
 

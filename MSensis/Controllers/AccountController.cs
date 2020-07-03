@@ -27,10 +27,11 @@ namespace MSensis.Controllers
         private readonly SignInManager<User> _signInManager;
         private readonly ILogger<AccountController> _logger;
         private readonly IHostingEnvironment _env;
+       
 
 
         public AccountController(MSensisContext _db, UserManager<User> manager, FileManager filemanager, SignInManager<User> signInManager,
-           ILogger<AccountController> logger,    IHostingEnvironment  env )
+           ILogger<AccountController> logger,IHostingEnvironment  env )
         {
             this._db = _db;
             _manager = manager;

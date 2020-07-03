@@ -9,6 +9,7 @@ using DinkToPdf;
 using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -44,7 +45,7 @@ namespace MSensis.Controllers
             _logger = logger;
             _mailer = mailer;
             _converter = converter;
-           
+
         }
 
         [HttpGet]
@@ -86,44 +87,44 @@ namespace MSensis.Controllers
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Index()
         {
-            
-                User user = await _manager.GetUserAsync(HttpContext.User);
-                if (user == null)
-                {
-                    _logger.LogWarning("no user found {0}", DateTime.Now);
-                     
-                }
-                else
-                {
-                    _logger.LogWarning("user is in {0}", user); 
-                }
-                List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList();
-            
 
-                List<Pdf> user_pdfs = _db.Pdfs.Where(c => c.User.Id == user.Id).ToList();
-                List<Client> Clients = _db.Clients.Where(c => c.User.Id == user.Id).ToList();
-                var totalvatThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalVat).Sum();
-                var totalvatSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalVat).Sum();
-                var totalValueSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalValue).Sum();
-                var totalValueThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalValue).Sum();
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            if (user == null)
+            {
+                _logger.LogWarning("no user found {0}", DateTime.Now);
 
-                UserViewModel model = new UserViewModel
-                {
-                    Companies = user_companies,
-                    Companys_Clients = user_companies.Count(),
-                    User_Invoices = user_pdfs.Count(),
-                    pdfs = user_pdfs,
-                    User_pdfs = user_pdfs.Count(),
-                    Clients = Clients,
-                    TotalValueSix = totalValueSix,
-                    TotalValueThree = totalValueThree,
-                    TotalVatSix = totalvatSix,
-                    TotalVatThree = totalvatThree ,
-                    User = user 
-                };
+            }
+            else
+            {
+                _logger.LogWarning("user is in {0}", user);
+            }
+            List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList();
 
-                return View(model);  
-            
+
+            List<Pdf> user_pdfs = _db.Pdfs.Where(c => c.User.Id == user.Id).ToList();
+            List<Client> Clients = _db.Clients.Where(c => c.User.Id == user.Id).ToList();
+            var totalvatThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalVat).Sum();
+            var totalvatSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalVat).Sum();
+            var totalValueSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalValue).Sum();
+            var totalValueThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalValue).Sum();
+
+            UserViewModel model = new UserViewModel
+            {
+                Companies = user_companies,
+                Companys_Clients = user_companies.Count(),
+                User_Invoices = user_pdfs.Count(),
+                pdfs = user_pdfs,
+                User_pdfs = user_pdfs.Count(),
+                Clients = Clients,
+                TotalValueSix = totalValueSix,
+                TotalValueThree = totalValueThree,
+                TotalVatSix = totalvatSix,
+                TotalVatThree = totalvatThree,
+                User = user
+            };
+
+            return View(model);
+
         }
 
         [ViewLayout("_Administrator")]
@@ -200,13 +201,13 @@ namespace MSensis.Controllers
             if (CompanyId == null)
             {
                 User user = await _manager.GetUserAsync(HttpContext.User);
-                List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList(); 
+                List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList();
 
                 UserViewModel model = new UserViewModel
                 {
                     Companies = user_companies,
                     Companys_Clients = user_companies.Count(),
-                    
+
                 };
 
                 return View(model);
@@ -225,13 +226,13 @@ namespace MSensis.Controllers
             User user = await _manager.GetUserAsync(HttpContext.User);
             List<Company> user_companies = await _db.Companies.Where(c => c.User.Id == user.Id).ToListAsync();
             List<Client> user_clients = await _db.Clients.Where(c => c.User.Id == user.Id).ToListAsync();
-            
+
 
             InvoiceViewModel model = new InvoiceViewModel()
             {
                 Companies = user_companies,
                 Clients = user_clients
-                 
+
             };
 
             return View(model);
@@ -271,7 +272,7 @@ namespace MSensis.Controllers
             Invoice invoice = await _db.Invoices.Where(c => c.Company.Id == company.Id).FirstOrDefaultAsync();
 
 
-            
+
             await _db.SaveChangesAsync();
             Product item = new Product()
             {
@@ -281,7 +282,7 @@ namespace MSensis.Controllers
                 Vat = 24,
                 Description = model.Invoice_Description,
                 Timestamp = DateTime.Now,
-                Absolute_value = model.Price   ,
+                Absolute_value = model.Price,
                 Invoice = invoice,
                 DateTimeString = DateTime.Now.ToString("MM/hh/yyyy")
 
@@ -305,23 +306,23 @@ namespace MSensis.Controllers
                 _logger.LogError($"{ex}");
             }
 
-             
-                Pdf pdf = new Pdf
-                {
-                    Client = client,
-                    Company = company,
-                    Invoice = invoice,
-                    User = user,
-                    Timestamp = DateTime.Now
 
-                };
-                _db.Pdfs.Add(pdf);
-                await _db.SaveChangesAsync();
+            Pdf pdf = new Pdf
+            {
+                Client = client,
+                Company = company,
+                Invoice = invoice,
+                User = user,
+                Timestamp = DateTime.Now
+
+            };
+            _db.Pdfs.Add(pdf);
+            await _db.SaveChangesAsync();
 
             return RedirectToAction("AllProd", "Home");
 
-            }
-              
+        }
+
 
 
         public int CalculateVat(int value)
@@ -329,11 +330,11 @@ namespace MSensis.Controllers
             return (value / 100) * 24;
         }
 
-      
+
 
         [HttpPost]
         public async Task<IActionResult> Create_Action([FromBody]InvoiceViewModel model)
-        { 
+        {
             User user = await _manager.GetUserAsync(HttpContext.User);
 
 
@@ -359,7 +360,7 @@ namespace MSensis.Controllers
                     IdentifierId = Guid.NewGuid()
                 };
                 _db.Invoices.Add(invoice);
-                await _db.SaveChangesAsync(); 
+                await _db.SaveChangesAsync();
 
                 Invoice_Product invoice_products = new Invoice_Product
                 {
@@ -369,7 +370,7 @@ namespace MSensis.Controllers
                 };
                 _db.Add(invoice_products);
 
-                await _db.SaveChangesAsync(); 
+                await _db.SaveChangesAsync();
 
                 Pdf pdf = new Pdf
                 {
@@ -391,7 +392,7 @@ namespace MSensis.Controllers
                     product.Name = c.Name;
                     product.PricePerUnit = c.Absolute_value;
                     product.Vat = c.Vat;
-                    product.Discount = c.Discount; 
+                    product.Discount = c.Discount;
                     product.Invoice = invoice;
                     product.PdfId = pdf.Id;
                     product.Quantity = c.Quantity;
@@ -401,8 +402,8 @@ namespace MSensis.Controllers
                     product.Timestamp = DateTime.Now;
                     list.Add(product);
                 }
-                await _db.Products.AddRangeAsync(list); 
-                await _db.SaveChangesAsync(); 
+                await _db.Products.AddRangeAsync(list);
+                await _db.SaveChangesAsync();
 
                 Product item = new Product()
                 {
@@ -416,18 +417,18 @@ namespace MSensis.Controllers
                     Invoice = invoice,
                     PdfId = pdf.Id,
                     DateTimeString = DateTime.Now.ToString("dd/MM/yyyy"),
-                    PricePerUnit = model.PricePerUnit 
-                   
+                    PricePerUnit = model.PricePerUnit
+
 
                 };
                 _db.Products.Add(item);
-                await _db.SaveChangesAsync(); 
+                await _db.SaveChangesAsync();
 
                 List<Product> products = await _db.Products.Where(u => u.PdfId == pdf.Id)
                        .ToListAsync();
 
                 decimal totalBeforeDiscount = 0;
-               
+
                 decimal subTotalAmount = 0;
                 decimal vatTotalAmount = 0;
                 decimal discount = 0;
@@ -448,7 +449,7 @@ namespace MSensis.Controllers
 
                 pdf.TotalValue = vatTotalAmount;
                 pdf.TotalVat = sumvat;
-                await  _db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -456,13 +457,13 @@ namespace MSensis.Controllers
             }
 
             return Ok();
-    }
+        }
 
-          
+
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Create_Client()
         {
-            User user = await _manager.GetUserAsync(HttpContext.User); 
+            User user = await _manager.GetUserAsync(HttpContext.User);
             return View();
         }
 
@@ -502,7 +503,7 @@ namespace MSensis.Controllers
             return RedirectToAction("CClients", "Home");
         }
 
-        
+
 
         [ViewLayout("Empty")]
         public async Task<ActionResult> ViewInvoice(string id)
@@ -517,7 +518,7 @@ namespace MSensis.Controllers
 
 
             decimal totalBeforeDiscount = 0;
-            
+
             decimal subTotalAmount = 0;
             decimal vatTotalAmount = 0;
             decimal discount = 0;
@@ -530,7 +531,7 @@ namespace MSensis.Controllers
             {
                 Product product = products[i];
                 decimal total = (decimal)(product.PricePerUnit * product.Quantity);
-                decimal subTotal = (decimal)(product.PricePerUnit * 100) / product.Vat; 
+                decimal subTotal = (decimal)(product.PricePerUnit * 100) / product.Vat;
                 totalBeforeDiscount += total;
                 subTotalAmount += subTotal;
             }
@@ -544,16 +545,16 @@ namespace MSensis.Controllers
                 Client = pdf.Client,
                 Invoice = pdf.Invoice,
                 ImageSrc = pdf.Company.ImageSrc,
-                products2 = products, 
+                products2 = products,
                 Id = pdf.Id,
                 SubTotal = subTotalAmount.ToString("#.##"),
                 TotalVat = sumvat.ToString("#.##"),
                 Discount = discount.ToString("#.##"),
                 PriceWithoutVat = vatTotalAmount.ToString("#.##"),
-                GrantTotal = vatTotalAmount  + sumvat,
-                DateTimeString =pdf.DateTimeString
+                GrantTotal = vatTotalAmount + sumvat,
+                DateTimeString = pdf.DateTimeString
 
-        };
+            };
 
             return View(model);
         }
@@ -664,7 +665,7 @@ namespace MSensis.Controllers
 
                 c.Code = model.Invoice_Code;
                 c.Description = model.Invoice_Description;
-                c.Quantity = model.Invoice_Quantity; 
+                c.Quantity = model.Invoice_Quantity;
                 c.PricePerUnit = model.PricePerUnit;
                 c.Vat = model.Invoice_VAT;
                 c.Discount = model.Discount;
@@ -673,12 +674,12 @@ namespace MSensis.Controllers
                 _db.Entry(await _db.Invoices.FirstOrDefaultAsync(x => x.Id == c.Id)).CurrentValues.SetValues(c);
                 await _db.SaveChangesAsync();
                 return RedirectToAction("ManagePdfs", "Home");
-                    }
+            }
             catch (Exception ex)
             {
                 _logger.LogError($"the reeson is {ex}");
                 return BadRequest("Error");
-            } 
+            }
         }
 
 
@@ -686,7 +687,7 @@ namespace MSensis.Controllers
         {
             Company company = _db.Companies.SingleOrDefault(c => c.Id == id);
 
-            List<Invoice>  company_invoices = await _db.Invoices.Where(i => i.Company.Id == id).ToListAsync();
+            List<Invoice> company_invoices = await _db.Invoices.Where(i => i.Company.Id == id).ToListAsync();
             List<Client> company_clients = _db.Clients.Where(c => c.Company.Id == id).ToList();
 
             UserViewModel model = new UserViewModel
@@ -727,9 +728,9 @@ namespace MSensis.Controllers
                 Code = client.Code,
                 CompanyName = client.CompanyName,
                 Email = client.Email,
-                ZipCode = client.ZipCode  
+                ZipCode = client.ZipCode
             };
-            return RedirectToAction("Manage","Home");
+            return RedirectToAction("Manage", "Home");
         }
 
 
@@ -756,9 +757,9 @@ namespace MSensis.Controllers
         public async Task<IActionResult> GetPdfs(int period)
         {
             User user = await _manager.GetUserAsync(HttpContext.User);
-            
 
-            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Draft" || c.Invoice.Invoice_Type == "Issued") && c.Invoice.Timestamp> DateTime.Now.AddMonths(-period))
+
+            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Draft" || c.Invoice.Invoice_Type == "Issued") && c.Invoice.Timestamp > DateTime.Now.AddMonths(-period))
                 .Include(u => u.Invoice)
                 .Include(u => u.Client)
                 .Include(u => u.Company)
@@ -806,7 +807,7 @@ namespace MSensis.Controllers
             return View(model);
         }
 
-        
+
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Edit_Product(string id)
         {
@@ -819,7 +820,7 @@ namespace MSensis.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit_Product(Product model)
         {
-            Product product = _db.Products.SingleOrDefault(u => u.Id == model.Id); 
+            Product product = _db.Products.SingleOrDefault(u => u.Id == model.Id);
             try
             {
                 product.Code = model.Code;
@@ -846,18 +847,43 @@ namespace MSensis.Controllers
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Update_Company(string id)
         {
-            var company = await _db.Companies.Where(u => u.Id == id)                 
+            var company = await _db.Companies.Where(u => u.Id == id)
                 .SingleOrDefaultAsync();
 
             return View(company);
+        }
+
+
+        [HttpPost]
+        [ViewLayout("_Administrator")]
+        public async Task<IActionResult> Update_Companys_Logo(Company model)
+        {
+            Company company = _db.Companies.SingleOrDefault(u => u.Id == model.Id);
+            if (model.Logo != null)
+            {
+                string Filepath = await _filemanager.SaveImage(model.Logo);
+
+                try
+                {
+                    company.ImageSrc = Filepath;
+                    _db.Entry(await _db.Companies.FirstOrDefaultAsync(x => x.Id == company.Id)).CurrentValues.SetValues(company);
+                    await _db.SaveChangesAsync();
+                }
+
+                catch (Exception ex)
+                {
+                    _logger.LogError($"{ex}");
+                }
+            }
+            return Ok(company);
         }
 
         [HttpPost]
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Update_Company(Company model)
         {
-              Company company = _db.Companies.SingleOrDefault(u => u.Id == model.Id);
-              if(model.Logo != null)
+            Company company = _db.Companies.SingleOrDefault(u => u.Id == model.Id);
+            if (model.Logo != null)
             {
                 string Filepath = await _filemanager.SaveImage(model.Logo);
 
@@ -878,7 +904,7 @@ namespace MSensis.Controllers
                 {
                     _logger.LogError($"{ex}");
                 }
-            }             
+            }
 
             if (model.Logo == null)
             {
@@ -892,11 +918,11 @@ namespace MSensis.Controllers
                 await _db.SaveChangesAsync();
             }
 
-            return RedirectToAction("Manage","Home");             
-        }      
+            return RedirectToAction("Manage", "Home");
+        }
 
-         
-        
+
+
 
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> DraftPdfs()
@@ -913,10 +939,10 @@ namespace MSensis.Controllers
             ClientViewModel model = new ClientViewModel
             {
                 Pdfs = pdfs
-                
+
             };
 
-           
+
             return View(model);
         }
 
@@ -957,8 +983,8 @@ namespace MSensis.Controllers
 
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> ViewProducts(string id)
-        { 
-            
+        {
+
             List<Product> products = await _db.Products.Where(u => u.PdfId == id).ToListAsync();
             PDFViewModel model = new PDFViewModel
             {
@@ -1015,7 +1041,7 @@ namespace MSensis.Controllers
             }
         }
 
-        
+
 
         [HttpPost]
         public bool Delete_Product(string id)
@@ -1039,7 +1065,7 @@ namespace MSensis.Controllers
         {
             try
             {
-                Client c =  _db.Clients.SingleOrDefault(s => s.Id == id);
+                Client c = _db.Clients.SingleOrDefault(s => s.Id == id);
                 _db.Remove(c);
                 _db.SaveChanges();
                 return true;
@@ -1059,12 +1085,12 @@ namespace MSensis.Controllers
             }
             try
             {
-          var invoice = _db.Invoices.Where(u => u.Id == id).SingleOrDefault();
-            var products = _db.Products.Where(u => u.Invoice.Id == id).ToList();
-            _db.RemoveRange(products);
-            _db.Remove(invoice);
-            _db.SaveChanges();
-            return true;
+                var invoice = _db.Invoices.Where(u => u.Id == id).SingleOrDefault();
+                var products = _db.Products.Where(u => u.Invoice.Id == id).ToList();
+                _db.RemoveRange(products);
+                _db.Remove(invoice);
+                _db.SaveChanges();
+                return true;
             }
             catch (Exception ex)
             {
@@ -1077,12 +1103,12 @@ namespace MSensis.Controllers
 
         public async Task<List<Company>> GetCompanies()
         {
-            User user =  await _manager.GetUserAsync(HttpContext.User);
-            var query =  _db.Companies.OrderByDescending(s => s.Timestamp)
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            var query = _db.Companies.OrderByDescending(s => s.Timestamp)
                           .Where(s => s.User.Id == user.Id).ToList();
-            return  query;
+            return query;
         }
- 
+
 
         public IActionResult Privacy()
         {
@@ -1114,5 +1140,5 @@ namespace MSensis.Controllers
         }
     }
 }
-  
+
 
