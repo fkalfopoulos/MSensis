@@ -34,7 +34,7 @@ namespace MSensis.Services
         {
             try
             {
-                string save_path = Path.Combine(Directory.GetCurrentDirectory(), _imagePath);
+               
                 string wwwRootPath = _hostEnviroment.WebRootPath;
                 string mime = image.FileName.Substring(image.FileName.LastIndexOf('.'));
                 string fileName = $"img_{DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss")}{mime}";

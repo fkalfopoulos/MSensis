@@ -9,6 +9,7 @@ using DinkToPdf;
 using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -856,12 +857,12 @@ namespace MSensis.Controllers
 
         [HttpPost]
         [ViewLayout("_Administrator")]
-        public async Task<IActionResult> Update_Companys_Logo(Company model)
+        public async Task<IActionResult> Update_Companys_Logo(LogoViewModel model)
         {
-            Company company = _db.Companies.SingleOrDefault(u => u.Id == model.Id);
-            if (model.Logo != null)
+            Company company = _db.Companies.SingleOrDefault(u => u.Id == model.PostId);
+            if (model.PostImage != null)
             {
-                string Filepath = await _filemanager.SaveImage(model.Logo);
+                string Filepath = await _filemanager.SaveImage(model.PostImage);
 
                 try
                 {

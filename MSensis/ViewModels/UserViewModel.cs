@@ -24,7 +24,11 @@ namespace MSensis.ViewModels
 
 
     }
-
+    public class LogoViewModel
+    {
+        public string PostId { get; set; }
+        public IFormFile PostImage { get; set; }
+    }
 
     public class UserViewModel
     {

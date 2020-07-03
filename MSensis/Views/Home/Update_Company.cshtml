@@ -102,30 +102,23 @@
 </section>
 
 <script>
-    function ChangeLogo() {
-        var Logo = document.getElementById("companyLogo").value;
-
+   async function ChangeLogo() {
+        let input = document.querySelector('input[type="file"]')
         var Id = document.getElementById("companyId").title;
-        //var Logo = new FormData();
-        var files = $('#companyLogo')[0].files[0];
-        //Logo.append('Logo', files);
-        console.log(Id);
-        console.log(files);
-        //console.log(Logo);
-        
-        $.ajax({
-            type: "POST",
-            url: "Update_Companys_Logo",
-            data: {
-                Logo: Logo,
-                Id:Id
-            },      
-            success: function (result) {
-                alert("ok");
-                console.log(result);
-            }
-        });
-    }
+        debugger;
+       let data = new FormData()
+        data.append('PostImage', input.files[0])
+        data.append('PostId', Id)
+        console.log(data);
+         const urlToSendRequest = "https://" + window.location.host + "@Url.Action("Update_Companys_Logo", "Home")";
+		const rawData = await fetch(urlToSendRequest,
+		{
+			method: 'POST',
+			credentials: "same-origin",
+			body: data
+		});
+		location.reload();
+	}
 </script>
 
 
