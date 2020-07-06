@@ -1,4 +1,7 @@
 ﻿@using MSensis.ViewModels;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
 @model UserViewModel
 
 
@@ -25,7 +28,7 @@
                 <div class="box-header">
                     <a asp-action="CreatePDF" asp-controller="MSensis">
 
-                        <h3 class="box-title">Manage Companies</h3>
+                        <h3 class="box-title">@_localizer["Manage Companies"]</h3>
                     </a>
                 </div>
                 <!-- /.box-header -->
@@ -33,12 +36,12 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Photo</th>
-                                <th>City</th>
-                                <th>Code</th>
-                                <th>Address</th>
-                                <th>Telephone Number</th>
-                                <th>Update</th> 
+                                <th>@_localizer["Photo"]</th>
+                                <th>@_localizer["City"]</th>
+                                <th>@_localizer["Code"]</th>
+                                <th>@_localizer["Address"]</th>
+                                <th>@_localizer["Telephone Number"]</th>
+                                <th>@_localizer["Update"]</th> 
                             </tr>
                         </thead>
                         <tbody>
@@ -52,7 +55,7 @@
                                     <td>@Html.DisplayFor(modelItem => item.Address)</td>
                                     <td>@Html.DisplayFor(modelItem => item.TelephoneNumber)</td>
                                     <td>
-                                        <a asp-action="Update_Company" asp-route-id="@item.Id"> Update<i class="fa fa-edit"></i></a>
+                                        <a asp-action="Update_Company" asp-route-id="@item.Id"> @_localizer["Update"]<i class="fa fa-edit"></i></a>
                                     </td> 
                                 </tr>
                             }

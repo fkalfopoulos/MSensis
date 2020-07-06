@@ -117,31 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Back" xml:space="preserve">
-    <value>Επιστροφή</value>
+  <data name="Address" xml:space="preserve">
+    <value>Διεύθυνση</value>
   </data>
-  <data name="Clients" xml:space="preserve">
-    <value>Πελάτες</value>
+  <data name="City" xml:space="preserve">
+    <value>Πόλη</value>
   </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Εταιρείες</value>
-  </data>
-  <data name="Manage Clients" xml:space="preserve">
-    <value>Διαχείριση Πελατών</value>
+  <data name="Code" xml:space="preserve">
+    <value>Κωδικός</value>
   </data>
   <data name="Manage Companies" xml:space="preserve">
     <value>Διαχείριση Εταιρειών</value>
   </data>
-  <data name="Manage Profile of" xml:space="preserve">
-    <value>Διαχείριση προφίλ του</value>
+  <data name="Photo" xml:space="preserve">
+    <value>Φωτογραφία</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Όνομα</value>
-  </data>
-  <data name="Phone Number" xml:space="preserve">
+  <data name="Telephone Number" xml:space="preserve">
     <value>Τηλέφωνο</value>
   </data>
-  <data name="Save" xml:space="preserve">
-    <value>Αποθήκευση</value>
+  <data name="Update" xml:space="preserve">
+    <value>Ενημέρωση</value>
   </data>
 </root>
