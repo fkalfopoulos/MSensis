@@ -1,4 +1,7 @@
 ﻿@using MSensis.ViewModels;
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
 @model ClientViewModel
 
 
@@ -10,23 +13,23 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Manage   Clients</h3>
+                    <h3 class="box-title">@_localizer["Manage Clients"]</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Occupation</th>
-                                <th>City</th>
-                                <th>Address</th>
-                                <th>Email</th>
-                                <th>Zipcode</th>
-                                <th>Telephone Number</th>
-                                <th>AFM</th>
-                                <th>Update</th>
-                                <th>Delete</th>
+                                <th>@_localizer["Name"]</th>
+                                <th>@_localizer["Occupation"]</th>
+                                <th>@_localizer["City"]</th>
+                                <th>@_localizer["Address"]</th>
+                                <th>@_localizer["Email"]</th>
+                                <th>@_localizer["Zipcode"]</th>
+                                <th>@_localizer["Telephone Number"]</th>
+                                <th>@_localizer["AFM"]</th>
+                                <th>@_localizer["Update"]</th>
+                                <th>@_localizer["Delete"]</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,10 +46,10 @@
                                 <td>@Html.DisplayFor(modelItem => item.AFM)</td>
 
                                 <td>
-                                    <a asp-action="Update_Client" asp-route-id="@item.Id">Update  <i class="fa fa-edit"></i></a> 
+                                    <a asp-action="Update_Client" asp-route-id="@item.Id">@_localizer["Update"]  <i class="fa fa-edit"></i></a> 
                                 </td>
                                 <td>
-                                    <a href="" onclick="Delete('@item.Id')"> Delete   <i class="fa fa-trash-o"> </i></a>
+                                    <a href="" onclick="Delete('@item.Id')"> @_localizer["Delete"] <i class="fa fa-trash-o"> </i></a>
                                 </td>
                             </tr>
                             }

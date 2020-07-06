@@ -5,7 +5,7 @@
     ViewData["Title"] = "Profile";
 }
 
-<h2>Manage @Model.Name Profile</h2>
+<h2>@_localizer["Manage Profile of"] @Model.Name</h2>
 
 <section class="content container-fluid">
 
@@ -24,7 +24,7 @@
 
                     </div>
                     <div class="col-md-6">
-                        <label for="companies">Companies</label>
+                        <label for="companies">@_localizer["Companies"]</label>
                         <ul class="list-group" id="companies">
                             @foreach (var company in Model.Companies)
                             {
@@ -34,11 +34,11 @@
 
                         </ul>
                         <a href='@Url.Action("Manage","Home")'>
-                            <span>Manage Companies</span>
+                            <span>@_localizer["Manage Companies"]</span>
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <label for="clients">Clients</label>
+                        <label for="clients">@_localizer["Clients"]</label>
                         <ul class="list-group" id="clients">
                             @foreach (var client in Model.Clients)
                             {
@@ -48,7 +48,7 @@
 
                         </ul>
                         <a href='@Url.Action("CClients","Home")'>
-                            <span> Manage Clients</span>
+                            <span> @_localizer["Manage Clients"]</span>
                         </a>
                     </div>
                 </div>

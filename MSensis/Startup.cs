@@ -62,10 +62,12 @@ namespace MSensis
             {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "/Account/Login");
             })
+            //localization code--------------------------------------------------
             .AddViewLocalization(
                 opts => { opts.ResourcesPath = "Resources"; })
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization()
+                //---------------------------------------------------
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             //this code is also for localization----------------------------------------------------------------------
             services.Configure<RequestLocalizationOptions>(opts =>
@@ -73,9 +75,9 @@ namespace MSensis
                 var supportedCultures = new List<CultureInfo>
                 {
                     new CultureInfo("en"),
-                    new CultureInfo("en-US"),
+                    //new CultureInfo("en-US"),
                     new CultureInfo("el"),
-                    new CultureInfo("el-GR")
+                    //new CultureInfo("el-GR")
                 };
                 opts.DefaultRequestCulture = new RequestCulture("en-US");
                 //formatting numbers, dates

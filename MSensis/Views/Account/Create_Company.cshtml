@@ -1,4 +1,6 @@
 ﻿@using MSensis.ViewModels
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
 @model CompanyViewModel
 
 <head>
@@ -6,7 +8,7 @@
 </head>
 <section class="content-header">
     <h1>
-        Create Company
+        @_localizer["Create Company"]
     </h1>
 </section>
 <br />
@@ -25,25 +27,25 @@
                     <div class="row">
                         <div class="col-50">
 
-                            <label for="fname"><i class="fa fa-user"></i>Name</label>
+                            <label for="fname"><i class="fa fa-user"></i>@_localizer["Name"]</label>
                             <input type="text" id="fname" name="Name">
 
-                            <label for="email"><i class="fa fa-envelope"></i> Address</label>
-                            <input type="text" id="email" name="Address" placeholder="address">
+                            <label for="email"><i class="fa fa-envelope"></i> @_localizer["Address"]</label>
+                            <input type="text" id="email" name="Address" placeholder="@_localizer["Address"]">
 
-                            <label for="adr"><i class="fa fa-address-card-o"></i> City</label>
-                            <input type="text" id="adr" name="City" placeholder="City">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> @_localizer["City"]</label>
+                            <input type="text" id="adr" name="City" placeholder="@_localizer["City"]">
 
 
                             <div class="row">
                                 <div class="col-50">
-                                    <label for="state">ΑΦΜ</label>
+                                    <label for="state">@_localizer["Social Security Number"]</label>
                                     <input type="number" id="state" name="Code" placeholder="">
                                 </div>
 
 
                                 <div class="col-50">
-                                    <label for="Telephone"><i class="fa fa-mobile"></i> Telephone  </label>
+                                    <label for="Telephone"><i class="fa fa-mobile"></i> @_localizer["Telephone"]  </label>
                                     <input type="number" id="zip" name="TelephoneNumber" />
                                 </div>
                             </div>
@@ -52,7 +54,7 @@
                         <br />
 
                         <div class="form-group">
-                            <label for="inputImage3" class="col-sm-4 control-label">Company's Logo</label>
+                            <label for="inputImage3" class="col-sm-4 control-label">@_localizer["Company's Logo"]</label>
                             <div class="col-sm-8">
 
                                 <input type="file" class="form-control" name="Company_Logo" >
@@ -72,8 +74,8 @@
 
 
         <div class="box-footer">
-            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">Back</button>
-            <button type="submit" class="btn btn-info pull-right">Save</button>
+            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">@_localizer["Back"]</button>
+            <button type="submit" class="btn btn-info pull-right">@_localizer["Save"]</button>
         </div>
 
     </form>
