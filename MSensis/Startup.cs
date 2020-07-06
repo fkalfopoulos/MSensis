@@ -1,8 +1,6 @@
-﻿
-using DinkToPdf;
+﻿using DinkToPdf;
 using DinkToPdf.Contracts;
- 
-using Microsoft.AspNetCore.Builder;
+ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
@@ -24,6 +22,8 @@ using System.Reflection;
 using System.Runtime.Loader;
 using System.Threading.Tasks;
 using Wkhtmltopdf.NetCore;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.Options;
 
 namespace MSensis
 {
@@ -51,12 +51,39 @@ namespace MSensis
             services.AddAuthorization();
             services.AddCors();
 
+            //code to try make app bilingual---------------------------------------------------------------------
+            services.AddLocalization(opts =>
+            {
+                opts.ResourcesPath = "Resources";
+            });
+
+            //------------------------------------------------------------------------------------------------------
             services.AddMvc().AddRazorPagesOptions(options =>
             {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "/Account/Login");
             })
-            .AddViewLocalization().AddDataAnnotationsLocalization()
+            .AddViewLocalization(
+                opts => { opts.ResourcesPath = "Resources"; })
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization()
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //this code is also for localization----------------------------------------------------------------------
+            services.Configure<RequestLocalizationOptions>(opts =>
+            {
+                var supportedCultures = new List<CultureInfo>
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("en-US"),
+                    new CultureInfo("el"),
+                    new CultureInfo("el-GR")
+                };
+                opts.DefaultRequestCulture = new RequestCulture("en-US");
+                //formatting numbers, dates
+                opts.SupportedCultures = supportedCultures;
+                //UI string  that we have localized
+                opts.SupportedUICultures = supportedCultures;
+            });
+            //-------------------------------------------------------------------------------------------------------------
              
         }
 
@@ -82,6 +109,12 @@ namespace MSensis
 
             //app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            //another piece of code for localization---------------------------------------------
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
+            //------------------------------------------------------------------------------------
+
             app.UseCookiePolicy();
             
             app.UseFileServer();
