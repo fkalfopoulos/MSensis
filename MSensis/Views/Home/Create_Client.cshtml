@@ -1,4 +1,6 @@
 ﻿@using MSensis.ViewModels
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
 @model ClientViewModel
 
 <head>
@@ -6,7 +8,7 @@
 </head>
 <section class="content-header">
     <h1>
-        Add Client
+        @_localizer["Add Client"]
     </h1>
 </section>
 <!-- Main content -->
@@ -22,29 +24,30 @@
                     <div class="row">
                         <div class="col-50">
 
-                            <label for="fname"><i class="fa fa-user"></i>Client Name</label>
+                            <label for="fname"><i class="fa fa-user"></i>@_localizer["Client Name"]</label>
                             <input type="text" id="fname" name="CompanyName" placeholder="John M. Doe">
+
                             <label for="email"><i class="fa fa-envelope"></i> Email</label>
-
                             <input type="text" id="email" name="Email" placeholder="client@gmail.com">
-                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
 
-                            <input type="text" id="adr" name="Address" placeholder="Address">
-                            <label for="city"><i class="fa fa-institution"></i> City</label>
-                            <input type="text" id="city" name="City" placeholder="City">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> @_localizer["Address"]</label>
+                            <input type="text" id="adr" name="Address" placeholder="@_localizer["Address"]">
+
+                            <label for="city"><i class="fa fa-institution"></i> @_localizer["City"]</label>
+                            <input type="text" id="city" name="City" placeholder="@_localizer["City"]">
 
                             <div class="row">
                                 <div class="col-50">
-                                    <label for="state">Occupation</label>
-                                    <input type="text" id="state" name="Client_Occupation" placeholder="Απασχόληση">
+                                    <label for="state">@_localizer["Occupation"]</label>
+                                    <input type="text" id="state" name="Client_Occupation" placeholder="@_localizer["Occupation"]">
                                 </div>
                                 <div class="col-50">
-                                    <label for="zip">Zip</label>
+                                    <label for="zip">@_localizer["Zip"]</label>
                                     <input type="number" id="zip" name="ZipCode" placeholder="10001">
 
                                 </div>
                                 <div class="col-50">
-                                    <label for="Telephone">Telephone</label>
+                                    <label for="Telephone">@_localizer["Telephone"]</label>
                                     <input type="number" id="zip" name="TelephoneNumber" placeholder="10001">
                                 </div>
                             </div>
@@ -53,11 +56,11 @@
 
                         <div class="row">
                             <div class="col-50">
-                                <label for="expyear">ΔΟΥ</label>
+                                <label for="expyear">@_localizer["DOY"]</label>
                                 <input type="text" id="expyear" name="DOY" placeholder="Ε">
                             </div>
                             <div class="col-50">
-                                <label for="cvv">ΑΦΜ</label>
+                                <label for="cvv">@_localizer["Social Security Number"]</label>
                                 <input type="number" id="cvv" name="AFM" placeholder="323232">
                             </div>
                         </div>
@@ -72,7 +75,7 @@
 
         <div class="box-footer">
 
-            <button type="submit" class="btn btn-info pull-right">Create</button>
+            <button type="submit" class="btn btn-info pull-right">@_localizer["Create"]</button>
         </div>
     </form>
 </section>

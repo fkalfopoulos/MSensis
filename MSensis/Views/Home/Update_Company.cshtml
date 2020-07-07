@@ -1,4 +1,7 @@
 ﻿@using MSensis.Models
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
 @model Company
 
 <head>
@@ -6,7 +9,7 @@
 </head>
 <section class="content-header">
     <h1>
-        Edit Company
+        @_localizer["Edit Company"]
     </h1>
 </section>
 <!-- Main content -->
@@ -23,25 +26,25 @@
                     <div class="row">
                         <div class="col-50">
 
-                            <label for="fname"><i class="fa fa-user"></i>Company Name</label>
+                            <label for="fname"><i class="fa fa-user"></i>@_localizer["Company Name"]</label>
                             <input type="text" id="fname" name="Name" value="@Model.Name">
 
-                            <label for="email"><i class="fa fa-envelope"></i> Company Address</label>
-                            <input type="text" id="email" name="Address" value="@Model.Address" placeholder="company address">
+                            <label for="email"><i class="fa fa-envelope"></i> @_localizer["Company Address"]</label>
+                            <input type="text" id="email" name="Address" value="@Model.Address" placeholder="@_localizer["Company Address"]">
 
-                            <label for="adr"><i class="fa fa-address-card-o"></i> City</label>
-                            <input type="text" id="adr" name="City" placeholder="Address" value="@Model.City">
+                            <label for="adr"><i class="fa fa-address-card-o"></i> @_localizer["City"]</label>
+                            <input type="text" id="adr" name="City" placeholder="@_localizer["City"]" value="@Model.City">
 
 
                             <div class="row">
                                 <div class="col-50">
-                                    <label for="state">Code</label>
+                                    <label for="state">@_localizer["Code"]</label>
                                     <input type="number" id="state" name="Code" placeholder="" value="@Model.Code">
                                 </div>
 
 
                                 <div class="col-50">
-                                    <label for="Telephone"><i class="fas fa-mobile"></i></label>
+                                    <label for="Telephone"><i class="fas fa-mobile">@_localizer["Telephone Number"]</i></label>
                                     <input type="number" id="zip" name="TelephoneNumber" placeholder="10001" value="@Model.TelephoneNumber">
                                 </div>
                             </div>
@@ -49,7 +52,7 @@
 
 
                         <div class="form-group">
-                            <label for="inputImage3" class="col-sm-2 control-label">Company's Logo</label>
+                            <label for="inputImage3" class="col-sm-2 control-label">@_localizer["Company's Logo"]</label>
                             <div class="col-sm-10">
 
                                 <img height="170" width="130" src="~/content/@Url.Content(Model.ImageSrc)" class="rounded-circle" />
@@ -57,14 +60,14 @@
                                 @*<input type="file" class="form-control" name="Logo" value="@Model.Logo">*@
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
-                                    Choose Logo
+                                    @_localizer["Choose New Logo"]
                                 </button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">Choose Image</h5>
+                                                <h5 class="modal-title" id="exampleModalLongTitle">@_localizer["Choose Image"]</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -73,8 +76,8 @@
                                                 <input id="companyLogo" type="file" class="form-control" name="Logo">
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary" onclick="ChangeLogo()" data-dismiss="modal">Select</button>                                               
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">@_localizer["Close"]</button>
+                                                <button type="button" class="btn btn-primary" onclick="ChangeLogo()" data-dismiss="modal">@_localizer["Select"]</button>                                               
                                             </div>
                                         </div>
                                     </div>
@@ -93,8 +96,8 @@
 
 
         <div class="box-footer">
-            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">Back</button>
-            <button type="submit" class="btn btn-info pull-right">Save</button>
+            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">@_localizer["Back"]</button>
+            <button type="submit" class="btn btn-info pull-right">@_localizer["Save"]</button>
         </div>
 
         <input id="companyId" type="hidden" name="Id" value="@Model.Id" title="@Model.Id"/>
