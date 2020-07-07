@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer _localizer
 
-@model Invoice 
+@model Invoice
 
 <head>
     <link rel="stylesheet" href="~/css/form.css" />
@@ -10,11 +10,9 @@
 <!-- Main content -->
 <section class="content container-fluid">
 
-    <div class="box box-info">
-        <div class="box-header with-border">
-            <h3 class="box-title">@_localizer["Edit Invoice"]</h3>
-        </div>
-    </div>
+    <section class="content-header">
+        <h3 class="box-title">@_localizer["Edit Invoice"]</h3>
+    </section>
 
     <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Home/Update_Invoice">
         <div class="row">
@@ -46,7 +44,7 @@
                                     <label for="zip">@_localizer["Discount"]</label>
                                     <input type="text" id="zip" name="Discount" placeholder="" value="@Model.Discount" />
                                 </div>
-                             
+
                             </div>
                         </div>
 
@@ -73,7 +71,7 @@
                                 </div>
                                 <div class="col-50">
                                     <label for="cvv">@_localizer["Quantity"]</label>
-                                    <input type="text" id="cvv" name="Invoice_Quantity" placeholder=""value="@Model.Quantity" />  
+                                    <input type="text" id="cvv" name="Invoice_Quantity" placeholder="" value="@Model.Quantity" />
                                 </div>
                             </div>
                         </div>
@@ -85,7 +83,7 @@
 
             <div class="col-25">
                 <div class="container">
-                    <h4>                        
+                    <h4>
                         <span class="price" style="color:black">
                             <label for="cvv">@_localizer["VAT"]</label>
                             <input type="text" id="cvv" name="Vat" placeholder="" value="@Model.Vat" />
@@ -101,13 +99,13 @@
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">@_localizer["Comments"]</label>
             <div class="col-sm-10">
-                 
+
                 <input type="text" id="cvv" name="Invoice_Comments" placeholder="" value="@Model.Comments">
             </div>
         </div>
 
-         
-       
+
+
 
 
         <div class="box-footer">

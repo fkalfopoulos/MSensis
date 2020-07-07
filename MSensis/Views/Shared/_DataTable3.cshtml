@@ -1,0 +1,62 @@
+﻿
+@using MSensis.ViewModels
+@model ClientViewModel
+
+
+
+<div class="box-body">
+    <table id="example1" class="table table-bordered table-striped">
+        <thead>
+
+            <tr>
+                <th>Company</th>
+                <th>Client</th>
+                <th>Invoice Date</th>
+                <th> Invoice type</th>
+                <th> View Document</th>
+                <th> Update Invoice</th>
+                <th> View Products</th>
+                <th>Delete  Invoice</th>
+                <th> Total Vat</th>
+                <th> Total Value</th>
+            </tr>
+
+        </thead>
+        @foreach (var item in Model.Pdfs)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Company.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Client.CompanyName)</td>
+                <td>@item.Invoice.Timestamp.Value.ToString("dd'/'MM'/'yyyy")</td>
+                <td>@Html.DisplayFor(modelItem => item.Invoice.Invoice_Type)</td>
+
+                <td>  <a asp-action="ViewInvoice" asp-controller="Home" asp-route-id="@item.Id">View <i class="fa fa-eye"></i></a> </td>
+                <td>
+                    <a asp-action="Update_Invoice" asp-route-id="@item.Invoice.Id">Update <i class="fa fa-edit"></i></a>
+                </td>
+                <td>
+                    <a asp-action="ViewProducts" asp-route-id="@item.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Download PDF"
+                       style="padding-right: 2px;">View Products<i class="fa fa-edit"></i></a>
+                </td>
+                <td>
+                    <a asp-action="Ιnvoice_del" asp-controller="MSensis" asp-route-id="@item.Invoice.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Download PDF"
+                       style="padding-right: 2px;">Delete invoice<i class="fa fa-edit"></i></a>
+
+                </td>
+                <td>
+                    @item.TotalVat.ToString("#.##")
+                </td>
+                <td>
+                    @item.TotalValue.ToString("#.##")
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+
+<script>
+      $(function () {
+        $('#example1').DataTable();
+    });
+</script>

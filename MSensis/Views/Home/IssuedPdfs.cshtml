@@ -1,87 +1,43 @@
 ﻿@using MSensis.ViewModels;
 @model ClientViewModel
 
- 
-
 <!-- Main content -->
 <section class="content">
     <div class="row">
         <div class="col-xs-12" id="Column">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Manage Pdf</h3>
+                    <h3 class="box-title">Manage Issued Pdf</h3>
                 </div>
                 <br />
             </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="box-header">
+            <div class="col-sm-10">
+                <select class="form-control" id="SearchString" name="SearchString" AutoPostBack="true">
+                    <option value="1"> One Month</option>
+                    <option value="3"> Three Month</option>
+                    <option value="6">Six Month</option>
+
+                </select>
+                <button type="submit" class="btn btn-info pull-right" onclick="SendData()">Search</button>
             </div>
-
-
-
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-
-                            <tr>
-                                <th>Company</th>
-                                <th>Client</th>
-                                <th>Invoice Date</th>
-                                <th> Invoice type</th>
-                                <th> View Document</th>
-                                <th> Update Invoice</th>
-                                <th> View Products</th>
-                                <th>Delete  Invoice</th>
-                                <th> Total Vat</th>
-                                <th> Total Value</th>
-                            </tr>
-
-                        </thead>
-                        @foreach (var item in Model.Pdfs)
-                        {
-                        <tr>
-                            <td>@Html.DisplayFor(modelItem => item.Company.Name)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Client.CompanyName)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Invoice.Timestamp)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Invoice.Invoice_Type)</td>
-
-                            <td>  <a asp-action="ViewInvoice" asp-controller="Home" asp-route-id="@item.Id">View <i class="fa fa-eye"></i></a> </td>
-                            <td>
-                                <a asp-action="Update_Invoice" asp-route-id="@item.Invoice.Id">Update <i class="fa fa-edit"></i></a>
-                            </td>
-                            <td>
-                                <a asp-action="ViewProducts" asp-route-id="@item.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Download PDF"
-                                   style="padding-right: 2px;">View Products<i class="fa fa-edit"></i></a>
-                            </td>
-                            <td>
-                                <a asp-action="Ιnvoice_del" asp-controller="MSensis" asp-route-id="@item.Invoice.Id" data-toggle="tooltip" data-position="top" data-delay="50" data-tooltip="Download PDF"
-                                   style="padding-right: 2px;">Delete invoice<i class="fa fa-edit"></i></a>
-
-                            </td>
-                            <td>
-                                @item.TotalVat.ToString("#.##")
-                            </td>
-                            <td>
-                                @item.TotalValue.ToString("#.##")
-                            </td>
-
-
-                        </tr>
-                        }
-                    </table>
-                </div>
-
-            </div>
-
-     
+        </div>
+    </div>
+    <div id="partial">
+        <partial name="_DataTable3" />
+    </div>
 
 </section>
- 
+
 <!-- page script -->
 <script>
     $(function () {
         $('#example1').DataTable();
     });
-
     function Delete(id) {
          var r = confirm("Are you sure you want to Delete?");
          if (r == true) {
@@ -93,7 +49,6 @@
                      data: {
                          id: id
                      },
-
                      error: function (result) {
                          alert("error");
                      },
@@ -106,17 +61,27 @@
                              alert("There is a problem, Try Later!");
                          }
                      }
-                 }); 
+                 });
          }
      }
-
-
 </script>
 
 <script>
-
-     function Action() {
-         const id = document.getElementById("")
-     }
-
+    function SendData() {
+        var SearchString = document.getElementById("SearchString").value;
+        console.log(SearchString);
+        let data = {
+            SearchString: SearchString
+        }
+        $.ajax({
+            url: "IssuedPdfs",
+            type: "POST",
+            data: data,
+            cache: false,
+            success: function (result) {
+                $("#partial").html(result);
+                console.log("i am here");
+            }
+        });
+    }
 </script>

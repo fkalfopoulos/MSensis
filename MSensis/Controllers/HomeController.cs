@@ -1036,6 +1036,26 @@ namespace MSensis.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> IssuedPdfs(ClientViewModel postData)
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+
+            List<Pdf> filter = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Issued") && c.Invoice.Timestamp > DateTime.Now.AddMonths(-postData.SearchString))
+                           .Include(u => u.Invoice)
+                           .Include(u => u.Client)
+                           .Include(u => u.Company)
+                            .OrderByDescending(u => u.Timestamp)
+                           .ToListAsync();
+
+            ClientViewModel model1 = new ClientViewModel
+            {
+                Pdfs = filter,
+            };
+
+            return PartialView("_DataTable3", model1);
+        }
+
 
 
         [HttpPost]

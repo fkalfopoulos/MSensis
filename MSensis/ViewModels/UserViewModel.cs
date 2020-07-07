@@ -95,6 +95,7 @@ namespace MSensis.ViewModels
         public List<string> Ids { get; set; }
 
         public string DatetimeString { get; set; }
+        public int SearchString { get; set; }
 
         public int choice { get; set; }
         public List<int> Choose { get; set; }
