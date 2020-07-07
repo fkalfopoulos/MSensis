@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Localization;
-using MSensis.Languages;
+using Microsoft.Extensions.Localization; 
 using MSensis.Models;
 using System;
 using System.Collections.Generic;

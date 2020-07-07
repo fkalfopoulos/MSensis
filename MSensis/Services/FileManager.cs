@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using MSensis.Models;
 using System;
@@ -13,12 +14,14 @@ namespace MSensis.Services
     {
 
         private readonly string _imagePath;
-        private readonly MSensisContext _db; 
+        private readonly MSensisContext _db;
+        private readonly IHostingEnvironment _env;
 
-        public FileManager(IConfiguration config, MSensisContext db)
+        public FileManager(IConfiguration config, MSensisContext db, IHostingEnvironment env)
         {
-            _imagePath = config["Path:Images"]; //remember to change
+            _imagePath = config["Path:Images"]; 
             _db = db;
+            _env = env;
         }
 
         public string GetImagePath(string PhotoId)
@@ -31,7 +34,7 @@ namespace MSensis.Services
         {
             try
             {
-                string save_path = Path.Combine(Directory.GetCurrentDirectory(), _imagePath);
+                string save_path = _env.WebRootPath + "/content";
 
                 string mime = image.FileName.Substring(image.FileName.LastIndexOf('.'));
                 string fileName = $"img_{DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss")}{mime}";

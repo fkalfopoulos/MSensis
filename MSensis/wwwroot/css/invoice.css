@@ -8,6 +8,35 @@
     min-height: 680px;
     padding: 15px
 }
+#popup {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: red;
+}
+.section-transform a {
+    padding: 5px 15px 5px;
+    border: 2px solid #616161;
+    
+    color: #212631;
+    background: #f4f4f4;
+    font-size: 24px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+    .section-transform a:hover {
+        background: #616161;
+        color: #fff;
+        text-decoration: none;
+    }
+
 
     .invoice header {
         padding: 10px 0;

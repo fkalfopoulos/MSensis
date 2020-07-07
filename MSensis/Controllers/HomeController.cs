@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using MSensis.Email;
 using MSensis.Models;
@@ -29,13 +30,14 @@ namespace MSensis.Controllers
         private readonly UserManager<User> _manager;
         private readonly FileManager _filemanager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IStringLocalizer<HomeController> _localizer;
         private readonly ILogger<HomeController> _logger;
         private readonly IMailer _mailer;
         private readonly IConverter _converter;
 
 
         public HomeController(MSensisContext _db, UserManager<User> manager, FileManager filemanager, SignInManager<User> signInManager,
-           ILogger<HomeController> logger, IMailer mailer, IConverter converter)
+           ILogger<HomeController> logger, IMailer mailer, IConverter converter, IStringLocalizer<HomeController> localizer)
         {
             this._db = _db;
             _manager = manager;
@@ -44,7 +46,8 @@ namespace MSensis.Controllers
             _logger = logger;
             _mailer = mailer;
             _converter = converter;
-           
+            _localizer = localizer;
+
         }
 
         [Authorize]
@@ -55,17 +58,15 @@ namespace MSensis.Controllers
                 User user = await _manager.GetUserAsync(HttpContext.User);
                 if (user == null)
                 {
-                    _logger.LogWarning("no user found {0}", DateTime.Now);
-                     
+                    _logger.LogWarning("no user found {0}", DateTime.Now); 
                 }
                 else
                 {
                     _logger.LogWarning("user is in {0}", user); 
                 }
-                List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList();
-            
+                List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList(); 
 
-                List<Pdf> user_pdfs = _db.Pdfs.Where(c => c.User.Id == user.Id).ToList();
+                List<Pdf> user_pdfs = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Invoice_Type != "Deleted").ToList();
                 List<Client> Clients = _db.Clients.Where(c => c.User.Id == user.Id).ToList();
                 var totalvatThree = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-3)).Select(u => u.TotalVat).Sum();
                 var totalvatSix = user_pdfs.Where(p => p.Timestamp <= DateTime.Today.AddMonths(-6)).Select(u => u.TotalVat).Sum();
@@ -87,10 +88,43 @@ namespace MSensis.Controllers
                     User = user 
                 };
 
-                return View(model);  
-            
+                return View(model);   
         }
 
+        [HttpGet]
+        [Authorize]
+        [ViewLayout("_Administrator")]
+        public async Task<IActionResult> UpdateProfile()
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            List<Company> user_companies = _db.Companies.Where(c => c.User.Id == user.Id).ToList();
+            List<Client> Clients = _db.Clients.Where(c => c.User.Id == user.Id).ToList();
+
+            UserForProfileViewModel model = new UserForProfileViewModel
+            {
+                Name = user.UserName,
+                PhoneNumber = user.PhoneNumber,
+                Clients = Clients,
+                Companies = user_companies
+            };
+
+
+            return View(model);
+        }
+        [HttpPost]
+        [Authorize]
+        [ViewLayout("_Administrator")]
+        public async Task<IActionResult> UpdateProfile(UserForProfileViewModel model)
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+            if (model.PhoneNumber != null && model.Name != null)
+                UserForProfileViewModel.UpdateProfile(user, model);
+            //user.PhoneNumber = model.PhoneNumber;
+            //user.Name = model.Name;
+            //await _manager.UpdateAsync(user);
+            await _manager.UpdateAsync(user);
+            return RedirectToAction("Index", "Home");
+        }
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> AllProducts()
         {
@@ -319,13 +353,13 @@ namespace MSensis.Controllers
                     Invoice_Type = "Draft",
                     Client = client,
                     Company = company,
-                    Timestamp = DateTime.UtcNow.Date,
+                    Timestamp = DateTime.Now,
                     DateTimeString = DateTime.Now.ToString("dd/MM/yyyy"),
                     IdentifierId = Guid.NewGuid()
                 };
                 _db.Invoices.Add(invoice);
-                await _db.SaveChangesAsync(); 
-
+                await _db.SaveChangesAsync();
+            
                 Invoice_Product invoice_products = new Invoice_Product
                 {
                     Invoice = invoice,
@@ -342,7 +376,8 @@ namespace MSensis.Controllers
                     Company = company,
                     Invoice = invoice,
                     User = user,
-                    DateTimeString = DateTime.Now.ToString("dd/MM/yyyy")
+                    DateTimeString = DateTime.Now.ToString("dd/MM/yyyy"),
+                    Timestamp = DateTime.Now
 
                 };
                 _db.Pdfs.Add(pdf);
@@ -419,11 +454,13 @@ namespace MSensis.Controllers
             {
                 _logger.LogError($"{ex}");
             }
-
+             
             return Ok();
     }
 
-          
+     
+
+
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Create_Client()
         {
@@ -621,6 +658,19 @@ namespace MSensis.Controllers
 
         [HttpPost]
         [ViewLayout("_Administrator")]
+        public async Task<IActionResult> Update_Companys_Logo(ResponseData model)
+        {
+            string FilePath = await _filemanager.SaveImage(model.PostImage);
+            Company company = _db.Companies.SingleOrDefault(u => u.Id == model.PostId);
+            company.ImageSrc = FilePath;
+            await _db.SaveChangesAsync();
+            return Ok();
+        }
+       
+
+
+        [HttpPost]
+        [ViewLayout("_Administrator")]
         public async Task<IActionResult> Update_Invoice(InvoiceViewModel model)
         {
             try
@@ -633,7 +683,7 @@ namespace MSensis.Controllers
                 c.PricePerUnit = model.PricePerUnit;
                 c.Vat = model.Invoice_VAT;
                 c.Discount = model.Discount;
-                c.Timestamp = DateTime.Now;
+                c.Timestamp = model.TimeStamp;
 
                 _db.Entry(await _db.Invoices.FirstOrDefaultAsync(x => x.Id == c.Id)).CurrentValues.SetValues(c);
                 await _db.SaveChangesAsync();
@@ -716,7 +766,32 @@ namespace MSensis.Controllers
         };  
             return View(model);
         }
-         
+
+
+       
+
+        [HttpPost]
+        public async Task<PartialViewResult> ManagePdfs(ClientViewModel postData)
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+
+
+            List<Pdf> filter = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Draft" || c.Invoice.Invoice_Type == "Issued") && c.Invoice.Timestamp > DateTime.Now.AddMonths(-postData.SearchString))
+                .Include(u => u.Invoice)
+                .Include(u => u.Client)
+                .Include(u => u.Company)
+                 .OrderByDescending(u => u.Id)
+                .ToListAsync();
+
+            ClientViewModel model1 = new ClientViewModel
+                {
+                    Pdfs = filter,
+                };
+
+                return PartialView("_DataTable2", model1);
+            
+
+        } 
 
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> Invoices()
@@ -851,92 +926,39 @@ namespace MSensis.Controllers
                 .Include(u => u.Client)
                 .Include(u => u.Company)
                  .OrderByDescending(u => u.Id)
-                .ToListAsync();
-
-            List<int> ChooseListD = new List<int>();
-            ChooseListD.Add(1);
-            ChooseListD.Add(2);
-            ChooseListD.Add(3);
+                .ToListAsync(); 
 
             ClientViewModel model = new ClientViewModel
             {
                 Pdfs = pdfs,
-                ChooseList = ChooseListD 
-            };
-
-           
+                 
+            };           
             return View(model);
         }
 
 
         [HttpPost]
-        [ViewLayout("_Administrator")]
-        public async Task<IActionResult> DraftPdfs(ClientViewModel postData)
+        public async Task<PartialViewResult> DraftPdfs(ClientViewModel postData)
         {
-
             User user = await _manager.GetUserAsync(HttpContext.User);
-            List<int> ChooseListD = new List<int>();
-            ChooseListD.Add(1);
-            ChooseListD.Add(2);
-            ChooseListD.Add(3);
 
-            List<Pdf> pdfs = await _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Invoice_Type == "Draft")
+
+
+            List<Pdf> filter = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Draft") && c.Invoice.Timestamp > DateTime.Now.AddMonths(-postData.SearchString))
                 .Include(u => u.Invoice)
                 .Include(u => u.Client)
                 .Include(u => u.Company)
-                 .OrderByDescending(u => u.Id)
+                 .OrderByDescending(u => u.Timestamp)
                 .ToListAsync();
-            if ( postData.CategoryId == 1)
+
+            ClientViewModel model1 = new ClientViewModel
             {
-                List<Pdf> ToSend = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Timestamp >= DateTime.Now.AddDays(-30) && c.Invoice.Timestamp <=
-                DateTime.Now).ToList();
-                ClientViewModel model2 = new ClientViewModel
-                {
-                    Pdfs = ToSend,
-                    ChooseList = ChooseListD
-                };
+                Pdfs = filter,
+            };
 
-                return PartialView(model2);
-            }
-            if (postData.CategoryId == 2)
-            {
-                List<Pdf>ToSend = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Timestamp >= DateTime.Now.AddDays(-23) && c.Invoice.Timestamp <=
-                DateTime.Now).ToList();
-                ClientViewModel model1 = new ClientViewModel
-                {
-                    Pdfs = ToSend,
-                    ChooseList = ChooseListD
-                };
+            return PartialView("_DataTable2", model1);
 
-                return PartialView(model1);
-
-            }
-            if (postData.CategoryId ==3)
-            {
-                List<Pdf> ToSend = _db.Pdfs.Where(c => c.User.Id == user.Id && c.Invoice.Timestamp >= DateTime.Now.AddMonths(-6) && c.Invoice.Timestamp <=
-                DateTime.Now).ToList();
-
-                if(ToSend == null)
-                {
-                    
-
-                }
-
-                ClientViewModel model3 = new ClientViewModel
-                {
-                    Pdfs = ToSend,
-                    ChooseList = ChooseListD
-                };
-
-                return PartialView(model3);
-            }
-            ClientViewModel model = new ClientViewModel
-            {
-                Pdfs = pdfs,
-                ChooseList = ChooseListD
-            }; 
-
-              return PartialView(model);
+             
         }
 
         [ViewLayout("_Administrator")]
@@ -952,6 +974,38 @@ namespace MSensis.Controllers
         }
 
 
+
+        public async Task<JsonResult> Pdfs()
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
+
+            var pdfs = _db.Pdfs.Where(c => c.Invoice.Invoice_Type == "Draft")             
+                .Include(u => u.Company)
+                .Include( u => u.Client)
+                .Include(u => u.Invoice)
+                .ToList();
+
+            List<ClientViewModel>ToSend = new List<ClientViewModel>(); 
+            for (var i = 0; i < pdfs.Count; i++)
+            {
+                Pdf pdf = pdfs[i];;
+                ToSend.Add(new ClientViewModel
+                {
+                    PdfId = pdf.Id,
+                    InvoiceId = pdf.InvoiceId,
+                    CompanyName = pdf.Company.Name,
+                    ClientName = pdf.Client.CompanyName,
+                    DatetimeString = pdf.DateTimeString,
+                    InvoiceType = pdf.Invoice.Invoice_Type
+                });
+            }
+             
+
+            return Json(ToSend);
+        }
+
+
+    
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -962,6 +1016,7 @@ namespace MSensis.Controllers
         }
 
 
+        [HttpGet]
         [ViewLayout("_Administrator")]
         public async Task<IActionResult> IssuedPdfs()
         {
@@ -980,8 +1035,25 @@ namespace MSensis.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> IssuedPdfs(ClientViewModel postData)
+        {
+            User user = await _manager.GetUserAsync(HttpContext.User);
 
+            List<Pdf> filter = await _db.Pdfs.Where(c => c.User.Id == user.Id && (c.Invoice.Invoice_Type == "Issued") && c.Invoice.Timestamp > DateTime.Now.AddMonths(-postData.SearchString))
+                           .Include(u => u.Invoice)
+                           .Include(u => u.Client)
+                           .Include(u => u.Company)
+                            .OrderByDescending(u => u.Timestamp)
+                           .ToListAsync();
 
+            ClientViewModel model1 = new ClientViewModel
+            {
+                Pdfs = filter,
+            };
+
+            return PartialView("_DataTable3", model1);
+        }
         [HttpPost]
         public bool Delete(string id)
         {

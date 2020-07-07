@@ -1,4 +1,4 @@
-﻿@using MSensis.ViewModels
+﻿@using MSensis.Models
 @model Company
 
 <head>
@@ -12,9 +12,9 @@
 <!-- Main content -->
 <section class="content container-fluid">
 
-     
 
-    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Home/Update_Company">
+
+    <form id="myForm" class="form-horizontal" method="post" enctype="multipart/form-data" action="/Home/Update_Company">
         <div class="row">
             <div class="col-75">
                 <div class="container">
@@ -32,7 +32,7 @@
                             <label for="adr"><i class="fa fa-address-card-o"></i> City</label>
                             <input type="text" id="adr" name="City" placeholder="Address" value="@Model.City">
 
-                           
+
                             <div class="row">
                                 <div class="col-50">
                                     <label for="state">Code</label>
@@ -51,14 +51,36 @@
                         <div class="form-group">
                             <label for="inputImage3" class="col-sm-2 control-label">Company's Logo</label>
                             <div class="col-sm-10">
-                               
-                                    <img height="170" width="130" src="~/content/@Url.Content(Model.ImageSrc)" class="rounded-circle" />
-                                
-                                <input type="file" class="form-control" name="Logo" value="@Model.Logo"  >
+
+                                <img height="170" width="130" src="~/content/@Url.Content(Model.ImageSrc)" class="rounded-circle" />
+ 
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Choose Logo
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Choose Image</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input id="companyLogo" type="file" class="form-control" name="Logo">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" onclick="ChangeLogo()" data-dismiss="modal">Select</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <input type="hidden" name="Id" value="@Model.Id" />
+                        @*<input type="hidden" name="Id" value="@Model.Id" />*@
 
                     </div>
 
@@ -72,16 +94,45 @@
             <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">Back</button>
             <button type="submit" class="btn btn-info pull-right">Save</button>
         </div>
-
-        <input type="hidden" name="Id" value="@Model.Id" />
+        <input id="companyId" type="hidden" name="Id" value="@Model.Id" title="@Model.Id" />
     </form>
 </section>
+<script>
+  async function ChangeLogo() {
+        let input = document.querySelector('input[type="file"]')
+        var Id = document.getElementById("companyId").title;
+       
+       let data = new FormData()
+        data.append('PostImage', input.files[0])
+        data.append('PostId', Id)
+        console.log(data);
+         const urlToSendRequest = "https://" + window.location.host + "@Url.Action("Update_Companys_Logo", "Home")";
+         
+		const rawData = await fetch(urlToSendRequest,
+		{
+			method: 'POST',
+			credentials: "same-origin",
+			body: data
+		});
+
+		location.reload();
+	}
 
 
 
-
-
-
-
-
-
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "Update_Companys_Logo", 
+    //        data: data,
+    //        processData: false,
+    //        contentType: false,
+    //        error: function (result) {
+    //            console.log(result);
+    //        },
+    //        success: function (result) {
+    //            alert("ok");
+    //            console.log(result);
+    //        }
+    //    });
+    //}
+</script>

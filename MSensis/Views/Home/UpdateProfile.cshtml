@@ -1,0 +1,63 @@
+﻿@model MSensis.ViewModels.UserForProfileViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h2>@_localizer["Manage Profile of"] @Model.Name</h2>
+
+<section class="content container-fluid">
+
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="/Home/UpdateProfile">
+
+        <div class="col-75">
+            <div class="container">
+                <div class="row">
+                    <div class="col-50">
+                        <label asp-for="Name"><i class="fa fa-user"></i>@_localizer["Name"]</label>
+                       
+                        <input asp-for="Name" value="@Model.Name">
+                        <label asp-for="PhoneNumber"><i class="fa fa-phone"></i> @_localizer["Phone Number"]</label>
+                         
+                        <input asp-for="PhoneNumber" value="@Model.PhoneNumber" placeholder="@_localizer["Phone number"]">
+
+                    </div>
+                    <div class="col-md-6">
+                        <label for="companies">@_localizer["Companies"]</label>
+                        <ul class="list-group" id="companies">
+                            @foreach (var company in Model.Companies)
+                            {
+                                <li class="list-group-item">@company.Name</li>
+                            }
+
+
+                        </ul>
+                        <a href='@Url.Action("Manage","Home")'>
+                            <span>@_localizer["Manage Companies"]</span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="clients">@_localizer["Clients"]</label>
+                        <ul class="list-group" id="clients">
+                            @foreach (var client in Model.Clients)
+                            {
+                                <li class="list-group-item">@client.CompanyName</li>
+                            }
+
+
+                        </ul>
+                        <a href='@Url.Action("CClients","Home")'>
+                            <span> @_localizer["Manage Clients"]</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-footer">
+            <button class="btn btn-info pull-right" onclick="" history.go(-1); return false;">@_localizer["Back"]</button>
+            <button type="submit" class="btn btn-info pull-right">@_localizer["Save"]</button>
+        </div>
+    </form>
+</section>

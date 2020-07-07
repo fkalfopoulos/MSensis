@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using MSensis.Email;
 using MSensis.LocalizationResources;
 using MSensis.Models;
@@ -51,6 +52,22 @@ namespace MSensis
             services.AddAuthorization();
             services.AddCors();
 
+            services.Configure<RequestLocalizationOptions>(opts =>
+            {
+                var supportedCultures = new List<CultureInfo>
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("en-US"),
+                    new CultureInfo("el"),
+                    new CultureInfo("el-GR")
+                };
+                opts.DefaultRequestCulture = new RequestCulture("en-US");
+                //formatting numbers, dates
+                opts.SupportedCultures = supportedCultures;
+                //UI string  that we have localized
+                opts.SupportedUICultures = supportedCultures;
+            });
+
             services.AddMvc().AddRazorPagesOptions(options =>
             {
                 options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "/Account/Login");
@@ -80,10 +97,13 @@ namespace MSensis
             //    context.Database.Migrate();
             //}
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            
+
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
+
             app.UseFileServer();
             app.UseAuthentication();
             

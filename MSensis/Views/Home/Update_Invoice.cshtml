@@ -1,5 +1,5 @@
-﻿ 
-@model Invoice 
+﻿
+@model Invoice
 
 <head>
     <link rel="stylesheet" href="~/css/form.css" />
@@ -10,7 +10,7 @@
 
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Add nvoice</h3>
+            <h3 class="box-title">Add Invoice</h3>
         </div>
     </div>
 
@@ -41,37 +41,32 @@
                                     <label for="zip">Discount</label>
                                     <input type="text" id="zip" name="Discount" placeholder="" value="@Model.Discount" />
                                 </div>
-                             
+
                             </div>
                         </div>
 
                         <div class="col-50">
-                            <h3>Payment</h3>
-                            <label for="fname">Accepted Cards</label>
-                            <div class="icon-container">
-                                <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                <i class="fa fa-cc-discover" style="color:orange;"></i>
-                            </div>
-                            <label for="cname">Name on Card</label>
-                            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                            <label for="ccnum">Credit card number</label>
-                            <input type="text" id="ccnum" name="cardnumber" placeholder=" ">
-                            <label for="expmonth">Exp Month</label>
-                            <input type="text" id="expmonth" name="expmonth" placeholder=" ">
+                            <div class="form-group">
+                                <label class="control-label">Creation Date</label>
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type="datetime-local" class="form-control" value="@Model.Timestamp" name="TimeStamp"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                </div>
 
-                            <div class="row">
-                                <div class="col-50">
-                                    <label for="expyear">Τιμή Πώλησης</label>
-                                    <input type="text" id="expyear" name="expyear" placeholder="">
-                                </div>
-                                <div class="col-50">
-                                    <label for="cvv">Quantity</label>
-                                    <input type="text" id="cvv" name="Invoice_Quantity" placeholder=""value="@Model.Quantity" />  
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Τιμή Πώλησης</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">Quantity</label>
+                                        <input type="text" id="cvv" name="Invoice_Quantity" placeholder="" value="@Model.Quantity" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                     </div>
 
@@ -80,7 +75,7 @@
 
             <div class="col-25">
                 <div class="container">
-                    <h4>                        
+                    <h4>
                         <span class="price" style="color:black">
                             <label for="cvv">VAT</label>
                             <input type="text" id="cvv" name="Vat" placeholder="" value="@Model.Vat" />
@@ -96,14 +91,11 @@
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">Enter Comments</label>
             <div class="col-sm-10">
-                 
+
                 <input type="text" id="cvv" name="Invoice_Comments" placeholder="" value="@Model.Comments">
             </div>
         </div>
-
          
-       
-
 
         <div class="box-footer">
             <button type="submit" class="btn btn-info pull-right" onclick="history.go(-1); return false;">Back</button>
@@ -115,4 +107,22 @@
 </section>
 
 
+<script>
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+</script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+<script>
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+</script>

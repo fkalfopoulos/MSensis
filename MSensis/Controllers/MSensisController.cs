@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -207,10 +208,10 @@ namespace MSensis.Controllers
 	        return new FileContentResult(file, contentType);
         }
 
+
+
        
 
-      
-         
 
         public PDFViewModel SearchByMonth(int months)
         {
@@ -228,9 +229,11 @@ namespace MSensis.Controllers
             };
 
             return model;
-        } 
+        }
 
-        public async Task<IActionResult> LoadCompany([FromBody]UserViewModel model)
+              
+
+            public async Task<IActionResult> LoadCompany([FromBody]UserViewModel model)
         {
             User user = await _manager.GetUserAsync(HttpContext.User);
             Company company = _db.Companies.Where(c => c.Id == model.CompanyId).SingleOrDefault();

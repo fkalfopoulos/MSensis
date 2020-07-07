@@ -1,0 +1,566 @@
+2020-07-07T11:08:52.5044169+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-07T11:08:53.3186654+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:08:53.4951378+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:08:53.5607274+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-07-07T11:08:53.5620573+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-07-07T11:08:53.6256310+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-07-07T11:08:53.7016191+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2020-07-07T11:08:53.7191396+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 206.2722ms (afa2e885)
+2020-07-07T11:08:53.7225182+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:08:53.8652415+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Request finished in 1427.7994ms 302  (791a596a)
+2020-07-07T11:08:54.2597150+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2020-07-07T11:08:54.2743714+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-07-07T11:08:55.6215236+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-07-07T11:08:57.0823984+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" - ModelState is Valid (cd3ef7ec)
+2020-07-07T11:08:57.1353189+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-07-07T11:08:57.1431445+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executed handler method "OnGetAsync", returned result "". (90fdc39c)
+2020-07-07T11:08:57.1715936+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executing an implicit handler method - ModelState is Valid (232a55d1)
+2020-07-07T11:08:57.1718302+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (f857da66)
+2020-07-07T11:09:00.0862951+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 4464.4994ms (02e01280)
+2020-07-07T11:09:00.0864839+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-07-07T11:09:00.1352300+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Request finished in 5875.5988ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:09:04.8767471+03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/site2.css   (ca22a1cb)
+2020-07-07T11:09:04.8982732+03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] The file "/css/site2.css" was not modified (f1f8d725)
+2020-07-07T11:09:04.9097964+03:00 80000002-0002-fe00-b63f-84710c7967bb [INF] Request finished in 33.1973ms 304 text/css (791a596a)
+2020-07-07T11:09:26.5197065+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 241 (ca22a1cb)
+2020-07-07T11:09:26.5409605+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-07-07T11:09:26.5419703+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-07-07T11:09:26.7005303+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" - ModelState is Valid (cd3ef7ec)
+2020-07-07T11:09:27.5410256+03:00 80000004-0002-fe00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-07-07T11:09:27.5780613+03:00 80000004-0002-fe00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-07-07T11:09:28.2646286+03:00 80000004-0002-fe00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-07-07T11:09:28.8564468+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:09:34.0367072+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("731"ms) [Parameters=["@__normalizedUserName_0='ADMIN@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:09:35.1291837+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("30"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `uc`.`Id`, `uc`.`ClaimType`, `uc`.`ClaimValue`, `uc`.`UserId`
+FROM `AspNetUserClaims` AS `uc`
+WHERE `uc`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:09:35.3216987+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("33"ms) [Parameters=["@__userId_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `role`.`Name`
+FROM `AspNetUserRoles` AS `userRole`
+INNER JOIN `AspNetRoles` AS `role` ON `userRole`.`RoleId` = `role`.`Id`
+WHERE `userRole`.`UserId` = @__userId_0" (0723d8ff)
+2020-07-07T11:09:35.3630677+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-07-07T11:09:35.3748778+03:00 80000004-0002-fe00-b63f-84710c7967bb [WRN] Info - Successful login for "admin@gmail.com" (2f0a74b7)
+2020-07-07T11:09:35.3893186+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (90fdc39c)
+2020-07-07T11:09:35.4138812+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-07-07T11:09:35.4213677+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 8879.1066ms (02e01280)
+2020-07-07T11:09:35.4483172+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-07-07T11:09:35.4716482+03:00 80000004-0002-fe00-b63f-84710c7967bb [INF] Request finished in 8952.2187ms 302  (791a596a)
+2020-07-07T11:09:35.5974029+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-07T11:09:35.6258037+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:09:35.6264069+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:09:35.6281191+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:09:35.6748448+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:09:35.7334175+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:09:35.7806248+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:09:35.7997360+03:00 80000006-0000-f900-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-07-07T11:09:35.9182453+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("27"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:09:36.5178139+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("126"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND ((`c.Invoice`.`Invoice_Type` <> 'Deleted') OR `c.Invoice`.`Invoice_Type` IS NULL)" (0723d8ff)
+2020-07-07T11:09:36.7340413+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("30"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:09:36.9190357+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 1229.5055ms. (50a9e262)
+2020-07-07T11:09:37.2667058+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-07T11:09:37.4968063+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:09:37.5087012+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:09:37.5243221+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:09:37.5287255+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:09:37.5533747+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__Model_User_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`Address`, `u`.`City`, `u`.`ClientId`, `u`.`Code`, `u`.`CompanyName`, `u`.`IdentifierId`, `u`.`ImageSrc`, `u`.`InvoiceId`, `u`.`Name`, `u`.`TelephoneNumber`, `u`.`Timestamp`, `u`.`UserId`
+FROM `Companies` AS `u`
+WHERE `u`.`UserId` = @__Model_User_Id_0" (0723d8ff)
+2020-07-07T11:09:37.6105970+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:09:37.8300164+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:09:39.7632718+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 2755.8415ms. (f66409e9)
+2020-07-07T11:09:39.7663876+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 4139.6859ms (afa2e885)
+2020-07-07T11:09:39.7665583+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:09:39.7668621+03:00 80000006-0000-f900-b63f-84710c7967bb [INF] Request finished in 4169.458ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:09:57.3246607+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/UpdateProfile   (ca22a1cb)
+2020-07-07T11:09:57.3270371+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (500cc934)
+2020-07-07T11:09:57.3535096+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"UpdateProfile\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:09:57.3538111+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:09:57.3564950+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:09:57.3652975+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:09:57.4149453+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:09:57.4241836+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:09:57.4281148+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:09:57.4300791+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 73.3142ms. (50a9e262)
+2020-07-07T11:09:57.5225992+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "UpdateProfile". (c83d0e25)
+2020-07-07T11:09:57.5447818+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" in 191.0889ms (afa2e885)
+2020-07-07T11:09:57.5458755+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (99874f2b)
+2020-07-07T11:09:57.8112499+03:00 80000002-0001-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'MSensis.ViewModels.UserViewModel', but this ViewDataDictionary instance requires a model item of type 'MSensis.ViewModels.UserForProfileViewModel'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-07T11:09:58.0820392+03:00 80000002-0001-fd00-b63f-84710c7967bb [INF] Request finished in 757.4836ms 500 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:10:07.9490796+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-07T11:10:07.9509678+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:10:07.9512367+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:10:07.9513992+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:10:07.9517414+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:10:07.9525357+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:10:07.9578878+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:10:07.9585004+03:00 80000004-0001-fd00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-07-07T11:10:07.9643823+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:10:07.9689975+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND ((`c.Invoice`.`Invoice_Type` <> 'Deleted') OR `c.Invoice`.`Invoice_Type` IS NULL)" (0723d8ff)
+2020-07-07T11:10:07.9779429+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:10:07.9796127+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 27.6138ms. (50a9e262)
+2020-07-07T11:10:07.9804823+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-07T11:10:07.9870627+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:10:07.9912531+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:10:07.9965890+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:10:07.9999285+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:10:08.0044262+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__Model_User_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`Address`, `u`.`City`, `u`.`ClientId`, `u`.`Code`, `u`.`CompanyName`, `u`.`IdentifierId`, `u`.`ImageSrc`, `u`.`InvoiceId`, `u`.`Name`, `u`.`TelephoneNumber`, `u`.`Timestamp`, `u`.`UserId`
+FROM `Companies` AS `u`
+WHERE `u`.`UserId` = @__Model_User_Id_0" (0723d8ff)
+2020-07-07T11:10:08.0113347+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:10:08.0180105+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:10:08.0322473+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 52.2674ms. (f66409e9)
+2020-07-07T11:10:08.0325358+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 81.1659ms (afa2e885)
+2020-07-07T11:10:08.0327208+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:10:08.0329473+03:00 80000004-0001-fd00-b63f-84710c7967bb [INF] Request finished in 83.9268ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:13:02.0310050+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-07T11:13:03.4414502+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:13:03.5610822+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:03.6149659+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:03.6800452+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:04.4557749+03:00 80000002-0000-f800-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-07-07T11:13:04.4802336+03:00 80000002-0000-f800-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-07-07T11:13:05.0802796+03:00 80000002-0000-f800-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-07-07T11:13:05.6198305+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:08.4242415+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("369"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:09.2026721+03:00 80000002-0000-f800-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-07-07T11:13:09.4519792+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:09.7873769+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND ((`c.Invoice`.`Invoice_Type` <> 'Deleted') OR `c.Invoice`.`Invoice_Type` IS NULL)" (0723d8ff)
+2020-07-07T11:13:09.9248807+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:10.1054430+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 6410.9111ms. (50a9e262)
+2020-07-07T11:13:10.2394571+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-07T11:13:10.5512450+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:10.5633584+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:10.5786623+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:10.5848444+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:10.6064164+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__Model_User_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`Address`, `u`.`City`, `u`.`ClientId`, `u`.`Code`, `u`.`CompanyName`, `u`.`IdentifierId`, `u`.`ImageSrc`, `u`.`InvoiceId`, `u`.`Name`, `u`.`TelephoneNumber`, `u`.`Timestamp`, `u`.`UserId`
+FROM `Companies` AS `u`
+WHERE `u`.`UserId` = @__Model_User_Id_0" (0723d8ff)
+2020-07-07T11:13:10.6419078+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:10.8554892+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:13.1452660+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 2945.437ms. (f66409e9)
+2020-07-07T11:13:13.1723729+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 9610.653ms (afa2e885)
+2020-07-07T11:13:13.2773270+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:13:13.4081958+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Request finished in 11404.4992ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:13:22.8115561+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/UpdateProfile   (ca22a1cb)
+2020-07-07T11:13:22.8388249+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (500cc934)
+2020-07-07T11:13:22.8796473+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"UpdateProfile\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:22.8811316+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:22.8844279+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:22.8941397+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:23.1411955+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:23.1509624+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:23.1566138+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:23.1593968+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 274.6381ms. (50a9e262)
+2020-07-07T11:13:23.2359338+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "UpdateProfile". (c83d0e25)
+2020-07-07T11:13:23.4791807+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "UpdateProfile" executed in 319.0298ms. (f66409e9)
+2020-07-07T11:13:23.4828193+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" in 602.9736ms (afa2e885)
+2020-07-07T11:13:23.4831599+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (99874f2b)
+2020-07-07T11:13:23.4836018+03:00 80000002-0003-fe00-b63f-84710c7967bb [INF] Request finished in 672.2995ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:13:30.9212956+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Home/UpdateProfile application/x-www-form-urlencoded 239 (ca22a1cb)
+2020-07-07T11:13:30.9879556+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (500cc934)
+2020-07-07T11:13:31.2091099+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"UpdateProfile\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile(MSensis.ViewModels.UserForProfileViewModel)" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:31.2094687+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:31.3700423+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:31.3786439+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:31.4613009+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("31"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:31.5515673+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='ADMIN@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:31.9788800+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("43"ms) [Parameters=["@p14='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Nullable = false) (Size = 255), @p0='0', @p1='f3995832-ae4a-44e8-bb38-886c4ced2f47' (Size = 4000), @p15='3f0d59b2-aeeb-4f45-bbbd-ccabe27d00f1' (Size = 4000), @p2='admin@gmail.com' (Size = 256), @p3='False', @p4='True', @p5='' (DbType = DateTimeOffset), @p6='ADMIN@GMAIL.COM' (Size = 256), @p7='ADMIN@GMAIL.COM' (Size = 256), @p8='AQAAAAEAACcQAAAAENEyN0C1CClHqq+HAwiBMeoGfcD8Bs2tA03U1eaJVWUC+Aw7YzM+MOSvUT9CmCmOZQ==' (Size = 4000), @p9='6986984894' (Size = 4000), @p10='False', @p11='S2Z7AQTBS2CBQOXKMZ4ZZP6OKM273IKU' (Size = 4000), @p12='False', @p13='admin@gmail.com' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `AspNetUsers` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `LockoutEnabled` = @p4, `LockoutEnd` = @p5, `NormalizedEmail` = @p6, `NormalizedUserName` = @p7, `PasswordHash` = @p8, `PhoneNumber` = @p9, `PhoneNumberConfirmed` = @p10, `SecurityStamp` = @p11, `TwoFactorEnabled` = @p12, `UserName` = @p13
+WHERE `Id` = @p14 AND `ConcurrencyStamp` = @p15;
+SELECT ROW_COUNT();" (0723d8ff)
+2020-07-07T11:13:32.0661938+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 695.8617ms. (50a9e262)
+2020-07-07T11:13:32.0680123+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-07-07T11:13:32.0685515+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" in 859.1871ms (afa2e885)
+2020-07-07T11:13:32.0687487+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (99874f2b)
+2020-07-07T11:13:32.0751077+03:00 80000004-0000-f800-b63f-84710c7967bb [INF] Request finished in 1154.1683ms 302  (791a596a)
+2020-07-07T11:13:32.1190339+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-07T11:13:32.1223234+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:13:32.1229849+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:32.1233134+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:32.1239279+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:32.1248764+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:32.1297891+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:32.1305041+03:00 80000003-0002-ff00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-07-07T11:13:32.1335094+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:32.1392970+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND ((`c.Invoice`.`Invoice_Type` <> 'Deleted') OR `c.Invoice`.`Invoice_Type` IS NULL)" (0723d8ff)
+2020-07-07T11:13:32.1453819+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:32.1467108+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 22.582ms. (50a9e262)
+2020-07-07T11:13:32.1470276+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-07T11:13:32.1512001+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:32.1551572+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:32.1606618+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:32.1641607+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:32.1675538+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__Model_User_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`Address`, `u`.`City`, `u`.`ClientId`, `u`.`Code`, `u`.`CompanyName`, `u`.`IdentifierId`, `u`.`ImageSrc`, `u`.`InvoiceId`, `u`.`Name`, `u`.`TelephoneNumber`, `u`.`Timestamp`, `u`.`UserId`
+FROM `Companies` AS `u`
+WHERE `u`.`UserId` = @__Model_User_Id_0" (0723d8ff)
+2020-07-07T11:13:32.1715062+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:32.1766041+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:32.1887891+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 41.6871ms. (f66409e9)
+2020-07-07T11:13:32.1890966+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 65.9052ms (afa2e885)
+2020-07-07T11:13:32.1892322+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:13:32.1893936+03:00 80000003-0002-ff00-b63f-84710c7967bb [INF] Request finished in 70.4254ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:13:36.4914553+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Home/UpdateProfile   (ca22a1cb)
+2020-07-07T11:13:36.4930014+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (500cc934)
+2020-07-07T11:13:36.4933084+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"UpdateProfile\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:36.4934915+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:36.4938488+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:36.4946760+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:36.5001960+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:36.5056758+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:36.5098313+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:36.5105533+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 16.5291ms. (50a9e262)
+2020-07-07T11:13:36.5108220+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "UpdateProfile". (c83d0e25)
+2020-07-07T11:13:36.5196617+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "UpdateProfile" executed in 8.8441ms. (f66409e9)
+2020-07-07T11:13:36.5199312+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" in 26.4556ms (afa2e885)
+2020-07-07T11:13:36.5200289+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (99874f2b)
+2020-07-07T11:13:36.5202997+03:00 80000005-0002-ff00-b63f-84710c7967bb [INF] Request finished in 28.914ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:13:39.2526963+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Home/UpdateProfile application/x-www-form-urlencoded 239 (ca22a1cb)
+2020-07-07T11:13:39.2540971+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (500cc934)
+2020-07-07T11:13:39.2544484+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"UpdateProfile\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProfile(MSensis.ViewModels.UserForProfileViewModel)" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:39.2546524+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:39.2567631+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:39.2575322+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:39.2649258+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:39.2706116+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='ADMIN@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`AccessFailedCount`, `u`.`ConcurrencyStamp`, `u`.`Email`, `u`.`EmailConfirmed`, `u`.`LockoutEnabled`, `u`.`LockoutEnd`, `u`.`NormalizedEmail`, `u`.`NormalizedUserName`, `u`.`PasswordHash`, `u`.`PhoneNumber`, `u`.`PhoneNumberConfirmed`, `u`.`SecurityStamp`, `u`.`TwoFactorEnabled`, `u`.`UserName`
+FROM `AspNetUsers` AS `u`
+WHERE `u`.`NormalizedUserName` = @__normalizedUserName_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:39.2854218+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@p14='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Nullable = false) (Size = 255), @p0='0', @p1='76e9a14d-5b7c-41e9-95d9-714dbbb55469' (Size = 4000), @p15='f3995832-ae4a-44e8-bb38-886c4ced2f47' (Size = 4000), @p2='admin@gmail.com' (Size = 256), @p3='False', @p4='True', @p5='' (DbType = DateTimeOffset), @p6='ADMIN@GMAIL.COM' (Size = 256), @p7='ADMIN@GMAIL.COM' (Size = 256), @p8='AQAAAAEAACcQAAAAENEyN0C1CClHqq+HAwiBMeoGfcD8Bs2tA03U1eaJVWUC+Aw7YzM+MOSvUT9CmCmOZQ==' (Size = 4000), @p9='6986984894' (Size = 4000), @p10='False', @p11='S2Z7AQTBS2CBQOXKMZ4ZZP6OKM273IKU' (Size = 4000), @p12='False', @p13='admin@gmail.com' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE `AspNetUsers` SET `AccessFailedCount` = @p0, `ConcurrencyStamp` = @p1, `Email` = @p2, `EmailConfirmed` = @p3, `LockoutEnabled` = @p4, `LockoutEnd` = @p5, `NormalizedEmail` = @p6, `NormalizedUserName` = @p7, `PasswordHash` = @p8, `PhoneNumber` = @p9, `PhoneNumberConfirmed` = @p10, `SecurityStamp` = @p11, `TwoFactorEnabled` = @p12, `UserName` = @p13
+WHERE `Id` = @p14 AND `ConcurrencyStamp` = @p15;
+SELECT ROW_COUNT();" (0723d8ff)
+2020-07-07T11:13:39.2927541+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.UpdateProfile (MSensis)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 35.8086ms. (50a9e262)
+2020-07-07T11:13:39.2934049+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-07-07T11:13:39.2938380+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.UpdateProfile (MSensis)" in 39.209ms (afa2e885)
+2020-07-07T11:13:39.2939489+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.UpdateProfile (MSensis)"' (99874f2b)
+2020-07-07T11:13:39.2949604+03:00 80000006-0000-f800-b63f-84710c7967bb [INF] Request finished in 48.2044ms 302  (791a596a)
+2020-07-07T11:13:39.3721521+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-07T11:13:39.3744580+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:13:39.3747490+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:39.3749693+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:39.3754787+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:39.3763562+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:39.3836958+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:39.3841752+03:00 80000006-0001-fd00-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-07-07T11:13:39.3873225+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:39.3931454+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND ((`c.Invoice`.`Invoice_Type` <> 'Deleted') OR `c.Invoice`.`Invoice_Type` IS NULL)" (0723d8ff)
+2020-07-07T11:13:39.4007080+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:39.4023777+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 26.7118ms. (50a9e262)
+2020-07-07T11:13:39.4027087+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-07T11:13:39.4071425+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:39.4109197+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:39.4146050+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:39.4184680+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:39.4217399+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__Model_User_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`Address`, `u`.`City`, `u`.`ClientId`, `u`.`Code`, `u`.`CompanyName`, `u`.`IdentifierId`, `u`.`ImageSrc`, `u`.`InvoiceId`, `u`.`Name`, `u`.`TelephoneNumber`, `u`.`Timestamp`, `u`.`UserId`
+FROM `Companies` AS `u`
+WHERE `u`.`UserId` = @__Model_User_Id_0" (0723d8ff)
+2020-07-07T11:13:39.4257577+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:39.4309607+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:39.4414236+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 38.7088ms. (f66409e9)
+2020-07-07T11:13:39.4454574+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 66.7635ms (afa2e885)
+2020-07-07T11:13:39.4457062+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:13:39.4461796+03:00 80000006-0001-fd00-b63f-84710c7967bb [INF] Request finished in 73.9972ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-07T11:13:43.4581120+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/ application/x-www-form-urlencoded 236 (ca22a1cb)
+2020-07-07T11:13:43.4621770+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-07T11:13:43.4626671+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "MSensis.Controllers.HomeController" ("MSensis"). (122b2fdf)
+2020-07-07T11:13:43.4628801+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-07T11:13:43.4632368+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-07T11:13:43.4642374+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-07T11:13:43.4690755+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`Id`, `e`.`AccessFailedCount`, `e`.`ConcurrencyStamp`, `e`.`Email`, `e`.`EmailConfirmed`, `e`.`LockoutEnabled`, `e`.`LockoutEnd`, `e`.`NormalizedEmail`, `e`.`NormalizedUserName`, `e`.`PasswordHash`, `e`.`PhoneNumber`, `e`.`PhoneNumberConfirmed`, `e`.`SecurityStamp`, `e`.`TwoFactorEnabled`, `e`.`UserName`
+FROM `AspNetUsers` AS `e`
+WHERE `e`.`Id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2020-07-07T11:13:43.4695896+03:00 80000008-0000-f800-b63f-84710c7967bb [WRN] user is in "admin@gmail.com" (14c61b46)
+2020-07-07T11:13:43.4725281+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`Address`, `c`.`City`, `c`.`ClientId`, `c`.`Code`, `c`.`CompanyName`, `c`.`IdentifierId`, `c`.`ImageSrc`, `c`.`InvoiceId`, `c`.`Name`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`
+FROM `Companies` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:43.4779174+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`InvoiceId`, `c`.`ClientId`, `c`.`CompanyId`, `c`.`DateTimeString`, `c`.`IdentifierId`, `c`.`ProductId`, `c`.`Timestamp`, `c`.`TotalValue`, `c`.`TotalVat`, `c`.`Type`, `c`.`UserId`
+FROM `Pdfs` AS `c`
+INNER JOIN `Invoices` AS `c.Invoice` ON `c`.`InvoiceId` = `c.Invoice`.`Id`
+WHERE (`c`.`UserId` = @__user_Id_0) AND ((`c.Invoice`.`Invoice_Type` <> 'Deleted') OR `c.Invoice`.`Invoice_Type` IS NULL)" (0723d8ff)
+2020-07-07T11:13:43.4852644+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`Id`, `c`.`AFM`, `c`.`Address`, `c`.`City`, `c`.`Client_Occupation`, `c`.`Code`, `c`.`CompanyId`, `c`.`CompanyName`, `c`.`DOY`, `c`.`Email`, `c`.`IdentifierId`, `c`.`TelephoneNumber`, `c`.`Timestamp`, `c`.`UserId`, `c`.`ZipCode`
+FROM `Clients` AS `c`
+WHERE `c`.`UserId` = @__user_Id_0" (0723d8ff)
+2020-07-07T11:13:43.4863555+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 22.951ms. (50a9e262)
+2020-07-07T11:13:43.4866703+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-07T11:13:43.4901967+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:43.4941145+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:43.4983861+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:43.5020686+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00' (DbType = DateTime), @__end_Date_1='2021-01-01T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM(`x`.`PricePerUnit`)
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__start_Date_0) AND (`x`.`Timestamp` <= @__end_Date_1))" (0723d8ff)
+2020-07-07T11:13:43.5053176+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__Model_User_Id_0='1dda9ae2-b515-4645-86e5-3519ef4e68b5' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `u`.`Id`, `u`.`Address`, `u`.`City`, `u`.`ClientId`, `u`.`Code`, `u`.`CompanyName`, `u`.`IdentifierId`, `u`.`ImageSrc`, `u`.`InvoiceId`, `u`.`Name`, `u`.`TelephoneNumber`, `u`.`Timestamp`, `u`.`UserId`
+FROM `Companies` AS `u`
+WHERE `u`.`UserId` = @__Model_User_Id_0" (0723d8ff)
+2020-07-07T11:13:43.5090845+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Issued') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:43.5146537+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-07T00:00:00' (DbType = DateTime), @__now_Date_1='2020-07-07T00:00:00' (DbType = DateTime)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `x`.`Id`, `x`.`ClientId`, `x`.`Code`, `x`.`Comments`, `x`.`CompanyId`, `x`.`DateTimeString`, `x`.`Description`, `x`.`Discount`, `x`.`IdentifierId`, `x`.`Invoice_Type`, `x`.`Number`, `x`.`Payment_Status`, `x`.`PriceAfterDiscount`, `x`.`PriceBeforeDiscount`, `x`.`PricePerUnit`, `x`.`Quantity`, `x`.`Timestamp`, `x`.`Vat`
+FROM `Invoices` AS `x`
+WHERE (`x`.`Invoice_Type` = 'Draft') AND ((`x`.`Timestamp` >= @__now7_Date_0) AND (`x`.`Timestamp` <= @__now_Date_1))" (0723d8ff)
+2020-07-07T11:13:43.5244954+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 37.8454ms. (f66409e9)
+2020-07-07T11:13:43.5247355+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 61.948ms (afa2e885)
+2020-07-07T11:13:43.5249121+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-07T11:13:43.5250719+03:00 80000008-0000-f800-b63f-84710c7967bb [INF] Request finished in 67.2098ms 200 text/html; charset=utf-8 (791a596a)

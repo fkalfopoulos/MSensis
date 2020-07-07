@@ -16,39 +16,48 @@
                     <h3 class="box-title">Manage Pdf</h3>
                 </div>
             </div>
-         
-                <br />
+        </div>
 
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Search for Invoices</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="CategoryId" name="TagId">
+        <br />
 
-                            @foreach (var c in Model.ChooseList)
-                            {
-                                <option value="@c"> Search </option>
-                            }
-                        </select>
-                    </div>
-                    </div>
+        <div class="form-group">
+            <div class="box-header" style="align-content:center">
 
-                    <button type="submit" onclick="SendData()">Search </button>
-                    <br />
+
+                <div class="col-sm-10">
+                    <select class="form-control" id="SearchString" name="SearchString" AutoPostBack="true">
+
+
+                        <option value="1"> One Month</option>
+                        <option value="3"> Three Month</option>
+                        <option value="6">Six Month</option>  
+                    </select>
+                    <button type="submit" class="btn btn-info pull-right" onclick="SendData()">Search</button>
                 </div>
+            </div>
+        </div>
+        <br /><br />
 
-                <div id="partial">
-                    <partial name="_DataTable" />
-                    </div> 
-                </div>
-          
+    </div>
+
+    <div id="partial">
+        <partial name="_DataTable2" />
+
+    </div>
+   
+
+
+
+
 </section>
 
- 
+
 
 <!-- page script -->
 <script>
     $(function () {
         $('#example1').DataTable();
+        $('#example2').DataTable();
     });
 
     function Delete(id) {
@@ -75,30 +84,54 @@
                              alert("There is a problem, Try Later!");
                          }
                      }
-                 }); 
+                 });
          }
      }
 
 
     function SendData() {
-        var CategoryId = document.getElementById("CategoryId").value;
+        event.preventDefault()
+        var SearchString = '';
+        var SearchString = document.getElementById("SearchString").value;
+
+        console.log(SearchString);
 
         let data = {
-            CategoryId: CategoryId
+            SearchString: SearchString
         }
+
+        var toSend = JSON.stringify(data);
+        console.log(toSend);
         debugger;
         $.ajax({
-            url: "/Home/DraftPdfs",
+            url: "DraftPdfs",
             type: "POST",
-            data: data,  
+            data: data,
+            cache: false,
             success: function (result) {
                 $("#partial").html(result);
-                $("#Column").hide();
                 console.log("i am here");
             }
         });
+    }
+    
 
+    async function sendData2(url, data) {
+        const urlToSendRequest = "https://" + window.location.host + url;
+
+        const rawData = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            credentials: "same-origin",
+            body: JSON.stringify(data)
+        });
+        return rawData.json();
     }
 
 </script>
 
+
+ 

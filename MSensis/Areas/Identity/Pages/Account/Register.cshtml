@@ -51,7 +51,7 @@
                 <div class="input-field col s12 col m12 col l12">
                     <i class="material-icons prefix">lock</i>
 
-                    <input asp-for="Input.ConfirmPassword" type="password" id="password-input" class="grey-text text-darken-3" autocomplete="off"
+                    <input asp-for="Input.ConfirmPassword" type="password" id="password-input2" class="grey-text text-darken-3" autocomplete="off"
                            style="padding-left: 6px;">
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     <label class="grey-text text-darken-3" for="password-input">Password</label>
@@ -67,6 +67,7 @@
             </form>
         </div>
     </div>
+    </div>
 
 
 
@@ -74,6 +75,7 @@
         $(document).ready(function () {
             changeEmailLabel();
             changePasswordLabel();
+            changePasswordLabel2();
 
             if ($("#email-input").val().length > 0 && $("#password-input").val().length == 0) {
                 $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
@@ -84,9 +86,11 @@
         $("#email-input").on("keyup", function () {
             changeEmailLabel();
         });
-
         $("#password-input").on("keyup", function () {
             changePasswordLabel();
+        });
+        $("#password-input2").on("keyup", function () {
+            changePasswordLabel2();
         });
 
         function changePasswordLabel() {
@@ -96,6 +100,16 @@
             } else {
                 $("#password-input").parent().find("label").css("transform", "translateY(12px)");
                 $("#password-input").parent().find("label").css("transform-origin", "0 100%");
+            }
+        }
+
+        function changePasswordLabel2() {
+            if ($("#password-input2").val().length > 0) {
+                $("#password-input2").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+                $("#password-input2").parent().find("label").css("transform-origin", "0 0");
+            } else {
+                $("#password-input2").parent().find("label").css("transform", "translateY(12px)");
+                $("#password-input2").parent().find("label").css("transform-origin", "0 100%");
             }
         }
 

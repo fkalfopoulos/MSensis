@@ -24,7 +24,7 @@
     DateTime now7 = now.AddMonths(-7);
     DateTime dcount = now7;
 
-
+    var mycompanies = _context.Companies.Where(u => u.User.Id == Model.User.Id).ToList();
 
 
     decimal[] valopen = new decimal[8];

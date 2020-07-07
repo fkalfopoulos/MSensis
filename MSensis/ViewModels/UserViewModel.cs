@@ -21,8 +21,10 @@ namespace MSensis.ViewModels
         public string Id { get; set; }
         public int Companys_Clients { get; set; }
         public int UserCompanies { get; set; } 
-
+        public string Name { get; set; }
         public string Company_Name { get; set; }
+        public string Email { get; set; }
+        
 
         public int Company_Invoices { get; set; }
         public int User_pdfs { get; set; }
@@ -34,6 +36,8 @@ namespace MSensis.ViewModels
         public decimal TotalValueSix { get; set; }
         public decimal TotalVatThree { get; set; }
         public decimal TotalValueThree { get; set; }
+
+        public string PhoneNumber { get; set; }
     }
 
     public class CompanyViewModel
@@ -58,17 +62,24 @@ namespace MSensis.ViewModels
     {
         public string Id { get; set; }
         public string CompanyName { get; set; }
+        public string ClientName { get; set; }
+        public string InvoiceType { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public IEnumerable<Client> Clients { get; set; }
         public int CategoryId { get; set; }
+        public string InvoiceId { get; set; }
+        public string PdfId { get; set; }
+    
 
         public List<string> pdfss { get; set; }
         
-        public List<int> ChooseList { get; set; }
+        public List<string> ChooseList { get; set; }
+        public int SearchString { get; set; }
 
        public List<string> Ids { get; set; }
 
+        public DateTime ChangeTime { get; set; }
         public string DatetimeString { get; set; }
 
         public int choice { get; set; }
@@ -89,8 +100,30 @@ namespace MSensis.ViewModels
 
 
     }
+    public class UserForProfileViewModel
+    {
+        public string Name { get; set; }
 
-    public class InvoiceViewModel
+        public string PhoneNumber { get; set; }
+        public IEnumerable<Company> Companies { get; set; }
+        public IEnumerable<Client> Clients { get; set; }
+
+        public static void UpdateProfile(User user, UserForProfileViewModel model)
+        {
+            user.PhoneNumber = model.PhoneNumber;
+            user.UserName = model.Name;
+        }
+    }
+
+        public class ResponseData
+    {
+        
+            public IFormFile PostImage { get; set; }
+            public string PostId { get; set; }
+    }
+     
+
+        public class InvoiceViewModel
     {
 
         public IEnumerable<Company> Companies { get; set; }
@@ -122,6 +155,8 @@ namespace MSensis.ViewModels
          
         public int Discount { get; set; }
         public string Invoice_Comments { get; set; }
+
+        public DateTime TimeStamp { get; set; }
 
 
         public string message { get; set; }
