@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="~/css/site2.css" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"> 
+          rel="stylesheet">
 
-    
+
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery-adaptive-background.js"></script>
 </head>
@@ -21,95 +21,87 @@
     </div>
     <div class="row" id="login-row">
         <div class="col s12 col m12 col l6 offset-l3">
-            <form id="login-form"  method="post" autocomplete="off">
-                  
-                        <div class="row">
-                            <div class="input-field col s12 col m12 col l12">
-                                <i class="material-icons prefix">account_circle</i>  
-                                <input asp-for="Input.Email" id="email-input" type="email" validate grey-text text-darken-3"
-                                       style="padding-left:6px;" >
-                                <label class="grey-text text-darken-3" for="email-input"
-                                       data-error="This email address is not valid."
-                                       data-success="This email address is valid.">
-                                    Email
-                                </label>
-                            </div>
-                        </div>   
+            <form id="login-form" method="post" autocomplete="off">
 
-                    <div class="row">
-                        <div class="input-field col s12 col m12 col l12">
-                            <i class="material-icons prefix">lock</i>
-                            <input asp-for="Input.Password"  type="password" id="password-input" class="grey-text text-darken-3"
-                                   style="padding-left: 6px;">
-                            <label class="grey-text text-darken-3" for="password-input">Password</label>
-                        </div>
-                    </div> 
-
+                <div class="row">
+                    <div class="input-field col s12 col m12 col l12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input asp-for="Input.Email" id="email-input" type="email" validate grey-text text-darken-3"
+                               style="padding-left:6px;">
+                        <label class="grey-text text-darken-3" for="email-input"
+                               data-error="This email address is not valid."
+                               data-success="This email address is valid.">
+                            Email
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 col m12 col l12">
+                        <i class="material-icons prefix">lock</i>
+                        <input asp-for="Input.Password" type="password" id="password-input" class="grey-text text-darken-3"
+                               style="padding-left: 6px;">
+                        <label class="grey-text text-darken-3" for="password-input">Password</label>
+                    </div>
+                </div>
                 <div class="row center-align">
                     <button id="login-button" type="submit"
                             class="btn indigo darken-1 white-text waves-effect waves-light">
                         Sign In
                     </button>
                     <br />
-                    
-                    <a asp-page="./Register"  id="forgot-link"asp-route-returnUrl="@Model.ReturnUrl" class="indigo-text text-darken-1">
-                    Register as a new user</a>
-                </div> 
-                    
+
+                    <a asp-page="./Register" id="forgot-link" asp-route-returnUrl="@Model.ReturnUrl" class="indigo-text text-darken-1">
+                        Register as a new user
+                    </a>
+                </div>
+
             </form>
         </div>
     </div>
 </div>
-  
-            <script>
-                $(document).ready(function () {
-                    changeEmailLabel();
-                    changePasswordLabel();
 
-                    if ($("#email-input").val().length > 0 && $("#password-input").val().length == 0) {
-                        $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
-                        $("#password-input").parent().find("label").css("transform-origin", "0 0");
-                    }
-                });
-
-                $("#email-input").on("keyup", function () {
-                    changeEmailLabel();
-                });
-
-                $("#password-input").on("keyup", function () {
-                    changePasswordLabel();
-                });
-
-                function changePasswordLabel() {
-                    if ($("#password-input").val().length > 0) {
-                        $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
-                        $("#password-input").parent().find("label").css("transform-origin", "0 0");
-                    } else {
-                        $("#password-input").parent().find("label").css("transform", "translateY(12px)");
-                        $("#password-input").parent().find("label").css("transform-origin", "0 100%");
-                    }
-                }
-
-                function changeEmailLabel() {
-                    if ($("#email-input").val().length > 0) {
-                        $("#email-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
-                        $("#email-input").parent().find("label").css("transform-origin", "0 0");
-                    } else {
-                        $("#email-input").parent().find("label").css("transform", "translateY(12px)");
-                        $("#email-input").parent().find("label").css("transform-origin", "0 100%");
-                    }
-                }
-            </script>
+<script>
+    $(document).ready(function () {
+        changeEmailLabel();
+        changePasswordLabel();
+        if ($("#email-input").val().length > 0 && $("#password-input").val().length == 0) {
+            $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+            $("#password-input").parent().find("label").css("transform-origin", "0 0");
         }
-
-        @*@section Scripts {
-                <partial name="_ValidationScriptsPartial" />
-                <script src="~/js/jquery.min.js"></script>
-                <!-- Vendor JS-->
-                <script src="~/js/select2.min.js"></script>
-                <script src="~/js/moment.min.js"></script>
-                <script src="~/js/daterangepicker.js"></script>
-                <!-- Main JS-->
-                <script src="~/js/global.js"></script>
-
-            }*@
+    });
+    $("#email-input").on("keyup", function () {
+        changeEmailLabel();
+    });
+    $("#password-input").on("keyup", function () {
+        changePasswordLabel();
+    });
+    function changePasswordLabel() {
+        if ($("#password-input").val().length > 0) {
+            $("#password-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+            $("#password-input").parent().find("label").css("transform-origin", "0 0");
+        } else {
+            $("#password-input").parent().find("label").css("transform", "translateY(12px)");
+            $("#password-input").parent().find("label").css("transform-origin", "0 100%");
+        }
+    }
+    function changeEmailLabel() {
+        if ($("#email-input").val().length > 0) {
+            $("#email-input").parent().find("label").css("transform", "translateY(-14px) scale(0.8)");
+            $("#email-input").parent().find("label").css("transform-origin", "0 0");
+        } else {
+            $("#email-input").parent().find("label").css("transform", "translateY(12px)");
+            $("#email-input").parent().find("label").css("transform-origin", "0 100%");
+        }
+    }
+</script>
+        }
+@*@section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+        <script src="~/js/jquery.min.js"></script>
+        <!-- Vendor JS-->
+        <script src="~/js/select2.min.js"></script>
+        <script src="~/js/moment.min.js"></script>
+        <script src="~/js/daterangepicker.js"></script>
+        <!-- Main JS-->
+        <script src="~/js/global.js"></script>
+    }*@
