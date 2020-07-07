@@ -117,49 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Client" xml:space="preserve">
-    <value>Πελάτης</value>
+  <data name="Manage Issued Pdf" xml:space="preserve">
+    <value>Διαχείριση Εκδομένων Pdf</value>
   </data>
-  <data name="Company" xml:space="preserve">
-    <value>Εταιρεία </value>
+  <data name="One Month" xml:space="preserve">
+    <value>Ένας Μήνας</value>
   </data>
-  <data name="Delete Invoice" xml:space="preserve">
-    <value>Διαγραφή Τιμολογίου</value>
+  <data name="Search" xml:space="preserve">
+    <value>Αναζήτηση</value>
   </data>
-  <data name="Download Pdf" xml:space="preserve">
-    <value>Λήψη Pdf</value>
+  <data name="Six Month" xml:space="preserve">
+    <value>Έξι Μήνες</value>
   </data>
-  <data name="Invoice Date" xml:space="preserve">
-    <value>Ημερομηνία Τιμολογίου</value>
-  </data>
-  <data name="Invoice type" xml:space="preserve">
-    <value>Τύπος Τιμολογίου</value>
-  </data>
-  <data name="Issue Invoice" xml:space="preserve">
-    <value>Έκδοση Τιμολογίου</value>
-  </data>
-  <data name="Print pdf" xml:space="preserve">
-    <value>Εκτύπωση pdf</value>
-  </data>
-  <data name="Total Value" xml:space="preserve">
-    <value>Συνολική Τιμή</value>
-  </data>
-  <data name="Total Vat" xml:space="preserve">
-    <value>Σύνολο ΦΠΑ</value>
-  </data>
-  <data name="Update" xml:space="preserve">
-    <value>Ενημέρωση</value>
-  </data>
-  <data name="Update Invoice" xml:space="preserve">
-    <value>Ενημέρωση Τιμολογίου</value>
-  </data>
-  <data name="View" xml:space="preserve">
-    <value>Προβολή</value>
-  </data>
-  <data name="View Document" xml:space="preserve">
-    <value>Προβολή Εγγράφου</value>
-  </data>
-  <data name="View Products" xml:space="preserve">
-    <value>Προβολή Προϊόντος</value>
+  <data name="Three Month" xml:space="preserve">
+    <value>Τρεις Μήνες</value>
   </data>
 </root>

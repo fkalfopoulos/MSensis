@@ -121,13 +121,10 @@
     <value>Πελάτης</value>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>Εταιρεία </value>
+    <value>Εταιρεία</value>
   </data>
   <data name="Delete Invoice" xml:space="preserve">
     <value>Διαγραφή Τιμολογίου</value>
-  </data>
-  <data name="Download Pdf" xml:space="preserve">
-    <value>Λήψη Pdf</value>
   </data>
   <data name="Invoice Date" xml:space="preserve">
     <value>Ημερομηνία Τιμολογίου</value>
@@ -135,14 +132,8 @@
   <data name="Invoice type" xml:space="preserve">
     <value>Τύπος Τιμολογίου</value>
   </data>
-  <data name="Issue Invoice" xml:space="preserve">
-    <value>Έκδοση Τιμολογίου</value>
-  </data>
-  <data name="Print pdf" xml:space="preserve">
-    <value>Εκτύπωση pdf</value>
-  </data>
   <data name="Total Value" xml:space="preserve">
-    <value>Συνολική Τιμή</value>
+    <value>Συνολική Αξία</value>
   </data>
   <data name="Total Vat" xml:space="preserve">
     <value>Σύνολο ΦΠΑ</value>
@@ -160,6 +151,6 @@
     <value>Προβολή Εγγράφου</value>
   </data>
   <data name="View Products" xml:space="preserve">
-    <value>Προβολή Προϊόντος</value>
+    <value>Προβολή Προϊόντων</value>
   </data>
 </root>
