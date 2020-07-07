@@ -1,4 +1,7 @@
 ﻿@using MSensis.ViewModels
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
 @model InvoiceViewModel
 
 <head>
@@ -7,31 +10,38 @@
 </head>
 
 <!-- Main content -->
-
+<section class="content-header">
+    <h2 class="box-title">@_localizer["Add Invoice"]</h2>
+</section>
 <div class="container">
+    @*<div class="box box-info">
+            <div class="box-header with-border">
+                  <h2 class="box-title">Add Invoice</h2>
+            </div>
+        </div>*@
     <div class="raw">
 
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Select Client</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">@_localizer["Select Client"]</label>
             <div class="col-sm-10">
                 <select class="form-control" name="ClientId" id="ClientId">
 
                     @foreach (var c in Model.Clients)
                     {
-                        <option value="@c.Id" > @c.CompanyName</option>
+                        <option value="@c.Id"> @c.CompanyName</option>
                     }
                 </select>
             </div>
             <br />
         </div>
-    </div> 
+    </div>
 </div>
 <div class="container">
     <div class="raw">
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Select your Company</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">@_localizer["Select Company"]</label>
             <div class="col-sm-10">
-                <select class="form-control"  name="CompanyId">
+                <select class="form-control" name="CompanyId">
 
                     @foreach (var c in Model.Companies)
                     {
@@ -42,163 +52,158 @@
         </div>
     </div> <br />
 </div>
-<div class="container">
-    <div class="raw">
-        <div class="box-footer">
-            <button type="submit" class="btn btn-info pull-right" onclick="history.go(-1); return false;">Back</button>
-            <button type="submit" class="btn btn-info pull-right" onclick="GetID()">Create</button>
-        </div>
-        </div>
-        </div>
 
 
-        <br />
+<br />
 
-        <section class="content container-fluid">
+<section class="content container-fluid">
 
-            <div class="box box-info">
-                <div class="box-header with-border">
-                    <center>   <h2 class="box-title">Add Invoice</h2> </center>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-75">
-                    <div class="container">
+
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-50">
+
+                        <label for="fname"><i class="fa fa-user"></i> @_localizer["Product Title"]</label>
+                        <input type="text" id="Invoice_Description" name="Invoice_Description" placeholder="">
+
+                        <label for="email"><i class="fa fa-envelope"></i> @_localizer["Product Code"]</label>
+                        <input type="number" step="any" id="Invoice_Code" name="Invoice_Code" placeholder="">
+
+                        <label for="adr"><i class="fa fa-address-card-o"></i> @_localizer["Price per unit"]</label>
+                        <input type="number" step="any" id="PricePerUnit" name="PricePerUnit" placeholder="" autocomplete="off">
+
 
 
                         <div class="row">
                             <div class="col-50">
-
-                                <label for="fname"><i class="fa fa-user"></i> Product Title</label>
-                                <input type="text" id="Invoice_Description" name="Invoice_Description" placeholder="">
-
-                                <label for="email"><i class="fa fa-envelope"></i> Product Code</label>
-                                <input type="number" step="any" id="Invoice_Code" name="Invoice_Code" placeholder="">
-
-                                <label for="adr"><i class="fa fa-address-card-o"></i> Price per unit</label>
-                                <input type="number" step="any" id="PricePerUnit" name="PricePerUnit" placeholder="" autocomplete="off">
-
-                               
-
-                                <div class="row">
-                                    <div class="col-50">
-                                        <label for="state">Quantity</label>
-                                        <input type="number"  step="any" id="Invoice_Quantity" name="Invoice_Quantity" placeholder="">
-                                    </div>
-                                    <div class="col-50">
-                                        <label for="zip">Discount</label>
-                                        <input type="number" id="Discount" name="Discount" placeholder="Discount">
-                                    </div>
-                                </div>
+                                <label for="state">@_localizer["Quantity"]</label>
+                                <input type="number" step="any" id="Invoice_Quantity" name="Invoice_Quantity" placeholder="">
                             </div>
-
                             <div class="col-50">
-                                <h3>Payment</h3>
-                                <label for="fname">Accepted Cards</label>
-                                <div class="icon-container">
-                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
-                                </div>
-                                <label for="cname">Name on Card</label>
-                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                                <label for="ccnum">Credit card number</label>
-                                <input type="text" id="ccnum" name="cardnumber" placeholder=" ">
-                                <label for="expmonth">Exp Month</label>
-                                <input type="text" id="expmonth" name="expmonth" placeholder=" ">
-
-                                <div class="row">
-                                    <div class="col-50">
-                                        <label for="expyear">Τιμή Πώλησης</label>
-                                        <input type="number" step="any" id="expyear" name="expyear" placeholder=" ">
-                                    </div>
-                                    <div class="col-50">
-                                        <label for="cvv">VAT</label>
-                                        <input type="number" step="any" id="Invoice_VAT" name="Invoice_VAT" placeholder="">
-                                    </div>
-                                </div>
+                                <label for="Discount">@_localizer["Discount"]</label>
+                                <input type="number" id="Discount" name="Discount" placeholder="">
                             </div>
-
                         </div>
-
-                        <div class="col-50">
-                            <label for="cvv">Comments</label>
-                            <input type="text" id="Invoice_Comments" name="Invoice_Comments" placeholder="">
-                        </div>
-                        <hr>
                     </div>
-                    <hr>
+
+                    <div class="col-50">
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder=" ">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder=" ">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="expyear">@_localizer["Sale Price"]</label>
+                                <input type="number" step="any" id="expyear" name="expyear" placeholder=" ">
+                            </div>
+                            <div class="col-50">
+                                <label for="cvv">@_localizer["VAT"]</label>
+                                <input type="number" step="any" id="Invoice_VAT" name="Invoice_VAT" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <div class="col-50">
+                    <label for="cvv">@_localizer["Comments"]</label>
+                    <input type="text" id="Invoice_Comments" name="Invoice_Comments" placeholder="">
+                </div>
+                <hr>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-75">
+            <div class="box-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="filldetails" name="member" onclick="addFields()">@_localizer["Create new products"]</button>
+                <input type="text" id="member" name="member" value="">Number of Products: (max. 5)<br />
+
+                <div id="container" class="boldText" />
+                <div id="container2" class="col-50" />
+
             </div>
 
-            <div class="row">
-                <div class="col-75">
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="filldetails" name="member" onclick="addFields()">Create new products</button>
-                    <input type="text" id="member" name="member" value="">Number of Products: (max. 5)<br />
-                                                                                                    
-                    <div id="container" class="boldText"/>
-                    <div id="container2" class="col-50" />
-                </div>
 
-                <br />
-                 
-            </div> 
-        </section>
+        </div>
+        <button type="submit" class="btn btn-info pull-right" onclick="history.go(-1); return false;">@_localizer["Back"]</button>
+        <button type="submit" class="btn btn-info pull-right" onclick="GetID()">@_localizer["Create"]</button>
+
+        <br />
+
+    </div>
+</section>
 
 
 
-        <script>
+<script>
 
       function addFields() {
         var number = document.getElementById("member").value;
-        var container = document.getElementById("container"); 
-          
+        var container = document.getElementById("container");
+
 
         while (container.hasChildNodes()) {
             container.removeChild(container.lastChild);
-            
+
         }
         for (i = 0; i < number; i++) {
-            
+
             //container.appendChild(document.createTextNode("Product" +(i+1)))
 
             var input = document.createElement("input");
             input.type = "text";
             input.id = "Product" ;
             input.name = "Product" + (i + 1);
-            input.placeholder = "Product Name " + (i + 1)
-            container.appendChild(input); 
-             
+            input.placeholder = "@_localizer["Product Title"]" + (i + 1)
+            container.appendChild(input);
+
 
             var input = document.createElement("input");
             input.type = "number";
             input.id = "Price";
             input.name = "Product" + (i + 1);
-            input.placeholder = "Product Price"
-            container.appendChild(input); 
+            input.placeholder = "@_localizer["Product Price"]"
+            container.appendChild(input);
 
             var input = document.createElement("input");
             input.type = "number";
             input.id = "Discount";
             input.name = "Product" + (i + 1);
-            input.placeholder = "Discount"
-            container.appendChild(input); 
+            input.placeholder = "@_localizer["Discount"]"
+            container.appendChild(input);
 
             var input = document.createElement("input");
             input.type = "number";
             input.id = "VAT";
             input.name = "Product" + (i + 1);
-            input.placeholder = "VAT"
-            container.appendChild(input); 
+            input.placeholder = "@_localizer["VAT"]"
+            container.appendChild(input);
 
-             
+
               var input = document.createElement("input");
               input.type = "number";
               input.id = "Code";
               input.name = "Product" + (i + 1);
-              input.placeholder = "Product Code"
+              input.placeholder = "@_localizer["Product Code"]"
             container.appendChild(input);
 
 
@@ -206,17 +211,17 @@
             input.type = "number";
             input.id = "Quantity";
             input.name = "Product" + (i + 1);
-            input.placeholder = "Product Quantity"
+            input.placeholder = "@_localizer["Quantity"]"
             container.appendChild(input);
 
-          }  
-        }   
+          }
+        }
 
             async function GetID() {
 
-               
+
                 var ids = []
-             
+
                 var Invoice_Description = document.getElementById("Invoice_Description").value;
                 var CompanyId = document.getElementById("CompanyId").value;
                 var ClientId = document.getElementById("ClientId").value;
@@ -227,7 +232,7 @@
                 var Invoice_Comments = document.getElementById("Invoice_Comments").value;
                 var Discount = document.getElementById("Discount").value;
 
-                
+
 
                 var checkboxes = document.querySelectorAll('input[id=Product]');
                 var checkboxes2 = document.querySelectorAll('input[id=Price]');
@@ -246,8 +251,8 @@
                     elements.Quantity = checkboxes6[i].value;
                     ids.push(elements);
                 }
-                
-               
+
+
                 let data =
                 {
                     ids: ids,
@@ -265,14 +270,14 @@
 
             var message=    sendData('@Url.Action("Create_Action", "Home")', data);
                 location.reload();
-               
+
             }
-            
+
 
 
             async function sendData(url, data) {
                 const urlToSendRequest = "https://" + window.location.host + url;
-               
+
                 const rawData = await fetch(url, {
                     method: 'POST',
                     headers: {
@@ -281,8 +286,8 @@
                     },
                     credentials: "same-origin",
                     body: JSON.stringify(data)
-                }) 
+                })
 
                 return rawData.json();
             }
-        </script>
+</script>

@@ -1,4 +1,6 @@
-﻿ 
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
 @model Invoice 
 
 <head>
@@ -10,7 +12,7 @@
 
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Add nvoice</h3>
+            <h3 class="box-title">@_localizer["Edit Invoice"]</h3>
         </div>
     </div>
 
@@ -23,22 +25,25 @@
                     <div class="row">
                         <div class="col-50">
 
-                            <label for="fname"><i class="fa fa-user"></i> Ιnvoice title</label>
+                            <label for="fname"><i class="fa fa-user"></i> @_localizer["Ιnvoice title"]</label>
                             <input type="text" id="fname" name="Invoice_Description" placeholder="" value="@Model.Description">
-                            <label for="email"><i class="fa fa-envelope"></i> Invoice Code</label>
+
+                            <label for="email"><i class="fa fa-envelope"></i> @_localizer["Invoice Code"]</label>
                             <input type="text" id="email" name="Invoice_Code" placeholder="" value="@Model.Code" />
-                            <label for="adr"><i class="fa fa-address-card-o"></i> Price per unit</label>
+
+                            <label for="adr"><i class="fa fa-address-card-o"></i> @_localizer["Price per unit"]</label>
                             <input type="text" id="adr" name="PricePerUnit" placeholder="" value="@Model.PricePerUnit" />
-                            <label for="city"><i class="fa fa-institution"></i> Price Before Discount</label>
+
+                            <label for="city"><i class="fa fa-institution"></i> @_localizer["Price Before Discount"]</label>
                             <input type="text" id="city" name="PriceBeforeDiscount" placeholder="" value="@Model.PriceBeforeDiscount" />
 
                             <div class="row">
                                 <div class="col-50">
-                                    <label for="state">Price after Discount</label>
+                                    <label for="state">@_localizer["Price after Discount"]</label>
                                     <input type="text" id="state" name="PriceAfterDiscount" placeholder="" value="@Model.PriceAfterDiscount" />
                                 </div>
                                 <div class="col-50">
-                                    <label for="zip">Discount</label>
+                                    <label for="zip">@_localizer["Discount"]</label>
                                     <input type="text" id="zip" name="Discount" placeholder="" value="@Model.Discount" />
                                 </div>
                              
@@ -63,11 +68,11 @@
 
                             <div class="row">
                                 <div class="col-50">
-                                    <label for="expyear">Τιμή Πώλησης</label>
+                                    <label for="expyear">@_localizer["Sale Price"]</label>
                                     <input type="text" id="expyear" name="expyear" placeholder="">
                                 </div>
                                 <div class="col-50">
-                                    <label for="cvv">Quantity</label>
+                                    <label for="cvv">@_localizer["Quantity"]</label>
                                     <input type="text" id="cvv" name="Invoice_Quantity" placeholder=""value="@Model.Quantity" />  
                                 </div>
                             </div>
@@ -82,7 +87,7 @@
                 <div class="container">
                     <h4>                        
                         <span class="price" style="color:black">
-                            <label for="cvv">VAT</label>
+                            <label for="cvv">@_localizer["VAT"]</label>
                             <input type="text" id="cvv" name="Vat" placeholder="" value="@Model.Vat" />
                         </span>
                     </h4>
@@ -94,7 +99,7 @@
         </div>
 
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Enter Comments</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">@_localizer["Comments"]</label>
             <div class="col-sm-10">
                  
                 <input type="text" id="cvv" name="Invoice_Comments" placeholder="" value="@Model.Comments">
@@ -106,8 +111,8 @@
 
 
         <div class="box-footer">
-            <button type="submit" class="btn btn-info pull-right" onclick="history.go(-1); return false;">Back</button>
-            <button type="submit" class="btn btn-info pull-right">Save</button>
+            <button type="submit" class="btn btn-info pull-right" onclick="history.go(-1); return false;">@_localizer["Back"]</button>
+            <button type="submit" class="btn btn-info pull-right">@_localizer["Save"]</button>
         </div>
 
         <input type="hidden" name="Id" value="@Model.Id" />
