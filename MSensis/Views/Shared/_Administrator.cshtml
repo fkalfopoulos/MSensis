@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="~/adminlte/dist/css/AdminLTE.css">
     <link rel="stylesheet" href="~/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/Lang.css">
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery.dataTables.min.js"></script>
     <script src="~/js/jquery-adaptive-background.js"></script>
@@ -38,10 +39,11 @@
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <span class="sr-only">Toggle navigation</span>
                 </a>
+                <div class="col-sm-6 text-right">
+                    @await Html.PartialAsync("_SelectLanguagePartial")
+                </div>
                 <div class="navbar-custom-menu">
-                    <div class="col-sm-6 text-right">
-                        @await Html.PartialAsync("_SelectLanguagePartial")
-                    </div>
+
                     <ul class="nav navbar-nav">
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">

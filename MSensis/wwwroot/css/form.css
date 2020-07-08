@@ -58,7 +58,16 @@ label {
     padding: 7px 0;
     font-size: 24px;
 }
-
+#langbtn {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    width: 20%;
+}
 .btn {
     background-color: cornflowerblue;
     color: white;
@@ -90,3 +99,4 @@ span.price {
         margin-bottom: 20px;
     }
 }
+
