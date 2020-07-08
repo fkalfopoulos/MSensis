@@ -1,4 +1,5 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
 @model MSensis.ViewModels.UserViewModel
 @inject MSensis.Models.MSensisContext _context
 @{
@@ -59,14 +60,14 @@
 
 <section class="content-header">
     <h1>
-        Dashboard
-        <small>Control panel</small>
+        @_localizer["Dashboard"]
+        <small>@_localizer["Control panel"]</small>
     </h1>
     <ol class="breadcrumb">
-        <li>Hello </li>
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-    </ol>
+        <li>@_localizer["Hello"] </li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> @_localizer["Home"]</a></li>
+        <li class="active">@_localizer["Dashboard"]</li>
+</ol>
 </section>
 <!-- Main content -->
 <section class="content">
@@ -77,12 +78,12 @@
             <div class="small-box bg-aqua">
                 <div class="inner">
                     <h3>@Model.TotalVatThree.ToString("#.##")€</h3>
-                    <p>Total Vat Last 3 Months</p>
+                    <p>@_localizer["Total Vat Last 3 Months"]</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-user-friends"></i>
                 </div>
-                <a href='@Url.Action("Index","Entities")' class="small-box-footer"> More info  <i class="fa fa-arrow-circle-right"> </i></a>
+                <a href='@Url.Action("Index", "Entities")' class="small-box-footer"> @_localizer["More info"]  <i class="fa fa-arrow-circle-right"> </i></a>
             </div>
         </div>
 
@@ -92,12 +93,12 @@
             <div class="small-box bg-red">
                 <div class="inner">
                     <h3>@Model.TotalValueSix.ToString("#.##")€</h3>
-                    <p>Total Value Past 6 months</p>
+                    <p>@_localizer["Total Value Past 6 months"]</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-users"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer">@_localizer["More info"] <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -108,13 +109,13 @@
             <div class="small-box bg-yellow">
                 <div class="inner">
                     <h3>@Model.TotalValueThree.ToString("#.##")€</h3>
-                    <p>Total Value of 3 months</p>
+                    <p>@_localizer["Total Value of 3 months"]</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-users"></i>
                 </div>
                 <a asp-action="CreatePDF" asp-controller="MSensis" class="small-box-footer">
-                    Print last pdf <i class="fa fa-arrow-circle-right"></i>
+                    @_localizer["Print last pdf"] <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>
@@ -125,12 +126,12 @@
             <div class="small-box bg-green">
                 <div class="inner">
                     <h3>@Model.TotalVatSix.ToString("#.##")€</h3>
-                    <p>Total Vat Past 6 months</p>
+                    <p>@_localizer["Total Vat Past 6 months"]</p>
                 </div>
                 <div class="icon">
                     <i class="fa fa-users"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer">@_localizer["More info"] <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
 
@@ -140,7 +141,7 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Monthly Recap Report Draft vs Issued</h3>
+                    <h3 class="box-title">@_localizer["Monthly Recap Report Draft vs Issued"]</h3>
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
                             <i class="fa fa-minus"></i>
@@ -176,11 +177,11 @@
                         <!-- /.col -->
                         <div class="col-md-4">
                             <p class="text-center">
-                                <strong>Open vs Paid</strong>
+                                <strong>@_localizer["Open vs Paid"]</strong>
                             </p>
                             <!-- /.progress-group -->
                             <div class="progress-group">
-                                <span class="progress-text"> Open</span>
+                                <span class="progress-text"> @_localizer["Open"]</span>
                                 <span class="progress-number"><b>@custpaid.ToString("0.##")</b>/@totalcust.ToString("0.##")</span>
                                 <div class="progress sm">
                                     <div class="progress-bar progress-bar-red" style="width: @perccust%"></div>
@@ -188,7 +189,7 @@
                             </div>
                             <!-- /.progress-group -->
                             <div class="progress-group">
-                                <span class="progress-text">Paid Vendor</span>
+                                <span class="progress-text">@_localizer["Paid Vendor"]</span>
                                 <span class="progress-number"><b>@vendpaid.ToString("0.##")</b>/@totalvend.ToString("0.##")</span>
                                 <div class="progress sm">
                                     <div class="progress-bar progress-bar-green" style="width: @percvend%"></div>
@@ -216,7 +217,7 @@
         <div class="box box-primary">
             <div class="box-header">
                 <i class="ion ion-clipboard"></i>
-                <h3 class="box-title">My Clients</h3>
+                <h3 class="box-title">@_localizer["My Clients"]</h3>
                 <div class="box-tools pull-right">
                     <ul class="pagination pagination-sm inline"></ul>
                 </div>
@@ -242,7 +243,7 @@
 
                             <div class="tools">
 
-                                <a asp-action="Update_Client" asp-route-id="@c.Id">Update <i class="fa fa-edit"></i></a>
+                                <a asp-action="Update_Client" asp-route-id="@c.Id">@_localizer["Update"] <i class="fa fa-edit"></i></a>
                                 <i class="fa fa-trash-o"></i>
                             </div>
                         </li>
@@ -254,7 +255,7 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix no-border">
-                <button type="button" class="btn btn-default pull-right" onclick="window.location.href='@Url.Action("Create_Client","Home")'"><i class="fa fa-plus"></i> Add Client</button>
+                <button type="button" class="btn btn-default pull-right" onclick="window.location.href='@Url.Action("Create_Client","Home")'"><i class="fa fa-plus"></i> @_localizer["Add Client"]</button>
             </div>
         </div>
         </div>
@@ -262,7 +263,7 @@
 
             <div class="box box-danger">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Companies List Chart</h3>
+                    <h3 class="box-title">@_localizer["Companies List Chart"]</h3>
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
                             <i class="fa fa-minus"></i>
@@ -301,7 +302,7 @@
             resize: true,
             colors: ["#3c8dbc", "#f56954", "#00a65a"],
             data: [
-                { label: "Total Invoices", value: @Model.User_Invoices },
+                { label: "@_localizer["Total Invoices"]", value: @Model.User_Invoices },
 
             ],
             hideHover: 'auto'

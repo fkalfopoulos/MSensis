@@ -1,4 +1,6 @@
-﻿@using MSensis.ViewModels;
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@using MSensis.ViewModels;
 
 @model PDFViewModel
 
@@ -11,47 +13,47 @@
 </head>
 <body>
     <header>
-        <h1>Invoice</h1>
+        <h1>@_localizer["Invoice"]</h1>
         <address contenteditable>
             <p><b> @Model.Company.Name</b></p>
             <p>@Model.Company.Address </p>
-<p>@Model.Company.City   </p>
-<p> tel. : @Model.Company.TelephoneNumber   </p>
-</address>
+            <p>@Model.Company.City   </p>
+            <p> @_localizer["tel."] : @Model.Company.TelephoneNumber   </p>
+        </address>
         <span><img src="/content/msensis.png" alt="@Model.Company.ImageSrc" /><input type="file" accept="image/*"></span>
     </header>
     <article>
         <h1>Invoice</h1>
         <address contenteditable>
-            <p>Company Name : <span>@Model.Client.CompanyName </span></p>
-            <p>    Address :  <span> @Model.Client.Address </span></p>
-            <p> City:  <span> @Model.Client.City            </span> </p>
-            <p> Telephone N. : <span> @Model.Client.TelephoneNumber    </span> </p>
-            <p>  AFM :<span> @Model.Client.AFM  </span> </p>
-            <p> Doy :<span> @Model.Client.DOY  </span> </p>
+            <p>@_localizer["Client Name"] : <span>@Model.Client.CompanyName </span></p>
+            <p>@_localizer["Address"] :  <span> @Model.Client.Address </span></p>
+            <p> @_localizer["City"]:  <span> @Model.Client.City            </span> </p>
+            <p> @_localizer["Telephone"] : <span> @Model.Client.TelephoneNumber    </span> </p>
+            <p>  @_localizer["Social Security Number"] :<span> @Model.Client.AFM  </span> </p>
+            <p> @_localizer["DOY"] :<span> @Model.Client.DOY  </span> </p>
         </address>
         <table class="meta">
             <tr>
-                <th><span contenteditable>Invoice #</span></th>
+                <th><span contenteditable>@_localizer["Invoice #"]</span></th>
                 <td><span contenteditable>101138</span></td>
             </tr>
             <tr>
-                <th><span contenteditable>Date</span></th>
+                <th><span contenteditable>@_localizer["Date"]</span></th>
                 <td><span contenteditable>@Model.DateTimeString</span></td>
             </tr>
             <tr>
-                <th><span contenteditable>Amount Due</span></th>
+                <th><span contenteditable>@_localizer["Amount Due"]</span></th>
                 <td><span id="prefix" contenteditable>$</span><span>600.00</span></td>
             </tr>
         </table>
         <table class="inventory">
             <thead>
                 <tr>
-                    <th><span contenteditable>Product Code</span></th>
-                    <th><span contenteditable>Description</span></th>
-                    <th><span contenteditable>Quantity</span></th>
-                    <th><span contenteditable>Price per Unit</span></th>
-                    <th><span contenteditable>VAT</span></th>
+                    <th><span contenteditable>@_localizer["Product Code"]</span></th>
+                    <th><span contenteditable>@_localizer["Description"]</span></th>
+                    <th><span contenteditable>@_localizer["Quantity"]</span></th>
+                    <th><span contenteditable>@_localizer["Price per Unit"]</span></th>
+                    <th><span contenteditable>@_localizer["VAT"]</span></th>
                 </tr>
             </thead>
             @foreach (var c in Model.products2)
@@ -64,38 +66,38 @@
                         <td><span contenteditable>@c.Quantity</span></td>
                         <td><span contenteditable>@c.PricePerUnit.ToString("#.##")€</span></td>
                         <td><span>@c.Vat%</span></td>
-                    </tr> 
+                    </tr>
                 </tbody>
             }
         </table>
         <a class="add">+</a>
         <table class="balance">
             <tr>
-                <th><span contenteditable>Price Before Taxes</span></th>
-                <td><span data-prefix>$</span><span>@Model.PriceWithoutVat€</span></td>
+                <th><span contenteditable>@_localizer["Price Before Taxes"]</span></th>
+                <td><span data-prefix></span><span>@Model.PriceWithoutVat€</span></td>
             </tr>
             <tr>
-                <th><span contenteditable>Total Discount</span></th>
+                <th><span contenteditable>@_localizer["Total Discount"]</span></th>
                 <td><span contenteditable>@Model.Discount€</span></td>
             </tr>
             <tr>
-                <th><span contenteditable>TOTAL VAT </span></th>
+                <th><span contenteditable>@_localizer["Total VAT"] </span></th>
                 <td><span>@Model.TotalVat€</span></td>
             </tr>
             <tr>
-                <th><span contenteditable>Grant Total</span></th>
+                <th><span contenteditable>@_localizer["Grant Total"]</span></th>
                 <td><span>@Model.GrantTotal.ToString("#.##")€</span></td>
             </tr>
         </table>
     </article>
     <aside>
-        <h1><span contenteditable>Additional Notes</span></h1>
+        <h1><span contenteditable>@_localizer["Additional Notes"]</span></h1>
         <div contenteditable>
-            <p>A finance charge of 1.5% will be made on unpaid balances after 30 days.</p>
+            <p>@_localizer["A finance charge of 1.5% will be made on unpaid balances after 30 days."]</p>
         </div>
     </aside>
 </body>
- 
+
 
 
 <script>
