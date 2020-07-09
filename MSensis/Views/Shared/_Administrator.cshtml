@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> UserManager
 
@@ -60,11 +62,11 @@
                                 </li>
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href='@Url.Action("UpdateProfile", "Home")' class="btn btn-default btn-flat">Profile</a>
+                                        <a href='@Url.Action("UpdateProfile", "Home")' class="btn btn-default btn-flat">@_localizer["Profile"]</a>
                                     </div>
                                     <div class="pull-right">
                                         <form id="logoutForm" class="form-inline" asp-action="LogOut" asp-controller="Account">
-                                            <button id="logout" type="submit" class=btn btn-default btn-flat">Logout</button>
+                                            <button id="logout" type="submit" class=btn btn-default btn-flat">@_localizer["Logout"]</button>
                                         </form>
                                     </div>
                                 </li>
@@ -82,7 +84,7 @@
                 </div>
                 <div class="pull-left info">
                     <p> @UserManager.GetUserName(User) </p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <a href="#"><i class="fa fa-circle text-success"></i> @_localizer["Online"]</a>
                 </div>
             </div>
 

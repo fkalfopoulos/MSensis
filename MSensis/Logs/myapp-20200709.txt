@@ -1,0 +1,114 @@
+2020-07-09T10:38:52.6963956+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-09T10:38:52.7647933+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-09T10:38:52.7806260+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing action "MSensis.Controllers.HomeController.Index (MSensis)" (a44c0341)
+2020-07-09T10:38:52.7929392+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Authorization failed. (b15dd539)
+2020-07-09T10:38:52.7966058+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-07-09T10:38:52.8018589+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-07-09T10:38:52.8124974+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2020-07-09T10:38:52.8157069+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 31.8507ms (afa2e885)
+2020-07-09T10:38:52.8162233+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-09T10:38:52.8313819+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2020-07-09T10:38:52.8316353+03:00 80000139-0004-fd00-b63f-84710c7967bb [INF] Request finished in 139.127ms 302  (791a596a)
+2020-07-09T10:38:52.8354974+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-07-09T10:38:52.8752841+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-07-09T10:38:53.0352203+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnGetAsync" with arguments (["/"]) - ModelState is Valid (d4ff7456)
+2020-07-09T10:38:53.0429212+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-07-09T10:38:53.0445116+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executed handler method "OnGetAsync", returned result "". (90fdc39c)
+2020-07-09T10:38:53.0460145+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executing an implicit handler method - ModelState is Valid (232a55d1)
+2020-07-09T10:38:53.0460561+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executed an implicit handler method, returned result "Microsoft.AspNetCore.Mvc.RazorPages.PageResult". (f857da66)
+2020-07-09T10:38:53.4380151+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 562.6227ms (02e01280)
+2020-07-09T10:38:53.4380756+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-07-09T10:38:53.4416078+03:00 8000016b-0008-fe00-b63f-84710c7967bb [INF] Request finished in 610.0806ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-09T10:39:03.2589847+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44389/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 238 (ca22a1cb)
+2020-07-09T10:39:03.2632480+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executing endpoint '"Page: /Account/Login"' (500cc934)
+2020-07-09T10:39:03.2639385+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Route matched with "{page = \"/Account/Login\", area = \"Identity\", action = \"\", controller = \"\"}". Executing page "/Account/Login" (547e620f)
+2020-07-09T10:39:03.2895313+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executing handler method "MSensis.Areas.Identity.Pages.Account.LoginModel.OnPostAsync" with arguments (["/"]) - ModelState is Valid (d4ff7456)
+2020-07-09T10:39:03.6371086+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] Navigations '"Client"."Company"' and '"Company"."Client"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-07-09T10:39:03.6431984+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] Navigations '"Company"."Invoice"' and '"Invoice"."Company"' were separated into two relationships as ForeignKeyAttribute was specified on navigations on both sides. (2c5f0086)
+2020-07-09T10:39:03.8060160+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development. (2b730620)
+2020-07-09T10:39:03.8273855+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"PriceAfterDiscount"' on entity type '"Invoice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8275448+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"PriceBeforeDiscount"' on entity type '"Invoice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8275797+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"PricePerUnit"' on entity type '"Invoice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8276565+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"TotalValue"' on entity type '"Pdf"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8276997+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"TotalVat"' on entity type '"Pdf"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8277588+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"Absolute_value"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8278141+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"PriceAfterDiscount"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8278592+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"PriceBeforeDiscount"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8278834+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] No type was specified for the decimal column '"PricePerUnit"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2020-07-09T10:39:03.8891144+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-09T10:39:04.3036764+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("20"ms) [Parameters=["@__normalizedUserName_0='TEST@GMAIL.COM' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-07-09T10:39:04.5173803+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='e0b74d1b-cacd-4f5f-8986-a91f13b95034' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-07-09T10:39:04.5592749+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='e0b74d1b-cacd-4f5f-8986-a91f13b95034' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-07-09T10:39:04.5671737+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-07-09T10:39:04.5690648+03:00 80000010-0003-fd00-b63f-84710c7967bb [WRN] Info - Successful login for "test@gmail.com" (2f0a74b7)
+2020-07-09T10:39:04.5716929+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executed handler method "OnPostAsync", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (90fdc39c)
+2020-07-09T10:39:04.5755106+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-07-09T10:39:04.5769247+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executed page "/Account/Login" in 1312.9205ms (02e01280)
+2020-07-09T10:39:04.5775403+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Executed endpoint '"Page: /Account/Login"' (99874f2b)
+2020-07-09T10:39:04.5822073+03:00 80000010-0003-fd00-b63f-84710c7967bb [INF] Request finished in 1323.3047ms 302  (791a596a)
+2020-07-09T10:39:04.5860508+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/   (ca22a1cb)
+2020-07-09T10:39:04.5905511+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executing endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (500cc934)
+2020-07-09T10:39:04.5906831+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", page = \"\", area = \"\"}". Executing action "MSensis.Controllers.HomeController.Index (MSensis)" (a44c0341)
+2020-07-09T10:39:04.5910511+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Authorization was successful. (0d575a54)
+2020-07-09T10:39:04.5992515+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executing action method "MSensis.Controllers.HomeController.Index (MSensis)" - Validation state: Valid (dad538d7)
+2020-07-09T10:39:04.6045463+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"MSensisContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "SensitiveDataLoggingEnabled DetailedErrorsEnabled " (9958f5bb)
+2020-07-09T10:39:04.6225723+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='e0b74d1b-cacd-4f5f-8986-a91f13b95034' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[Name], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2020-07-09T10:39:04.6389489+03:00 8000000a-000a-fc00-b63f-84710c7967bb [WRN] user is in "test@gmail.com" (14c61b46)
+2020-07-09T10:39:04.6654438+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='e0b74d1b-cacd-4f5f-8986-a91f13b95034' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Address], [c].[City], [c].[ClientId], [c].[Code], [c].[CompanyName], [c].[IdentifierId], [c].[ImageSrc], [c].[InvoiceId], [c].[Name], [c].[TelephoneNumber], [c].[Timestamp], [c].[UserId]
+FROM [Companies] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2020-07-09T10:39:04.7279345+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='e0b74d1b-cacd-4f5f-8986-a91f13b95034' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[InvoiceId], [c].[ClientId], [c].[CompanyId], [c].[DateTimeString], [c].[IdentifierId], [c].[ProductId], [c].[Timestamp], [c].[TotalValue], [c].[TotalVat], [c].[Type], [c].[UserId]
+FROM [Pdfs] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2020-07-09T10:39:04.7568550+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='e0b74d1b-cacd-4f5f-8986-a91f13b95034' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[AFM], [c].[Address], [c].[City], [c].[Client_Occupation], [c].[Code], [c].[CompanyId], [c].[CompanyName], [c].[DOY], [c].[Email], [c].[IdentifierId], [c].[TelephoneNumber], [c].[Timestamp], [c].[UserId], [c].[ZipCode]
+FROM [Clients] AS [c]
+WHERE [c].[UserId] = @__user_Id_0" (0723d8ff)
+2020-07-09T10:39:04.7858939+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed action method "MSensis.Controllers.HomeController.Index (MSensis)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 184.4243ms. (50a9e262)
+2020-07-09T10:39:04.8355745+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-07-09T10:39:04.8778937+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00', @__end_Date_1='2021-01-01T00:00:00'"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM([x].[PricePerUnit])
+FROM [Invoices] AS [x]
+WHERE ([x].[Invoice_Type] = N'Draft') AND (([x].[Timestamp] >= @__start_Date_0) AND ([x].[Timestamp] <= @__end_Date_1))" (0723d8ff)
+2020-07-09T10:39:04.8845171+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00', @__end_Date_1='2021-01-01T00:00:00'"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM([x].[PricePerUnit])
+FROM [Invoices] AS [x]
+WHERE ([x].[Invoice_Type] = N'Draft') AND (([x].[Timestamp] >= @__start_Date_0) AND ([x].[Timestamp] <= @__end_Date_1))" (0723d8ff)
+2020-07-09T10:39:04.8881864+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00', @__end_Date_1='2021-01-01T00:00:00'"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM([x].[PricePerUnit])
+FROM [Invoices] AS [x]
+WHERE ([x].[Invoice_Type] = N'Issued') AND (([x].[Timestamp] >= @__start_Date_0) AND ([x].[Timestamp] <= @__end_Date_1))" (0723d8ff)
+2020-07-09T10:39:04.8887864+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("0"ms) [Parameters=["@__start_Date_0='2020-01-01T00:00:00', @__end_Date_1='2021-01-01T00:00:00'"], CommandType='Text', CommandTimeout='30']"
+""SELECT SUM([x].[PricePerUnit])
+FROM [Invoices] AS [x]
+WHERE ([x].[Invoice_Type] = N'Issued') AND (([x].[Timestamp] >= @__start_Date_0) AND ([x].[Timestamp] <= @__end_Date_1))" (0723d8ff)
+2020-07-09T10:39:04.8965999+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__now7_Date_0='2019-12-09T00:00:00', @__now_Date_1='2020-07-09T00:00:00'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ClientId], [x].[Code], [x].[Comments], [x].[CompanyId], [x].[DateTimeString], [x].[Description], [x].[Discount], [x].[IdentifierId], [x].[Invoice_Type], [x].[Number], [x].[Payment_Status], [x].[PriceAfterDiscount], [x].[PriceBeforeDiscount], [x].[PricePerUnit], [x].[Quantity], [x].[Timestamp], [x].[Vat]
+FROM [Invoices] AS [x]
+WHERE ([x].[Invoice_Type] = N'Issued') AND (([x].[Timestamp] >= @__now7_Date_0) AND ([x].[Timestamp] <= @__now_Date_1))" (0723d8ff)
+2020-07-09T10:39:04.9204389+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__now7_Date_0='2019-12-09T00:00:00', @__now_Date_1='2020-07-09T00:00:00'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ClientId], [x].[Code], [x].[Comments], [x].[CompanyId], [x].[DateTimeString], [x].[Description], [x].[Discount], [x].[IdentifierId], [x].[Invoice_Type], [x].[Number], [x].[Payment_Status], [x].[PriceAfterDiscount], [x].[PriceBeforeDiscount], [x].[PricePerUnit], [x].[Quantity], [x].[Timestamp], [x].[Vat]
+FROM [Invoices] AS [x]
+WHERE ([x].[Invoice_Type] = N'Draft') AND (([x].[Timestamp] >= @__now7_Date_0) AND ([x].[Timestamp] <= @__now_Date_1))" (0723d8ff)
+2020-07-09T10:39:05.0756180+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 283.8722ms. (f66409e9)
+2020-07-09T10:39:05.0759138+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed action "MSensis.Controllers.HomeController.Index (MSensis)" in 485.185ms (afa2e885)
+2020-07-09T10:39:05.0759495+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Executed endpoint '"MSensis.Controllers.HomeController.Index (MSensis)"' (99874f2b)
+2020-07-09T10:39:05.0761749+03:00 8000000a-000a-fc00-b63f-84710c7967bb [INF] Request finished in 490.1576ms 200 text/html; charset=utf-8 (791a596a)
+2020-07-09T10:39:05.0961421+03:00 80000108-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44389/css/Lang.css   (ca22a1cb)
+2020-07-09T10:39:05.1032566+03:00 80000108-0000-fd00-b63f-84710c7967bb [INF] The file "/css/Lang.css" was not modified (f1f8d725)
+2020-07-09T10:39:05.1049095+03:00 80000108-0000-fd00-b63f-84710c7967bb [INF] Request finished in 8.868ms 304 text/css (791a596a)
