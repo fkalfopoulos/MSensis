@@ -117,61 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Add Client" xml:space="preserve">
-    <value>Προσθήκη Πελάτη</value>
+  <data name="A finance charge of 1.5% will be made on unpaid balances after 30 days." xml:space="preserve">
+    <value>Θα πραγματοποιείται χρέωση ύψους 1,5% σε μη καταβληθέντα υπόλοιπα μετά από διάστημα 30 ημερών.</value>
   </data>
-  <data name="Companies List Chart" xml:space="preserve">
-    <value>Διάγραμμα Λίστας Εταιρειών</value>
+  <data name="Address" xml:space="preserve">
+    <value>Διεύθυνση</value>
   </data>
-  <data name="Control panel" xml:space="preserve">
-    <value>Πίνακας Ελέγχου</value>
+  <data name="City" xml:space="preserve">
+    <value>Πόλη</value>
   </data>
-  <data name="Dashboard" xml:space="preserve">
-    <value>Πίνακας Εργαλείων</value>
+  <data name="Description" xml:space="preserve">
+    <value>Περιγραφή</value>
   </data>
-  <data name="Hello" xml:space="preserve">
-    <value>Γεια σας</value>
+  <data name="Discount" xml:space="preserve">
+    <value>Έκπτωση</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Αρχική</value>
+  <data name="Grand Total" xml:space="preserve">
+    <value>Συνολική Τιμή</value>
   </data>
-  <data name="Monthly Recap Report Draft vs Issued" xml:space="preserve">
-    <value>Μηνιαία Ανασκόπηση Πρόχειρων σε σχέση με Εκδομένα</value>
+  <data name="INVOICE" xml:space="preserve">
+    <value>ΤΙΜΟΛΟΓΙΟ</value>
   </data>
-  <data name="More info" xml:space="preserve">
-    <value>Περισσότερες Πληροφορίες</value>
+  <data name="INVOICE TO" xml:space="preserve">
+    <value>ΤΙΜΟΛΟΓΙΟ ΣΕ</value>
   </data>
-  <data name="My Clients" xml:space="preserve">
-    <value>Οι Πελάτες μου</value>
+  <data name="Invoice was created on a computer and is valid without the signature and seal." xml:space="preserve">
+    <value>Το τιμολόγιο δημιουργήθηκε μέσω προγράμματος λογισμικού και είναι έγκυρο, παρόλο που δε διαθέτει υπογραφή και σφραγίδα.</value>
   </data>
-  <data name="Open" xml:space="preserve">
-    <value>Σε εκκρεμότητα</value>
+  <data name="Name" xml:space="preserve">
+    <value>Επωνυμία</value>
   </data>
-  <data name="Open vs Paid" xml:space="preserve">
-    <value>Σε εκκρεμότητα σε σχέση με Πληρωμένα</value>
+  <data name="NOTICE" xml:space="preserve">
+    <value>ΣΗΜΕΙΩΣΗ</value>
   </data>
-  <data name="Paid Vendor" xml:space="preserve">
-    <value>Πληρωμένα</value>
+  <data name="Number" xml:space="preserve">
+    <value>Τηλέφωνο</value>
   </data>
-  <data name="Print last pdf" xml:space="preserve">
-    <value>Τύπωσε το τελευταίο pdf</value>
+  <data name="Price" xml:space="preserve">
+    <value>Τιμή</value>
   </data>
-  <data name="Total Invoices" xml:space="preserve">
-    <value>Συνολικά Τιμολόγια</value>
+  <data name="Price Before Discount" xml:space="preserve">
+    <value>Τιμή χωρίς έκπτωση</value>
   </data>
-  <data name="Total Value of 3 months" xml:space="preserve">
-    <value>Συνολική Αξία των τελευταίων 3 μηνών</value>
+  <data name="Price Per Unit" xml:space="preserve">
+    <value>Τιμή ανά Μονάδα</value>
   </data>
-  <data name="Total Value Past 6 months" xml:space="preserve">
-    <value>Συνολική Αξία των τελευταίων 6 μηνών</value>
+  <data name="Quantity" xml:space="preserve">
+    <value>Ποσότητα</value>
   </data>
-  <data name="Total Vat Last 3 Months" xml:space="preserve">
-    <value>Συνολικός ΦΠΑ των τελευταίων 3 μηνών</value>
+  <data name="Total Discount" xml:space="preserve">
+    <value>Συνολικό ποσό έκπτωσης</value>
   </data>
-  <data name="Total Vat Past 6 months" xml:space="preserve">
-    <value>Συνολικός ΦΠΑ των τελευταίων 6 μηνών</value>
+  <data name="Total VAT" xml:space="preserve">
+    <value>Συνολικός Φ.Π.Α.</value>
   </data>
-  <data name="Update" xml:space="preserve">
-    <value>Επεξεργασία</value>
+  <data name="VAT" xml:space="preserve">
+    <value>Φ.Π.Α.</value>
   </data>
 </root>

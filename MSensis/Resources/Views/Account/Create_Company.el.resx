@@ -121,7 +121,7 @@
     <value>Διεύθυνση</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>Επιστροφή</value>
+    <value>Πίσω</value>
   </data>
   <data name="City" xml:space="preserve">
     <value>Πόλη</value>
@@ -130,10 +130,10 @@
     <value>Λογότυπο Εταιρείας</value>
   </data>
   <data name="Create Company" xml:space="preserve">
-    <value>Δημιουργία Εταιρείας</value>
+    <value>Προσθήκη εταιρείας</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Όνομα</value>
+    <value>Επωνυμία</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Αποθήκευση</value>

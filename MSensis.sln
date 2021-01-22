@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSensis", "MSensis\MSensis.csproj", "{C29F3B48-13B3-4C4C-8C5B-4D7227356864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSensis.Tests", "MSensis.Tests\MSensis.Tests.csproj", "{6CC46D8F-9957-4499-B16F-4EED59F4735D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C29F3B48-13B3-4C4C-8C5B-4D7227356864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C29F3B48-13B3-4C4C-8C5B-4D7227356864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C29F3B48-13B3-4C4C-8C5B-4D7227356864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC46D8F-9957-4499-B16F-4EED59F4735D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC46D8F-9957-4499-B16F-4EED59F4735D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC46D8F-9957-4499-B16F-4EED59F4735D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC46D8F-9957-4499-B16F-4EED59F4735D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

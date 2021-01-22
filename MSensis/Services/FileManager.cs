@@ -38,7 +38,7 @@ namespace MSensis.Services
                 string wwwRootPath = _hostEnviroment.WebRootPath;
                 string mime = image.FileName.Substring(image.FileName.LastIndexOf('.'));
                 string fileName = $"img_{DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss")}{mime}";
-                string path = Path.Combine(wwwRootPath + "/Content/" + fileName);
+                string path = Path.Combine(wwwRootPath + "/content/" + fileName);
 
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
